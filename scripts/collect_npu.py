@@ -5,7 +5,6 @@ from pathlib import Path
 OUT = Path("events.json")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-# Корни городов и названия на РУССКОМ
 REGIONS = [
     (["київ", "киев"], "Киевская область", 50.4501, 30.5234),
     (["чернігів", "чернигов"], "Черниговская область", 51.25, 32.00),
@@ -32,7 +31,6 @@ REGIONS = [
     (["чернівц", "черновц"], "Черновицкая область", 48.29, 25.94)
 ]
 
-# Ключевые слова на РУС и УКР
 KEYWORDS = [
     "атака", "удар", "обстрел", "попад", "оскол", "облом", "бпла", "беспилот", "поврежд", "погиб", "ранен", "пострад", "взрыв", "ракет", "каб",
     "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"
@@ -44,7 +42,6 @@ TRUXA_CHANNELS = [
     ("Труха⚡️Харків", "truexakharkiv")
 ]
 
-# Русскоязычные RSS-ленты крупнейших СМИ
 RSS_FEEDS = [
     ("Украинская Правда", "https://www.pravda.com.ua/rus/rss/"),
     ("УНИАН", "https://www.unian.net/detail/all_news.rss"),
@@ -58,11 +55,13 @@ def get(u):
 
 def clean(s):
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)
+    s = re.sub(r"<!\[CDATA\[|\]\]>", " ", s) # Вырезаем скрытые теги RSS
     s = re.sub(r"<[^>]+>", " ", s)
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
 
-def process_text(text, source_name, url, old_events):
-    low = text.lower()
+# Функция теперь принимает текст для ПОИСКА отдельно от текста для ОТОБРАЖЕНИЯ
+def process_text(search_text, display_text, source_name, url, old_events):
+    low = search_text.lower()
     if not any(k in low for k in KEYWORDS): return
     
     reg = None
@@ -74,9 +73,8 @@ def process_text(text, source_name, url, old_events):
     if not reg: return 
     ru_name, lat, lon = reg
     
-    eid = "osint-" + hashlib.sha1((text + url).encode()).hexdigest()[:16]
+    eid = "osint-" + hashlib.sha1((display_text + url).encode()).hexdigest()[:16]
     
-    # Категоризация
     types = []
     if any(x in low for x in ["ата", "удар", "обстр", "влуч", "вибух", "ракет", "каб", "попад", "взрыв"]): types.append("hit")
     if any(x in low for x in ["улам", "оскол", "облом"]): types.append("debris")
@@ -84,7 +82,7 @@ def process_text(text, source_name, url, old_events):
     if any(x in low for x in ["постраж", "травм", "поран", "ранен"]): types.append("injured")
     if any(x in low for x in ["загин", "загиб", "погиб"]): types.append("dead")
     
-    preview = text[:250] + "..." if len(text) > 250 else text
+    preview = display_text[:250] + "..." if len(display_text) > 250 else display_text
     
     old_events[eid] = {
         "id": eid, "region": ru_name, "lat": lat, "lon": lon,
@@ -102,7 +100,7 @@ def main():
         
     old = {e["id"]: e for e in d.get("events", [])}
     
-    # --- ОЧИСТКА СТАРЫХ СОБЫТИЙ (Оставляем только за последние 24 часа) ---
+    # --- ОЧИСТКА ---
     now = datetime.now(timezone.utc)
     filtered_old = {}
     for eid, event in old.items():
@@ -111,7 +109,7 @@ def main():
             if (now - pub_time) <= timedelta(hours=24):
                 filtered_old[eid] = event
         except ValueError:
-            pass # Если дата сломана, удаляем
+            pass 
     old = filtered_old
     
     # 1. Полиция (НПУ)
@@ -122,9 +120,10 @@ def main():
             url = urllib.parse.urljoin("https://npu.gov.ua", path)
             try:
                 raw = get(url)
+                full_text = clean(raw) # Сканируем весь текст статьи
                 title_match = re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S)
-                title = clean(title_match[1]) if title_match else ""
-                process_text(title, "Национальная полиция", url, old)
+                title = clean(title_match[1]) if title_match else full_text[:100]
+                process_text(full_text, title, "Национальная полиция", url, old)
             except Exception: continue
     except Exception as e:
         print("Ошибка НПУ:", e)
@@ -133,7 +132,6 @@ def main():
     for source_name, rss_url in RSS_FEEDS:
         try:
             xml_data = get(rss_url)
-            # Простой парсинг XML без сторонних библиотек
             items = re.findall(r'<item>(.*?)</item>', xml_data, re.I | re.S)
             for item in items[:20]:
                 t_match = re.search(r'<title>(.*?)</title>', item, re.I | re.S)
@@ -146,7 +144,8 @@ def main():
                 desc = clean(d_match[1]) if d_match else ""
                 link = clean(l_match[1]) if l_match else rss_url
                 
-                process_text(title + " " + desc, source_name, link, old)
+                full_text = title + " " + desc
+                process_text(full_text, title, source_name, link, old)
         except Exception as e:
             print(f"Ошибка RSS ({source_name}):", e)
 
@@ -160,11 +159,10 @@ def main():
             for i, html_text in enumerate(posts):
                 text = clean(html_text)
                 url = post_links[i] if i < len(post_links) else f"https://t.me/{handle}"
-                process_text(text, source_name, url, old)
+                process_text(text, text, source_name, url, old)
         except Exception as e:
             print(f"Ошибка Telegram ({handle}):", e)
 
-    # Сохранение
     d = {
         "updated": datetime.now(timezone.utc).isoformat(),
         "source_policy": "Major News RSS + Telegram + NPU",
