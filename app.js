@@ -10,7 +10,24 @@ async function loadDataAndRender() {
         if (D.updated) {
             document.getElementById("date").textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", {day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit"});
         }
-        render(); 
+         function render(){
+    markers.forEach(m=>map.removeLayer(m));
+    markers=[];
+    let a=E.filter(e=>filter==="all"||e.types.includes(filter));
+    counter.textContent=a.length;
+    
+    a.forEach(e=>{
+        // Добавляем случайный разброс (примерно +- 2.5 км), чтобы точки не слипались в одну
+        let jitterLat = e.lat + (Math.random() - 0.5) * 0.05;
+        let jitterLon = e.lon + (Math.random() - 0.5) * 0.05;
+        
+        let m=L.marker([jitterLat, jitterLon],{icon:ic(e)}).addTo(map);
+        m.bindPopup(`<b>${e.region}</b><br><small>${e.status}</small>`);
+        m.on("click",()=>show(e));
+        markers.push(m);
+    })
+}
+
     } catch (e) {
         console.warn("Данные пока не загружены", e);
     }
