@@ -1,11 +1,11 @@
 import json, re, html, urllib.request, urllib.parse, hashlib
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 OUT = Path("events.json")
-UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-# Теперь ищем по корням слов, чтобы находить любые склонения ("Харкові", "Одесу")
+# Корни городов и названия на РУССКОМ
 REGIONS = [
     (["київ", "киев"], "Киевская область", 50.4501, 30.5234),
     (["чернігів", "чернигов"], "Черниговская область", 51.25, 32.00),
@@ -32,12 +32,23 @@ REGIONS = [
     (["чернівц", "черновц"], "Черновицкая область", 48.29, 25.94)
 ]
 
-KEYWORDS = ["ата", "удар", "обстр", "влуч", "улам", "бпла", "пошкод", "загиб", "поран", "постраж", "вибух", "ракет", "каб"]
+# Ключевые слова на РУС и УКР
+KEYWORDS = [
+    "атака", "удар", "обстрел", "попад", "оскол", "облом", "бпла", "беспилот", "поврежд", "погиб", "ранен", "пострад", "взрыв", "ракет", "каб",
+    "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"
+]
 
 TRUXA_CHANNELS = [
     ("Труха⚡️Україна", "truexanewsua"),
     ("Труха⚡️Київ", "truexakyiv"),
     ("Труха⚡️Харків", "truexakharkiv")
+]
+
+# Русскоязычные RSS-ленты крупнейших СМИ
+RSS_FEEDS = [
+    ("Украинская Правда", "https://www.pravda.com.ua/rus/rss/"),
+    ("УНИАН", "https://www.unian.net/detail/all_news.rss"),
+    ("ТСН", "https://tsn.ua/ru/rss/full.rss")
 ]
 
 def get(u):
@@ -55,7 +66,6 @@ def process_text(text, source_name, url, old_events):
     if not any(k in low for k in KEYWORDS): return
     
     reg = None
-    # Новый поиск по корням слов
     for roots, ru_name, lat, lon in REGIONS:
         if any(root in low for root in roots):
             reg = (ru_name, lat, lon)
@@ -64,20 +74,22 @@ def process_text(text, source_name, url, old_events):
     if not reg: return 
     ru_name, lat, lon = reg
     
-    eid = "osint-" + hashlib.sha1(text.encode()).hexdigest()[:16]
-    types = []
-    if any(x in low for x in ["ата","удар","обстр","влуч","вибух","ракет","каб"]): types.append("hit")
-    if "улам" in low: types.append("debris")
-    if any(x in low for x in ["пошкод","руйн","пожеж"]): types.append("damage")
-    if any(x in low for x in ["постраж","травм","поран"]): types.append("injured")
-    if any(x in low for x in ["загин","загиб"]): types.append("dead")
+    eid = "osint-" + hashlib.sha1((text + url).encode()).hexdigest()[:16]
     
-    preview = text[:200] + "..." if len(text) > 200 else text
+    # Категоризация
+    types = []
+    if any(x in low for x in ["ата", "удар", "обстр", "влуч", "вибух", "ракет", "каб", "попад", "взрыв"]): types.append("hit")
+    if any(x in low for x in ["улам", "оскол", "облом"]): types.append("debris")
+    if any(x in low for x in ["пошкод", "руйн", "пожеж", "поврежд"]): types.append("damage")
+    if any(x in low for x in ["постраж", "травм", "поран", "ранен"]): types.append("injured")
+    if any(x in low for x in ["загин", "загиб", "погиб"]): types.append("dead")
+    
+    preview = text[:250] + "..." if len(text) > 250 else text
     
     old_events[eid] = {
         "id": eid, "region": ru_name, "lat": lat, "lon": lon,
         "types": list(dict.fromkeys(types or ["hit"])), 
-        "status": "Требует проверки", "confidence": "medium",
+        "status": "Зафиксировано", "confidence": "high" if "НПУ" in source_name or "RSS" in source_name else "medium",
         "text": preview, "published": datetime.now(timezone.utc).isoformat(),
         "source": source_name, "url": url
     }
@@ -87,9 +99,22 @@ def main():
         d = json.loads(OUT.read_text(encoding="utf-8"))
     except Exception:
         d = {"events": []}
+        
     old = {e["id"]: e for e in d.get("events", [])}
     
-    # 1. Полиция
+    # --- ОЧИСТКА СТАРЫХ СОБЫТИЙ (Оставляем только за последние 24 часа) ---
+    now = datetime.now(timezone.utc)
+    filtered_old = {}
+    for eid, event in old.items():
+        try:
+            pub_time = datetime.fromisoformat(event["published"])
+            if (now - pub_time) <= timedelta(hours=24):
+                filtered_old[eid] = event
+        except ValueError:
+            pass # Если дата сломана, удаляем
+    old = filtered_old
+    
+    # 1. Полиция (НПУ)
     try:
         page = get("https://npu.gov.ua/news")
         links = list(dict.fromkeys(re.findall(r'href=["\'](?:https://npu\.gov\.ua)?(/news/[^"\']+)["\']', page, re.I)))
@@ -104,7 +129,28 @@ def main():
     except Exception as e:
         print("Ошибка НПУ:", e)
 
-    # 2. Труха
+    # 2. СМИ (RSS-ленты)
+    for source_name, rss_url in RSS_FEEDS:
+        try:
+            xml_data = get(rss_url)
+            # Простой парсинг XML без сторонних библиотек
+            items = re.findall(r'<item>(.*?)</item>', xml_data, re.I | re.S)
+            for item in items[:20]:
+                t_match = re.search(r'<title>(.*?)</title>', item, re.I | re.S)
+                d_match = re.search(r'<description>(.*?)</description>', item, re.I | re.S)
+                l_match = re.search(r'<link>(.*?)</link>', item, re.I | re.S)
+                
+                if not t_match: continue
+                
+                title = clean(t_match[1])
+                desc = clean(d_match[1]) if d_match else ""
+                link = clean(l_match[1]) if l_match else rss_url
+                
+                process_text(title + " " + desc, source_name, link, old)
+        except Exception as e:
+            print(f"Ошибка RSS ({source_name}):", e)
+
+    # 3. Труха (Telegram)
     for source_name, handle in TRUXA_CHANNELS:
         try:
             tg_page = get(f"https://t.me/s/{handle}")
@@ -118,13 +164,14 @@ def main():
         except Exception as e:
             print(f"Ошибка Telegram ({handle}):", e)
 
+    # Сохранение
     d = {
         "updated": datetime.now(timezone.utc).isoformat(),
-        "source_policy": "NPU + Truxa Network",
-        "events": list(old.values())[-300:]
+        "source_policy": "Major News RSS + Telegram + NPU",
+        "events": list(old.values())
     }
     OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Stored", len(d["events"]), "events")
+    print("Stored", len(d["events"]), "events (last 24 hours)")
 
 if __name__ == "__main__":
     main()
