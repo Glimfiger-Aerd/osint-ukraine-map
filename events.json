@@ -1,0 +1,76 @@
+{
+  "updated": "2026-09-01T15:03:00+03:00",
+  "source_policy": "Official NPU publications; regional/city level only; no exact target coordinates or routes.",
+  "events": [
+    {
+      "id": "npu-20260901-kyiv-0801",
+      "region": "город Киев",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "types": [
+        "hit",
+        "damage",
+        "injured",
+        "dead"
+      ],
+      "status": "Подтверждено",
+      "confidence": "high",
+      "text": "Национальная полиция сообщила о ночной атаке по Киеву: 8 погибших и 3 пострадавших, включая ребёнка.",
+      "published": "2026-09-01T08:01:00+03:00",
+      "source": "Национальная полиция Украины",
+      "url": "https://npu.gov.ua/news/visim-zahyblykh-i-troie-poterpilykh-sered-iakykh-dytyna-politsiia-dokumentuie-naslidky-nichnoi-ataky-rf-po-kyievu"
+    },
+    {
+      "id": "npu-20260901-kyiv-1503",
+      "region": "город Киев",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "types": [
+        "hit",
+        "damage",
+        "injured"
+      ],
+      "status": "Подтверждено",
+      "confidence": "high",
+      "text": "Полиция сообщила о продолжении документирования последствий атаки в Подольском районе: повреждён жилой дом; трое жителей получили осколочные ранения.",
+      "published": "2026-09-01T15:03:00+03:00",
+      "source": "Национальная полиция Украины",
+      "url": "https://npu.gov.ua/news/politseiski-prodovzhuiut-dokumentuvaty-naslidky-vorozhoi-ataky-u-podilskomu-raioni-stolytsi"
+    },
+    {
+      "id": "npu-20260901-kyiv-oblast",
+      "region": "Киевская область",
+      "lat": 50.1,
+      "lon": 30.65,
+      "types": [
+        "hit",
+        "debris",
+        "damage",
+        "injured",
+        "dead"
+      ],
+      "status": "Подтверждено",
+      "confidence": "high",
+      "text": "Полиция сообщила о 4 погибших и 14 травмированных; зафиксированы повреждения домов, автомобилей, магазина и предприятия, а также последствия падения обломков БпЛА.",
+      "published": "2026-09-01T08:29:00+03:00",
+      "source": "Национальная полиция Украины",
+      "url": "https://npu.gov.ua/news/chetvero-zahyblykh-14-travmovanykh-politsiia-kyivshchyny-dokumentuie-naslidky-nichnoi-ataky-rosii"
+    },
+    {
+      "id": "npu-20260901-chernihiv",
+      "region": "Черниговская область",
+      "lat": 51.25,
+      "lon": 32.0,
+      "types": [
+        "hit",
+        "damage"
+      ],
+      "status": "Подтверждено",
+      "confidence": "high",
+      "text": "Полиция сообщила о повреждениях складских помещений, жилых и хозяйственных строений, объектов образования и магазина; пострадавших людей не сообщалось.",
+      "published": "2026-09-01T10:07:00+03:00",
+      "source": "Национальная полиция Украины",
+      "url": "https://npu.gov.ua/news/politsiia-dokumentuie-naslidky-udariv-rosiian-na-chernihivshchyni010926"
+    }
+  ]
+}
