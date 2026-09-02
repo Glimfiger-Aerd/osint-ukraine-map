@@ -36,10 +36,12 @@ KEYWORDS = [
     "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"
 ]
 
-TRUXA_CHANNELS = [
+# Сюда добавлен новый канал!
+TG_CHANNELS = [
     ("Труха⚡️Україна", "truexanewsua"),
     ("Труха⚡️Київ", "truexakyiv"),
-    ("Труха⚡️Харків", "truexakharkiv")
+    ("Труха⚡️Харків", "truexakharkiv"),
+    ("UKR 2025", "ukr_2025_ru")
 ]
 
 RSS_FEEDS = [
@@ -55,11 +57,10 @@ def get(u):
 
 def clean(s):
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)
-    s = re.sub(r"<!\[CDATA\[|\]\]>", " ", s) # Вырезаем скрытые теги RSS
+    s = re.sub(r"<!\[CDATA\[|\]\]>", " ", s) 
     s = re.sub(r"<[^>]+>", " ", s)
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
 
-# Функция теперь принимает текст для ПОИСКА отдельно от текста для ОТОБРАЖЕНИЯ
 def process_text(search_text, display_text, source_name, url, old_events):
     low = search_text.lower()
     if not any(k in low for k in KEYWORDS): return
@@ -100,7 +101,7 @@ def main():
         
     old = {e["id"]: e for e in d.get("events", [])}
     
-    # --- ОЧИСТКА ---
+    # Очистка старых новостей
     now = datetime.now(timezone.utc)
     filtered_old = {}
     for eid, event in old.items():
@@ -120,7 +121,7 @@ def main():
             url = urllib.parse.urljoin("https://npu.gov.ua", path)
             try:
                 raw = get(url)
-                full_text = clean(raw) # Сканируем весь текст статьи
+                full_text = clean(raw) 
                 title_match = re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S)
                 title = clean(title_match[1]) if title_match else full_text[:100]
                 process_text(full_text, title, "Национальная полиция", url, old)
@@ -149,8 +150,8 @@ def main():
         except Exception as e:
             print(f"Ошибка RSS ({source_name}):", e)
 
-    # 3. Труха (Telegram)
-    for source_name, handle in TRUXA_CHANNELS:
+    # 3. Telegram-каналы
+    for source_name, handle in TG_CHANNELS:
         try:
             tg_page = get(f"https://t.me/s/{handle}")
             posts = re.findall(r'<div class="tgme_widget_message_text[^>]*>(.*?)</div>', tg_page, re.S | re.I)
