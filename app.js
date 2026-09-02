@@ -16,7 +16,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "© OpenStreetMap contributors" 
 }).addTo(map);
 
-let E = [];
+let allEvents = []; // Хранилище за все 30 дней
+let E = []; // Активные события для отрисовки
 const card = document.getElementById("card");
 const counter = document.getElementById("counter");
 let filter = "all";
@@ -56,13 +57,35 @@ function show(region, events) {
     `).join("");
 
     card.innerHTML = `
-        <h2>${region}</h2>
-        <span class="badge">Событий за сутки: ${events.length}</span>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2 style="margin: 0;">${region}</h2>
+            <button id="shareBtn" style="background: #3b82f6; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: bold;">📤 Поделиться</button>
+        </div>
+        <span class="badge" style="display: inline-block; margin-top: 10px;">Событий: ${events.length}</span>
         ${stats(events)}
         <div style="max-height: 250px; overflow-y: auto; margin-top: 15px; padding-right: 5px;">
             ${newsList}
         </div>
     `;
+
+    // Логика кнопки "Поделиться"
+    document.getElementById("shareBtn").addEventListener("click", () => {
+        if (tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('heavy');
+        
+        let shareText = `🇺🇦 Сводка OSINT: ${region}\n`;
+        shareText += `🔴 Прилётов: ${n(events, "hit")} | 🟠 Обломки: ${n(events, "debris")}\n\n`;
+        events.slice(0, 3).forEach(e => {
+            shareText += `🔸 ${e.text.substring(0, 100)}...\nИсточник: ${e.source}\n\n`;
+        });
+        shareText += `Подробнее в приложении OSINT Ukraine Map.`;
+
+        const shareUrl = `https://t.me/share/url?url=&text=${encodeURIComponent(shareText)}`;
+        if (tg && tg.openTelegramLink) {
+            tg.openTelegramLink(shareUrl);
+        } else {
+            window.open(shareUrl, "_blank");
+        }
+    });
 }
 
 function render() {
@@ -83,9 +106,9 @@ function render() {
         if (!grouped[e.region]) grouped[e.region] = [];
         grouped[e.region].push(e);
 
-        let jLat = e.lat + (Math.random() - 0.5) * 0.6;
-        let jLon = e.lon + (Math.random() - 0.5) * 0.6;
-        heatPoints.push([jLat, jLon, 0.6]); 
+        let jLat = e.lat + (Math.random() - 0.5) * 0.2;
+        let jLon = e.lon + (Math.random() - 0.5) * 0.2;
+        heatPoints.push([jLat, jLon, 1.0]); 
     });
 
     if (heatPoints.length > 0) {
@@ -113,12 +136,20 @@ function render() {
 
 document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => { 
     if (tg && tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
-
     document.querySelectorAll("#filters button").forEach(x => x.classList.remove("active")); 
     b.classList.add("active"); 
     filter = b.dataset.filter; 
     render(); 
 }));
+
+function filterByDate(dateStr) {
+    E = allEvents.filter(e => e.published.startsWith(dateStr));
+    let dateEl = document.getElementById("date");
+    if (dateEl) {
+        dateEl.textContent = "Сводка за: " + dateStr.split('-').reverse().join('.');
+    }
+    render();
+}
 
 async function borders() {
     try {
@@ -148,7 +179,10 @@ async function borders() {
                     l.on("click", () => {
                         let a = E.filter(e => e.region === name);
                         if (a.length > 0) show(name, a);
-                        else card.innerHTML = `<h2>${name}</h2><span class="badge">Событий: 0</span>${stats([])}<p>В текущем наборе данных событий нет.</p>`;
+                        else {
+                            if (tg && tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('error');
+                            card.innerHTML = `<h2>${name}</h2><span class="badge">Событий: 0</span>${stats([])}<p>В выбранную дату событий нет.</p>`;
+                        }
                     });
                 }
             }
@@ -165,13 +199,19 @@ async function loadDataAndRender() {
     try {
         const response = await fetch('events.json', { cache: "no-store" });
         const D = await response.json();
-        E = D.events || [];
+        allEvents = D.events || [];
         
-        let dateEl = document.getElementById("date");
-        if (D.updated && dateEl) {
-            dateEl.textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", { day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit" });
-        }
-        render();
+        const cal = document.getElementById("calendar");
+        const today = new Date().toISOString().split('T')[0]; 
+        cal.value = today; 
+        
+        filterByDate(today);
+        
+        cal.addEventListener("change", (e) => {
+            if (tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('heavy');
+            filterByDate(e.target.value);
+        });
+        
     } catch (e) {
         console.warn("Данные пока не загружены", e);
     }
