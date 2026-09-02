@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>OSINT Ukraine Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    
-    <!-- Версия для CSS, чтобы сбросить кэш стилей -->
-    <link rel="stylesheet" href="style.css?v=2">
-    
+    <link rel="stylesheet" href="style.css?v=3">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Библиотека графиков -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="header">
@@ -24,7 +23,7 @@
             <button class="active" data-filter="all">Все</button>
             <button data-filter="hit">🔴 Прилёты</button>
             <button data-filter="debris">🟠 Обломки</button>
-            <button data-filter="damage">🔥 Повреждения</button>
+            <button id="btn-analytics" style="background: #10b981; color: white; border: none;">📊 Аналитика</button>
         </div>
     </div>
 
@@ -35,10 +34,19 @@
         <p style="color: var(--hint-color); font-size: 14px;">Нажмите на маркер на карте, чтобы посмотреть сводку.</p>
     </div>
 
+    <!-- Модальное окно графиков -->
+    <div id="analyticsModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="modal-close">&times;</span>
+            <h3 style="margin-top:0;">Активность за месяц</h3>
+            <div style="height: 250px; width: 100%;">
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
-    
-    <!-- Версия v8 для JS -->
-    <script src="app.js?v=8"></script>
+    <script src="app.js?v=9"></script>
 </body>
 </html>
