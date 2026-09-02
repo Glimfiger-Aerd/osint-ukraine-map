@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T20:15:40.622433+00:00",
+  "updated": "2026-09-02T20:42:12.516890+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -5112,8 +5112,8 @@
       "lat": 49.23,
       "lon": 28.47,
       "types": [
-        "hit",
-        "debris"
+        "debris",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -5122,7 +5122,7 @@
       "confidence": "medium",
       "text": "В Винницкой области сообщают о падении обломков БПЛА: двое человек пострадали...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/6/905201/46ccd330aa5c4bf118623efc91794f57.jpeg",
-      "published": "2026-09-02T20:15:35.982684+00:00",
+      "published": "2026-09-02T20:42:09.258747+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051601/"
     },
@@ -5480,15 +5480,15 @@
       "lat": 50.25,
       "lon": 28.66,
       "types": [
-        "damage",
-        "hit"
+        "hit",
+        "damage"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали Житомирскую область: повреждены объекты инфраструктуры...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/0/905208/b0c6a912dd763811781c38428724c7c8.jpeg",
-      "published": "2026-09-02T20:15:35.982092+00:00",
+      "published": "2026-09-02T20:42:09.258195+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051607/"
     },
@@ -5507,7 +5507,7 @@
       "confidence": "medium",
       "text": "Комендантский час в Киеве станет короче: когда могут ввести новые правила...",
       "image": "https://img.tsn.ua/cached/481/tsn-0b4bc102/thumbs/608xX/7d/08/ecdbc109621cddddb935eab67c67087d.jpg",
-      "published": "2026-09-02T20:15:36.761131+00:00",
+      "published": "2026-09-02T20:42:09.640683+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/komendantskiy-chas-v-kieve-stanet-koroche-kogda-mogut-vvesti-novye-pravila-3161066.html"
     },
@@ -5524,7 +5524,7 @@
       "confidence": "medium",
       "text": "Российский удар по Киеву: число пострадавших возросло (фото, видео)...",
       "image": "https://img.tsn.ua/cached/672/tsn-51cb131e/thumbs/608xX/2d/45/1112b08f40e04f3b64c0536eb82f452d.jpg",
-      "published": "2026-09-02T20:15:36.761237+00:00",
+      "published": "2026-09-02T20:42:09.640761+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rossiyskiy-udar-po-kievu-chislo-postradavshih-vozroslo-foto-video-3161060.html"
     },
@@ -5804,10 +5804,10 @@
       "lat": 49.23,
       "lon": 28.47,
       "types": [
-        "damage",
-        "hit",
         "debris",
-        "injured"
+        "injured",
+        "hit",
+        "damage"
       ],
       "weapons": [
         "drone"
@@ -5816,7 +5816,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали Винницкую область: повреждены дома, есть раненые...",
       "image": "https://img.tsn.ua/cached/451/tsn-51cb131e/thumbs/608xX/f4/6f/e0d52173c725f30ac135ce1238d76ff4.jpg",
-      "published": "2026-09-02T20:15:36.760972+00:00",
+      "published": "2026-09-02T20:42:09.640521+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-vinnitskuyu-oblast-povrezhdeny-doma-est-ranenye-3161072.html"
     },
@@ -6396,15 +6396,15 @@
       "lat": 50.25,
       "lon": 28.66,
       "types": [
-        "damage",
-        "hit"
+        "hit",
+        "damage"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "РФ атаковала Житомирщину безпилотниками: появились первые последствия удара...",
       "image": "https://img.tsn.ua/cached/594/tsn-0b4bc102/thumbs/608xX/51/40/4b6351029942983ad9ee2e3a27304051.jpg",
-      "published": "2026-09-02T20:15:36.760515+00:00",
+      "published": "2026-09-02T20:42:09.640056+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rf-atakovala-zhitomirschinu-bezpiotchikami-poyavilis-pervye-posledstviya-udara-3161093.html"
     },
@@ -6499,6 +6499,45 @@
       "text": "Россияне атаковали Хмельницкий: после удара вспыхнул масштабный пожар...",
       "image": "https://img.tsn.ua/cached/765/tsn-135859377404ec64163c97d964721c31/thumbs/608xX/70/b0/05067bcaed39ffa4eda0a13ec7b9b070.jpeg",
       "published": "2026-09-02T20:15:36.759956+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-hmelnitskiy-posle-udara-vspyhnul-masshtabnyy-pozhar-3161129.html"
+    },
+    {
+      "id": "osint-a425c25b2d3bfadd",
+      "region": "Хмельницкий",
+      "lat": 49.42,
+      "lon": 27.0,
+      "types": [
+        "debris",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Хмельницкой области обломки российского БПЛА упали на склад: пострадал водитель...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/9/905263/999af00988f60429beec9e85f8d9a14d.jpeg",
+      "published": "2026-09-02T20:42:09.257541+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051622/"
+    },
+    {
+      "id": "osint-83dd053fdd4bf222",
+      "region": "Хмельницкий",
+      "lat": 49.42,
+      "lon": 27.0,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали Хмельницкий: после удара вспыхнул масштабный пожар (обновлено)...",
+      "image": "https://img.tsn.ua/cached/765/tsn-135859377404ec64163c97d964721c31/thumbs/608xX/70/b0/05067bcaed39ffa4eda0a13ec7b9b070.jpeg",
+      "published": "2026-09-02T20:42:09.639136+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-hmelnitskiy-posle-udara-vspyhnul-masshtabnyy-pozhar-3161129.html"
     }
