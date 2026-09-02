@@ -100,13 +100,13 @@ def main():
         
     old = {e["id"]: e for e in d.get("events", [])}
     
-    # Очистка старых новостей
+    # Очистка старых новостей: теперь храним 30 дней для работы календаря!
     now = datetime.now(timezone.utc)
     filtered_old = {}
     for eid, event in old.items():
         try:
             pub_time = datetime.fromisoformat(event["published"])
-            if (now - pub_time) <= timedelta(hours=24):
+            if (now - pub_time) <= timedelta(days=30):
                 filtered_old[eid] = event
         except ValueError:
             pass 
@@ -169,7 +169,7 @@ def main():
         "events": list(old.values())
     }
     OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Stored", len(d["events"]), "events (last 24 hours)")
+    print("Stored", len(d["events"]), "events (up to 30 days)")
 
 if __name__ == "__main__":
     main()
