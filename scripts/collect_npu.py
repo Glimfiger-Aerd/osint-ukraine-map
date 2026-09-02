@@ -1,66 +1,69 @@
-import json, re, html, urllib.request, urllib.parse, hashlib
+import json, re, html, urllib.request, urllib.parse, hashlib, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 OUT = Path("events.json")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
+# Токены для бота-информатора (берутся из GitHub Secrets)
+BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
+CHAT_ID = os.environ.get("TG_CHAT_ID")
+
+# Сначала точные города, затем области (чтобы скрипт сначала искал город)
 REGIONS = [
-    (["київ", "киев"], "Киевская область", 50.4501, 30.5234),
-    (["чернігів", "чернигов"], "Черниговская область", 51.25, 32.00),
-    (["сум", "суми", "сумы"], "Сумская область", 50.91, 34.80),
-    (["харків", "харьков"], "Харьковская область", 49.99, 36.23),
-    (["полтав"], "Полтавская область", 49.59, 34.55),
-    (["дніпр", "днепр"], "Днепропетровская область", 48.46, 35.05),
-    (["запоріж", "запорож"], "Запорожская область", 47.84, 35.14),
+    (["кривий ріг", "кривой рог"], "Кривой Рог", 47.91, 33.39),
+    (["біла церква", "белая церковь"], "Белая Церковь", 49.79, 30.11),
+    (["краматорськ", "краматорск"], "Краматорск", 48.73, 37.58),
+    (["покровськ", "покровск"], "Покровск", 48.28, 37.17),
+    (["костянтинів", "константинов"], "Константиновка", 48.52, 37.70),
+    (["київ", "киев"], "Киев", 50.45, 30.52),
+    (["харків", "харьков"], "Харьков", 49.99, 36.23),
+    (["дніпр", "днепр"], "Днепр", 48.46, 35.05),
+    (["одес"], "Одесса", 46.48, 30.72),
+    (["запоріж", "запорож"], "Запорожье", 47.84, 35.14),
+    (["миколаїв", "николаев"], "Николаев", 46.97, 32.00),
+    (["херсон"], "Херсон", 46.64, 32.62),
+    (["сум", "суми", "сумы"], "Сумы", 50.91, 34.80),
+    (["чернігів", "чернигов"], "Чернигов", 51.25, 32.00),
+    (["полтав"], "Полтава", 49.59, 34.55),
     (["донец", "донеч"], "Донецкая область", 48.30, 37.80),
     (["луган"], "Луганская область", 48.57, 39.31),
-    (["херсон"], "Херсонская область", 46.64, 32.62),
-    (["миколаїв", "николаев"], "Николаевская область", 46.97, 32.00),
-    (["одес"], "Одесская область", 46.48, 30.72),
-    (["вінниц", "винниц"], "Винницкая область", 49.23, 28.47),
-    (["житомир"], "Житомирская область", 50.25, 28.66),
-    (["кіровоград", "кропивниц", "кировоград"], "Кировоградская область", 48.51, 32.26),
-    (["черкас"], "Черкасская область", 49.44, 32.06),
-    (["хмельниц"], "Хмельницкая область", 49.42, 27.00),
-    (["терноп", "тернопол"], "Тернопольская область", 49.55, 25.59),
-    (["рівн", "ровн"], "Ровенская область", 50.62, 26.25),
-    (["волин", "луцьк", "луцк"], "Волынская область", 50.75, 25.34),
-    (["львів", "львов"], "Львовская область", 49.84, 24.03),
-    (["франківськ", "франковск"], "Ивано-Франковская область", 48.92, 24.71),
-    (["чернівц", "черновц"], "Черновицкая область", 48.29, 25.94)
+    (["вінниц", "винниц"], "Винница", 49.23, 28.47),
+    (["житомир"], "Житомир", 50.25, 28.66),
+    (["кіровоград", "кропивниц", "кировоград"], "Кропивницкий", 48.51, 32.26),
+    (["черкас"], "Черкассы", 49.44, 32.06),
+    (["хмельниц"], "Хмельницкий", 49.42, 27.00),
+    (["терноп", "тернопол"], "Тернополь", 49.55, 25.59),
+    (["рівн", "ровн"], "Ровно", 50.62, 26.25),
+    (["волин", "луцьк", "луцк"], "Луцк", 50.75, 25.34),
+    (["львів", "львов"], "Львов", 49.84, 24.03),
+    (["франківськ", "франковск"], "Ивано-Франковск", 48.92, 24.71),
+    (["чернівц", "черновц"], "Черновцы", 48.29, 25.94)
 ]
 
-KEYWORDS = [
-    "атака", "удар", "обстрел", "попад", "оскол", "облом", "бпла", "беспилот", "поврежд", "погиб", "ранен", "пострад", "взрыв", "ракет", "каб",
-    "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"
-]
+KEYWORDS = ["атака", "удар", "обстрел", "попад", "оскол", "облом", "бпла", "беспилот", "поврежд", "погиб", "ранен", "пострад", "взрыв", "ракет", "каб", "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"]
 
-TG_CHANNELS = [
-    ("Труха⚡️Україна", "truexanewsua"),
-    ("Труха⚡️Київ", "truexakyiv"),
-    ("Труха⚡️Харків", "truexakharkiv"),
-    ("UKR 2025", "ukr_2025_ru")
-]
-
-RSS_FEEDS = [
-    ("Украинская Правда", "https://www.pravda.com.ua/rus/rss/"),
-    ("УНИАН", "https://www.unian.net/detail/all_news.rss"),
-    ("ТСН", "https://tsn.ua/ru/rss/full.rss")
-]
+TG_CHANNELS = [("Труха⚡️Україна", "truexanewsua"), ("Труха⚡️Київ", "truexakyiv"), ("Труха⚡️Харків", "truexakharkiv"), ("UKR 2025", "ukr_2025_ru")]
+RSS_FEEDS = [("Украинская Правда", "https://www.pravda.com.ua/rus/rss/"), ("УНИАН", "https://www.unian.net/detail/all_news.rss"), ("ТСН", "https://tsn.ua/ru/rss/full.rss")]
 
 def get(u):
     r = urllib.request.Request(u, headers={"User-Agent": UA})
-    with urllib.request.urlopen(r, timeout=20) as x:
-        return x.read().decode("utf-8", "ignore")
+    with urllib.request.urlopen(r, timeout=20) as x: return x.read().decode("utf-8", "ignore")
 
 def clean(s):
     s = re.sub(r"<br\s*/?>", " ", s, flags=re.I)
-    s = re.sub(r"<!\[CDATA\[|\]\]>", " ", s) 
-    s = re.sub(r"<[^>]+>", " ", s)
-    return re.sub(r"\s+", " ", html.unescape(s)).strip()
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<!\[CDATA\[|\]\]>|<[^>]+>", " ", s))).strip()
 
-def process_text(search_text, display_text, source_name, url, old_events):
+def send_alert(text):
+    if not BOT_TOKEN or not CHAT_ID: return
+    try:
+        url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+        data = json.dumps({"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}).encode('utf-8')
+        req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
+        urllib.request.urlopen(req, timeout=10)
+    except Exception as e: print("Ошибка отправки в TG:", e)
+
+def process_text(search_text, display_text, source_name, url, old_events, new_alerts):
     low = search_text.lower()
     if not any(k in low for k in KEYWORDS): return
     
@@ -76,100 +79,71 @@ def process_text(search_text, display_text, source_name, url, old_events):
     eid = "osint-" + hashlib.sha1((display_text + url).encode()).hexdigest()[:16]
     
     types = []
-    if any(x in low for x in ["ата", "удар", "обстр", "влуч", "вибух", "ракет", "каб", "попад", "взрыв"]): types.append("hit")
+    if any(x in low for x in ["ата", "удар", "обстр", "влуч", "вибух", "ракет", "каб", "попад"]): types.append("hit")
     if any(x in low for x in ["улам", "оскол", "облом"]): types.append("debris")
     if any(x in low for x in ["пошкод", "руйн", "пожеж", "поврежд"]): types.append("damage")
     if any(x in low for x in ["постраж", "травм", "поран", "ранен"]): types.append("injured")
     if any(x in low for x in ["загин", "загиб", "погиб"]): types.append("dead")
     
-    preview = display_text[:250] + "..." if len(display_text) > 250 else display_text
+    # Авто-постинг (только если событие новое и есть пострадавшие)
+    if eid not in old_events and ("dead" in types or "injured" in types):
+        alert_msg = f"🚨 <b>OSINT Alert: {ru_name}</b>\n\n{display_text[:500]}...\n\n<a href='{url}'>Источник: {source_name}</a>"
+        new_alerts.append(alert_msg)
     
     old_events[eid] = {
         "id": eid, "region": ru_name, "lat": lat, "lon": lon,
         "types": list(dict.fromkeys(types or ["hit"])), 
         "status": "Зафиксировано", "confidence": "high" if "НПУ" in source_name or "RSS" in source_name else "medium",
-        "text": preview, "published": datetime.now(timezone.utc).isoformat(),
+        "text": display_text[:250] + "...", "published": datetime.now(timezone.utc).isoformat(),
         "source": source_name, "url": url
     }
 
 def main():
-    try:
-        d = json.loads(OUT.read_text(encoding="utf-8"))
-    except Exception:
-        d = {"events": []}
+    try: d = json.loads(OUT.read_text(encoding="utf-8"))
+    except: d = {"events": []}
         
     old = {e["id"]: e for e in d.get("events", [])}
+    new_alerts = []
     
-    # Очистка старых новостей: теперь храним 30 дней для работы календаря!
+    # Очистка (30 дней)
     now = datetime.now(timezone.utc)
-    filtered_old = {}
-    for eid, event in old.items():
-        try:
-            pub_time = datetime.fromisoformat(event["published"])
-            if (now - pub_time) <= timedelta(days=30):
-                filtered_old[eid] = event
-        except ValueError:
-            pass 
-    old = filtered_old
+    old = {eid: event for eid, event in old.items() if (now - datetime.fromisoformat(event["published"])) <= timedelta(days=30)}
     
-    # 1. Полиция (НПУ)
+    # Парсинг
     try:
         page = get("https://npu.gov.ua/news")
-        links = list(dict.fromkeys(re.findall(r'href=["\'](?:https://npu\.gov\.ua)?(/news/[^"\']+)["\']', page, re.I)))
-        for path in links[:20]:
-            url = urllib.parse.urljoin("https://npu.gov.ua", path)
+        for path in list(dict.fromkeys(re.findall(r'href=["\'](/news/[^"\']+)["\']', page, re.I)))[:20]:
             try:
+                url = "https://npu.gov.ua" + path
                 raw = get(url)
-                full_text = clean(raw) 
-                title_match = re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S)
-                title = clean(title_match[1]) if title_match else full_text[:100]
-                process_text(full_text, title, "Национальная полиция", url, old)
-            except Exception: continue
-    except Exception as e:
-        print("Ошибка НПУ:", e)
+                title = clean(re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S).group(1)) if re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S) else clean(raw)[:100]
+                process_text(clean(raw), title, "Национальная полиция", url, old, new_alerts)
+            except: continue
+    except Exception as e: print("Ошибка НПУ:", e)
 
-    # 2. СМИ (RSS-ленты)
     for source_name, rss_url in RSS_FEEDS:
         try:
-            xml_data = get(rss_url)
-            items = re.findall(r'<item>(.*?)</item>', xml_data, re.I | re.S)
+            items = re.findall(r'<item>(.*?)</item>', get(rss_url), re.I | re.S)
             for item in items[:20]:
-                t_match = re.search(r'<title>(.*?)</title>', item, re.I | re.S)
-                d_match = re.search(r'<description>(.*?)</description>', item, re.I | re.S)
-                l_match = re.search(r'<link>(.*?)</link>', item, re.I | re.S)
-                
-                if not t_match: continue
-                
-                title = clean(t_match[1])
-                desc = clean(d_match[1]) if d_match else ""
-                link = clean(l_match[1]) if l_match else rss_url
-                
-                full_text = title + " " + desc
-                process_text(full_text, title, source_name, link, old)
-        except Exception as e:
-            print(f"Ошибка RSS ({source_name}):", e)
+                t = re.search(r'<title>(.*?)</title>', item, re.I | re.S)
+                if not t: continue
+                title, desc = clean(t.group(1)), clean(re.search(r'<description>(.*?)</description>', item, re.I | re.S).group(1)) if re.search(r'<description>', item) else ""
+                process_text(title + " " + desc, title, source_name, clean(re.search(r'<link>(.*?)</link>', item, re.I | re.S).group(1)) if re.search(r'<link>', item) else rss_url, old, new_alerts)
+        except Exception as e: print(f"Ошибка RSS ({source_name}):", e)
 
-    # 3. Telegram-каналы
     for source_name, handle in TG_CHANNELS:
         try:
             tg_page = get(f"https://t.me/s/{handle}")
             posts = re.findall(r'<div class="tgme_widget_message_text[^>]*>(.*?)</div>', tg_page, re.S | re.I)
-            post_links = re.findall(r'<a class="tgme_widget_message_date" href="(https://t\.me/[^/]+/\d+)">', tg_page, re.I)
-            
-            for i, html_text in enumerate(posts):
-                text = clean(html_text)
-                url = post_links[i] if i < len(post_links) else f"https://t.me/{handle}"
-                process_text(text, text, source_name, url, old)
-        except Exception as e:
-            print(f"Ошибка Telegram ({handle}):", e)
+            links = re.findall(r'<a class="tgme_widget_message_date" href="(https://t\.me/[^/]+/\d+)">', tg_page, re.I)
+            for i, text in enumerate(posts): process_text(clean(text), clean(text), source_name, links[i] if i < len(links) else f"https://t.me/{handle}", old, new_alerts)
+        except Exception as e: print(f"Ошибка Telegram ({handle}):", e)
 
-    d = {
-        "updated": datetime.now(timezone.utc).isoformat(),
-        "source_policy": "Major News RSS + Telegram + NPU",
-        "events": list(old.values())
-    }
+    # Отправляем максимум 3 алерта за раз, чтобы не спамить
+    for alert in new_alerts[:3]: send_alert(alert)
+
+    d = {"updated": datetime.now(timezone.utc).isoformat(), "source_policy": "NPU + RSS + TG", "events": list(old.values())}
     OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Stored", len(d["events"]), "events (up to 30 days)")
+    print("Stored", len(d["events"]), "events")
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
