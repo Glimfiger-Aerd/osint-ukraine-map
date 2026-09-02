@@ -20,7 +20,6 @@ function stats(a) {
     return `<div class="stats"><div class="stat">🔴<b>${n(a, "hit")}</b>прилёты</div><div class="stat">🟠<b>${n(a, "debris")}</b>обломки</div><div class="stat">🔥<b>${n(a, "damage")}</b>ущерб</div><div class="stat">🩹<b>${n(a, "injured")}</b>раненые</div><div class="stat">⚫<b>${n(a, "dead")}</b>погибшие</div></div>` 
 }
 
-// Новая функция отображения: теперь она принимает массив событий и рисует прокручиваемый список
 function show(region, events) {
     let newsList = events.map(e => `
         <div style="margin-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
@@ -48,19 +47,16 @@ function render() {
     let a = E.filter(e => filter === "all" || e.types.includes(filter));
     counter.textContent = a.length;
 
-    // Группируем отфильтрованные события по регионам
     let grouped = {};
     a.forEach(e => {
         if (!grouped[e.region]) grouped[e.region] = [];
         grouped[e.region].push(e);
     });
 
-    // Отрисовываем по одному маркеру на регион
     Object.keys(grouped).forEach(region => {
         let evs = grouped[region];
         let first = evs[0]; 
         
-        // Собираем все типы событий для правильного цвета маркера
         let allTypes = [];
         evs.forEach(e => allTypes.push(...e.types));
 
@@ -80,6 +76,17 @@ async function borders() {
     try {
         let r = await fetch("https://cdn.jsdelivr.net/gh/darmat1/ukraine-geo-data@main/geodata/Ukraine.geojson", { cache: "no-store" });
         let g = await r.json();
+
+        // 🛑 ФИЛЬТР РЕГИОНОВ: Исключаем Крым, Севастополь, Донецкую и Луганскую области
+        const excluded = ["донецька", "луганська", "крим", "севастополь", "donetsk", "luhansk", "crimea"];
+        
+        g.features = g.features.filter(f => {
+            let p = f.properties || {};
+            let name = (p.name || p.NAME || p.name_1 || p.NAME_1 || "").toLowerCase();
+            // Оставляем только те регионы, в названии которых НЕТ слов из списка исключений
+            return !excluded.some(ex => name.includes(ex));
+        });
+
         L.geoJSON(g, {
             style: { color: "#64748b", weight: 1.5, fillColor: "#60a5fa", fillOpacity: .08 },
             onEachFeature: (f, l) => {
