@@ -2,10 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>OSINT Ukraine Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Версия для CSS, чтобы сбросить кэш стилей -->
+    <link rel="stylesheet" href="style.css?v=2">
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
@@ -16,10 +19,8 @@
         </div>
         <div id="date" class="update-date">Загрузка...</div>
         
-        <div id="filters" class="filters" style="display: flex; gap: 5px; flex-wrap: wrap; margin-top: 10px;">
-            <!-- Календарь для архива -->
-            <input type="date" id="calendar" style="padding: 6px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; margin-bottom: 5px;">
-            
+        <div id="filters" class="filters">
+            <input type="date" id="calendar">
             <button class="active" data-filter="all">Все</button>
             <button data-filter="hit">🔴 Прилёты</button>
             <button data-filter="debris">🟠 Обломки</button>
@@ -31,13 +32,13 @@
 
     <div id="card" class="card-container">
         <h2>Выберите событие</h2>
-        <p>Нажмите на маркер на карте, чтобы посмотреть сводку.</p>
+        <p style="color: var(--hint-color); font-size: 14px;">Нажмите на маркер на карте, чтобы посмотреть сводку.</p>
     </div>
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     
-    <!-- Версия v7 для гарантированного обхода кэша Telegram -->
-    <script src="app.js?v=7"></script>
+    <!-- Версия v8 для JS -->
+    <script src="app.js?v=8"></script>
 </body>
 </html>
