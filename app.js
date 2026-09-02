@@ -1,23 +1,44 @@
 const tg = window.Telegram && window.Telegram.WebApp;
 if (tg) { tg.ready(); tg.expand(); }
 
-const map = L.map("map", { zoomControl: false, zoomSnap: .5, minZoom: 5, maxZoom: 12, maxBounds: L.latLngBounds([[44.1, 22], [52.6, 40.3]]), maxBoundsViscosity: 1 }).setView([49, 31.2], 6);
+const map = L.map("map", { 
+    zoomControl: false, 
+    zoomSnap: .5, 
+    minZoom: 5, 
+    maxZoom: 12, 
+    maxBounds: L.latLngBounds([[44.1, 22], [52.6, 40.3]]), 
+    maxBoundsViscosity: 1 
+}).setView([49, 31.2], 6);
+
 L.control.zoom({ position: "bottomright" }).addTo(map);
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap contributors" }).addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { 
+    maxZoom: 19, 
+    attribution: "© OpenStreetMap contributors" 
+}).addTo(map);
 
 let E = [];
-const card = document.getElementById("card"), counter = document.getElementById("counter");
-let filter = "all", markers = [];
+const card = document.getElementById("card");
+const counter = document.getElementById("counter");
+let filter = "all";
+let markers = [];
 
 function ic(e) { 
-    let c = e.types.includes("dead") ? "black" : e.types.includes("injured") ? "purple" : e.types.includes("debris") ? "orange" : "red"; 
-    return L.divIcon({ className: "", html: `<div class="event-dot ${c}"></div>`, iconSize: [18, 18], iconAnchor: [9, 9] }) 
+    let c = e.types.includes("dead") ? "black" : 
+            e.types.includes("injured") ? "purple" : 
+            e.types.includes("debris") ? "orange" : "red"; 
+    return L.divIcon({ className: "", html: `<div class="event-dot ${c}"></div>`, iconSize: [18, 18], iconAnchor: [9, 9] });
 }
 
-function n(a, t) { return a.filter(e => e.types.includes(t)).length }
+function n(a, t) { return a.filter(e => e.types.includes(t)).length; }
 
 function stats(a) { 
-    return `<div class="stats"><div class="stat">🔴<b>${n(a, "hit")}</b>прилёты</div><div class="stat">🟠<b>${n(a, "debris")}</b>обломки</div><div class="stat">🔥<b>${n(a, "damage")}</b>ущерб</div><div class="stat">🩹<b>${n(a, "injured")}</b>раненые</div><div class="stat">⚫<b>${n(a, "dead")}</b>погибшие</div></div>` 
+    return `<div class="stats">
+        <div class="stat">🔴<b>${n(a, "hit")}</b>прилёты</div>
+        <div class="stat">🟠<b>${n(a, "debris")}</b>обломки</div>
+        <div class="stat">🔥<b>${n(a, "damage")}</b>ущерб</div>
+        <div class="stat">🩹<b>${n(a, "injured")}</b>раненые</div>
+        <div class="stat">⚫<b>${n(a, "dead")}</b>погибшие</div>
+    </div>`; 
 }
 
 function show(region, events) {
@@ -45,7 +66,7 @@ function render() {
     markers.forEach(m => map.removeLayer(m)); 
     markers = [];
     let a = E.filter(e => filter === "all" || e.types.includes(filter));
-    counter.textContent = a.length;
+    if (counter) counter.textContent = a.length;
 
     let grouped = {};
     a.forEach(e => {
@@ -69,7 +90,9 @@ function render() {
 
 document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => { 
     document.querySelectorAll("#filters button").forEach(x => x.classList.remove("active")); 
-    b.classList.add("active"); filter = b.dataset.filter; render() 
+    b.classList.add("active"); 
+    filter = b.dataset.filter; 
+    render(); 
 }));
 
 async function borders() {
@@ -77,20 +100,25 @@ async function borders() {
         let r = await fetch("https://cdn.jsdelivr.net/gh/darmat1/ukraine-geo-data@main/geodata/Ukraine.geojson", { cache: "no-store" });
         let g = await r.json();
 
-        // 🛑 ФИЛЬТР РЕГИОНОВ: Исключаем Крым, Севастополь, Донецкую и Луганскую области
-        const excluded = ["донецька", "луганська", "крим", "севастополь", "donetsk", "luhansk", "crimea"];
+        // 🛑 УЛЬТРА-ФИЛЬТР: Ищем корни на UA, RU и EN в любом свойстве региона
+        const excludedRoots = [
+            "донец", "донець", "donets", 
+            "луган", "luhans", "lugans", 
+            "крым", "крим", "krym", "crimea", 
+            "севастоп", "sevastop"
+        ];
         
         g.features = g.features.filter(f => {
-            let p = f.properties || {};
-            let name = (p.name || p.NAME || p.name_1 || p.NAME_1 || "").toLowerCase();
-            // Оставляем только те регионы, в названии которых НЕТ слов из списка исключений
-            return !excluded.some(ex => name.includes(ex));
+            let propsStr = JSON.stringify(f.properties || {}).toLowerCase();
+            return !excludedRoots.some(root => propsStr.includes(root));
         });
 
         L.geoJSON(g, {
             style: { color: "#64748b", weight: 1.5, fillColor: "#60a5fa", fillOpacity: .08 },
             onEachFeature: (f, l) => {
-                let p = f.properties || {}, name = p.name || p.NAME || p.name_1 || p.NAME_1;
+                let p = f.properties || {};
+                let name = p.name || p.NAME || p.name_1 || p.NAME_1 || p.shapeName || "Регион";
+                
                 if (name) {
                     l.bindTooltip(name, { sticky: true });
                     l.on("click", () => {
@@ -100,19 +128,24 @@ async function borders() {
                     });
                 }
             }
-        }).addTo(map)
-    } catch (e) { console.warn(e) }
+        }).addTo(map);
+    } catch (e) { console.warn(e); }
 }
 
-function fix() { setTimeout(() => map.invalidateSize(false), 100); setTimeout(() => map.invalidateSize(false), 800) }
+function fix() { 
+    setTimeout(() => map.invalidateSize(false), 100); 
+    setTimeout(() => map.invalidateSize(false), 800); 
+}
 
 async function loadDataAndRender() {
     try {
         const response = await fetch('events.json', { cache: "no-store" });
         const D = await response.json();
         E = D.events || [];
-        if (D.updated) {
-            document.getElementById("date").textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", { day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit" });
+        
+        let dateEl = document.getElementById("date");
+        if (D.updated && dateEl) {
+            dateEl.textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", { day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit" });
         }
         render();
     } catch (e) {
@@ -120,5 +153,8 @@ async function loadDataAndRender() {
     }
 }
 
-borders(); fix(); window.addEventListener("resize", fix); document.addEventListener("visibilitychange", () => { if (!document.hidden) fix() });
+borders(); 
+fix(); 
+window.addEventListener("resize", fix); 
+document.addEventListener("visibilitychange", () => { if (!document.hidden) fix(); });
 loadDataAndRender();
