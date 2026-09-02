@@ -1,5 +1,4 @@
 :root {
-    /* Подхватываем цвета из темы самого Telegram */
     --bg-color: var(--tg-theme-bg-color, #ffffff);
     --text-color: var(--tg-theme-text-color, #000000);
     --hint-color: var(--tg-theme-hint-color, #999999);
@@ -7,163 +6,37 @@
     --button-text: var(--tg-theme-button-text-color, #ffffff);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden; /* Запрещаем прокрутку самой страницы, прокручивается только лента новостей */
-}
+body { margin: 0; padding: 0; font-family: -apple-system, sans-serif; background-color: var(--bg-color); color: var(--text-color); display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
-/* --- ШАПКА --- */
-.header {
-    /* Добавляем безопасные отступы: 15px сверху/снизу, 20px по бокам */
-    padding: 15px 20px; 
-    background-color: var(--bg-color);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
+.header { padding: 15px 20px; background-color: var(--bg-color); box-shadow: 0 2px 10px rgba(0,0,0,0.05); z-index: 1000; }
+.title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+h1 { margin: 0; font-size: 20px; }
+.total-counter { font-size: 18px; font-weight: bold; }
+.update-date { font-size: 13px; color: var(--hint-color); margin-bottom: 12px; }
 
-.title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.filters button { padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 16px; background: transparent; color: var(--text-color); cursor: pointer; font-size: 13px; transition: all 0.2s; }
+.filters button.active { background: var(--button-bg); color: var(--button-text); border-color: var(--button-bg); }
+#calendar { background: var(--bg-color); color: var(--text-color); border: 1px solid #cbd5e1; outline: none; border-radius: 8px; padding: 5px;}
 
-h1 {
-    margin: 0;
-    font-size: 20px;
-}
+#map { flex: 1; width: 100%; z-index: 1; }
 
-.total-counter {
-    font-size: 18px;
-    font-weight: bold;
-}
+.card-container { padding: 20px 20px calc(20px + env(safe-area-inset-bottom)) 20px; background-color: var(--bg-color); box-shadow: 0 -4px 15px rgba(0,0,0,0.08); z-index: 1000; max-height: 45vh; display: flex; flex-direction: column; }
+.card-container h2 { margin: 0 0 10px 0; font-size: 20px; }
+.badge { display: inline-block; padding: 4px 10px; background: #f1f5f9; color: #475569; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; background: rgba(0, 0, 0, 0.03); padding: 12px; border-radius: 8px; }
+.stat { font-size: 12px; display: flex; align-items: center; gap: 4px; }
 
-.update-date {
-    font-size: 13px;
-    color: var(--hint-color);
-    margin-bottom: 12px;
-}
+.event-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.5); }
+.event-dot.red { background-color: #ef4444; } .event-dot.orange { background-color: #f97316; } .event-dot.purple { background-color: #a855f7; } .event-dot.black { background-color: #1e293b; }
 
-/* --- ФИЛЬТРЫ --- */
-.filters {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
+/* Окно аналитики */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center; }
+.modal-content { background: var(--bg-color); padding: 20px; border-radius: 16px; width: 90%; max-width: 400px; text-align: center; position: relative; }
+.modal-close { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; color: var(--hint-color); }
 
-.filters button {
-    padding: 6px 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 16px;
-    background: transparent;
-    color: var(--text-color);
-    cursor: pointer;
-    font-size: 13px;
-    outline: none;
-    transition: all 0.2s;
-}
-
-.filters button.active {
-    background: var(--button-bg);
-    color: var(--button-text);
-    border-color: var(--button-bg);
-}
-
-#calendar {
-    background: var(--bg-color);
-    color: var(--text-color);
-    border: 1px solid #cbd5e1;
-    outline: none;
-}
-
-/* --- КАРТА --- */
-#map {
-    flex: 1; /* Занимает всё оставшееся пространство */
-    width: 100%;
-    z-index: 1;
-}
-
-/* --- НИЖНЯЯ КАРТОЧКА --- */
-.card-container {
-    /* 20px по всем сторонам, а снизу учитываем "челку" и полоску iPhone (safe-area) */
-    padding: 20px 20px calc(20px + env(safe-area-inset-bottom)) 20px;
-    background-color: var(--bg-color);
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
-    z-index: 1000;
-    max-height: 45vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-container h2 {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-}
-
-.badge {
-    display: inline-block;
-    padding: 4px 10px;
-    background: #f1f5f9;
-    color: #475569;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-/* Стилизация статистики */
-.stats {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-    background: rgba(0, 0, 0, 0.03);
-    padding: 12px;
-    border-radius: 8px;
-}
-
-.stat {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    white-space: nowrap;
-}
-
-/* Точки на карте */
-.event-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 4px rgba(0,0,0,0.5);
-}
-
-.event-dot.red { background-color: #ef4444; }
-    .event-dot.orange { background-color: #f97316; }
-    .event-dot.purple { background-color: #a855f7; }
-    .event-dot.black { background-color: #1e293b; }
-
-/* --- ТЕМНАЯ ТЕМА --- */
 @media (prefers-color-scheme: dark) {
-    .badge {
-        background: #334155;
-        color: #e2e8f0;
-    }
-    .stats {
-        background: rgba(255, 255, 255, 0.05);
-    }
-    .filters button {
-        border-color: #475569;
-    }
-    #calendar {
-        border-color: #475569;
-        color-scheme: dark; /* Делает сам календарь темным */
-    }
+    .badge { background: #334155; color: #e2e8f0; }
+    .stats { background: rgba(255, 255, 255, 0.05); }
+    .filters button, #calendar { border-color: #475569; color-scheme: dark; }
 }
