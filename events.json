@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T18:56:46.586789+00:00",
+  "updated": "2026-09-02T19:07:22.175644+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -5082,10 +5082,12 @@
       "types": [
         "hit"
       ],
+      "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "РФ атаковала поезд с пассажирами в Одесской области: первые подробности (обновлено)...",
-      "published": "2026-09-02T18:56:42.504036+00:00",
+      "image": "https://img.tsn.ua/cached/007/tsn-7d69491ed57b2e0aebe0922b41d97a86/thumbs/608xX/29/03/866d52920aeb00e1e863cf9f19010329.jpeg",
+      "published": "2026-09-02T19:07:19.038887+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rf-atakovala-poezd-s-passazhirami-v-odesskoy-oblasti-pervye-podrobnosti-video-3161006.html"
     },
@@ -5113,10 +5115,14 @@
         "hit",
         "debris"
       ],
+      "weapons": [
+        "drone"
+      ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "В Винницкой области сообщают о падении обломков БПЛА: двое человек пострадали...",
-      "published": "2026-09-02T18:56:41.691242+00:00",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/6/905201/46ccd330aa5c4bf118623efc91794f57.jpeg",
+      "published": "2026-09-02T19:07:18.368721+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051601/"
     },
@@ -5203,10 +5209,12 @@
       "types": [
         "hit"
       ],
+      "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Сколько будут продолжаться непрерывные атаки России по Киеву: Мусиенко назвал сценарий...",
-      "published": "2026-09-02T18:56:42.503893+00:00",
+      "image": "https://img.tsn.ua/cached/403/tsn-51cb131e/thumbs/608xX/f1/4b/f298836fc731ad5537ebab4880b74bf1.jpg",
+      "published": "2026-09-02T19:07:19.038605+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/skolko-budut-prodolzhatsya-nepreryvnye-ataki-rossii-po-kievu-musienko-nazval-stsenariy-3161045.html"
     },
@@ -5472,13 +5480,15 @@
       "lat": 50.25,
       "lon": 28.66,
       "types": [
-        "hit",
-        "damage"
+        "damage",
+        "hit"
       ],
+      "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали Житомирскую область: повреждены объекты инфраструктуры...",
-      "published": "2026-09-02T18:56:41.690868+00:00",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/0/905208/b0c6a912dd763811781c38428724c7c8.jpeg",
+      "published": "2026-09-02T19:07:18.368148+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051607/"
     },
@@ -5490,10 +5500,14 @@
       "types": [
         "hit"
       ],
+      "weapons": [
+        "bomb"
+      ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Комендантский час в Киеве станет короче: когда могут ввести новые правила...",
-      "published": "2026-09-02T18:56:42.503750+00:00",
+      "image": "https://img.tsn.ua/cached/481/tsn-0b4bc102/thumbs/608xX/7d/08/ecdbc109621cddddb935eab67c67087d.jpg",
+      "published": "2026-09-02T19:07:19.038348+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/komendantskiy-chas-v-kieve-stanet-koroche-kogda-mogut-vvesti-novye-pravila-3161066.html"
     },
@@ -5505,10 +5519,12 @@
       "types": [
         "hit"
       ],
+      "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Российский удар по Киеву: число пострадавших возросло (фото, видео)...",
-      "published": "2026-09-02T18:56:42.503795+00:00",
+      "image": "https://img.tsn.ua/cached/672/tsn-51cb131e/thumbs/608xX/2d/45/1112b08f40e04f3b64c0536eb82f452d.jpg",
+      "published": "2026-09-02T19:07:19.038426+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rossiyskiy-udar-po-kievu-chislo-postradavshih-vozroslo-foto-video-3161060.html"
     },
@@ -5788,15 +5804,19 @@
       "lat": 49.23,
       "lon": 28.47,
       "types": [
-        "hit",
-        "debris",
         "damage",
-        "injured"
+        "injured",
+        "hit",
+        "debris"
+      ],
+      "weapons": [
+        "drone"
       ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали Винницкую область: повреждены дома, есть раненые...",
-      "published": "2026-09-02T18:56:42.503653+00:00",
+      "image": "https://img.tsn.ua/cached/451/tsn-51cb131e/thumbs/608xX/f4/6f/e0d52173c725f30ac135ce1238d76ff4.jpg",
+      "published": "2026-09-02T19:07:19.038162+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-vinnitskuyu-oblast-povrezhdeny-doma-est-ranenye-3161072.html"
     },
@@ -6376,13 +6396,15 @@
       "lat": 50.25,
       "lon": 28.66,
       "types": [
-        "hit",
-        "damage"
+        "damage",
+        "hit"
       ],
+      "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "РФ атаковала Житомирщину безпилотниками: появились первые последствия удара...",
-      "published": "2026-09-02T18:56:42.503379+00:00",
+      "image": "https://img.tsn.ua/cached/594/tsn-0b4bc102/thumbs/608xX/51/40/4b6351029942983ad9ee2e3a27304051.jpg",
+      "published": "2026-09-02T19:07:19.037652+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rf-atakovala-zhitomirschinu-bezpiotchikami-poyavilis-pervye-posledstviya-udara-3161093.html"
     },
