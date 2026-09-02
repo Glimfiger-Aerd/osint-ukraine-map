@@ -21,6 +21,7 @@ const card = document.getElementById("card");
 const counter = document.getElementById("counter");
 let filter = "all";
 let markers = [];
+let heatLayer = null; 
 
 function ic(e) { 
     let c = e.types.includes("dead") ? "black" : 
@@ -42,6 +43,8 @@ function stats(a) {
 }
 
 function show(region, events) {
+    if (tg && tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+
     let newsList = events.map(e => `
         <div style="margin-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
             <p style="margin: 0 0 8px 0; font-size: 14px;">${e.text}</p>
@@ -65,14 +68,34 @@ function show(region, events) {
 function render() {
     markers.forEach(m => map.removeLayer(m)); 
     markers = [];
+    
+    if (heatLayer) {
+        map.removeLayer(heatLayer);
+    }
+
     let a = E.filter(e => filter === "all" || e.types.includes(filter));
     if (counter) counter.textContent = a.length;
 
     let grouped = {};
+    let heatPoints = []; 
+
     a.forEach(e => {
         if (!grouped[e.region]) grouped[e.region] = [];
         grouped[e.region].push(e);
+
+        let jLat = e.lat + (Math.random() - 0.5) * 0.6;
+        let jLon = e.lon + (Math.random() - 0.5) * 0.6;
+        heatPoints.push([jLat, jLon, 0.6]); 
     });
+
+    if (heatPoints.length > 0) {
+        heatLayer = L.heatLayer(heatPoints, {
+            radius: 45, 
+            blur: 35, 
+            maxZoom: 8, 
+            gradient: { 0.2: 'blue', 0.4: 'cyan', 0.6: 'lime', 0.8: 'yellow', 1.0: 'red' } 
+        }).addTo(map);
+    }
 
     Object.keys(grouped).forEach(region => {
         let evs = grouped[region];
@@ -89,6 +112,8 @@ function render() {
 }
 
 document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => { 
+    if (tg && tg.HapticFeedback) tg.HapticFeedback.selectionChanged();
+
     document.querySelectorAll("#filters button").forEach(x => x.classList.remove("active")); 
     b.classList.add("active"); 
     filter = b.dataset.filter; 
@@ -100,7 +125,6 @@ async function borders() {
         let r = await fetch("https://cdn.jsdelivr.net/gh/darmat1/ukraine-geo-data@main/geodata/Ukraine.geojson", { cache: "no-store" });
         let g = await r.json();
 
-        // 🛑 УЛЬТРА-ФИЛЬТР: Ищем корни на UA, RU и EN в любом свойстве региона
         const excludedRoots = [
             "донец", "донець", "donets", 
             "луган", "luhans", "lugans", 
