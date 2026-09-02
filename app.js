@@ -1,44 +1,117 @@
-const tg=window.Telegram&&window.Telegram.WebApp;if(tg){tg.ready();tg.expand()}
-const map=L.map("map",{zoomControl:false,zoomSnap:.5,minZoom:5,maxZoom:12,maxBounds:L.latLngBounds([[44.1,22],[52.6,40.3]]),maxBoundsViscosity:1}).setView([49,31.2],6);
-L.control.zoom({position:"bottomright"}).addTo(map);L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"© OpenStreetMap contributors"}).addTo(map);
+const tg = window.Telegram && window.Telegram.WebApp;
+if (tg) { tg.ready(); tg.expand(); }
+
+const map = L.map("map", { zoomControl: false, zoomSnap: .5, minZoom: 5, maxZoom: 12, maxBounds: L.latLngBounds([[44.1, 22], [52.6, 40.3]]), maxBoundsViscosity: 1 }).setView([49, 31.2], 6);
+L.control.zoom({ position: "bottomright" }).addTo(map);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap contributors" }).addTo(map);
+
 let E = [];
+const card = document.getElementById("card"), counter = document.getElementById("counter");
+let filter = "all", markers = [];
+
+function ic(e) { 
+    let c = e.types.includes("dead") ? "black" : e.types.includes("injured") ? "purple" : e.types.includes("debris") ? "orange" : "red"; 
+    return L.divIcon({ className: "", html: `<div class="event-dot ${c}"></div>`, iconSize: [18, 18], iconAnchor: [9, 9] }) 
+}
+
+function n(a, t) { return a.filter(e => e.types.includes(t)).length }
+
+function stats(a) { 
+    return `<div class="stats"><div class="stat">🔴<b>${n(a, "hit")}</b>прилёты</div><div class="stat">🟠<b>${n(a, "debris")}</b>обломки</div><div class="stat">🔥<b>${n(a, "damage")}</b>ущерб</div><div class="stat">🩹<b>${n(a, "injured")}</b>раненые</div><div class="stat">⚫<b>${n(a, "dead")}</b>погибшие</div></div>` 
+}
+
+// Новая функция отображения: теперь она принимает массив событий и рисует прокручиваемый список
+function show(region, events) {
+    let newsList = events.map(e => `
+        <div style="margin-top: 10px; padding-bottom: 10px; border-bottom: 1px solid #e2e8f0;">
+            <p style="margin: 0 0 8px 0; font-size: 14px;">${e.text}</p>
+            <div class="source" style="font-size: 12px; color: #64748b;">
+                <b>Источник:</b> <a href="${e.url}" target="_blank" rel="noopener" style="color: #3b82f6;">${e.source}</a><br>
+                <small>${new Date(e.published).toLocaleString("ru-RU")}</small>
+            </div>
+        </div>
+    `).join("");
+
+    card.innerHTML = `
+        <h2>${region}</h2>
+        <span class="badge">Событий за сутки: ${events.length}</span>
+        ${stats(events)}
+        <div style="max-height: 250px; overflow-y: auto; margin-top: 15px; padding-right: 5px;">
+            ${newsList}
+        </div>
+    `;
+}
+
+function render() {
+    markers.forEach(m => map.removeLayer(m)); 
+    markers = [];
+    let a = E.filter(e => filter === "all" || e.types.includes(filter));
+    counter.textContent = a.length;
+
+    // Группируем отфильтрованные события по регионам
+    let grouped = {};
+    a.forEach(e => {
+        if (!grouped[e.region]) grouped[e.region] = [];
+        grouped[e.region].push(e);
+    });
+
+    // Отрисовываем по одному маркеру на регион
+    Object.keys(grouped).forEach(region => {
+        let evs = grouped[region];
+        let first = evs[0]; 
+        
+        // Собираем все типы событий для правильного цвета маркера
+        let allTypes = [];
+        evs.forEach(e => allTypes.push(...e.types));
+
+        let m = L.marker([first.lat, first.lon], { icon: ic({ types: allTypes }) }).addTo(map);
+        m.bindPopup(`<b>${region}</b><br><small>Новостей: ${evs.length}</small>`);
+        m.on("click", () => show(region, evs));
+        markers.push(m);
+    });
+}
+
+document.querySelectorAll("#filters button").forEach(b => b.addEventListener("click", () => { 
+    document.querySelectorAll("#filters button").forEach(x => x.classList.remove("active")); 
+    b.classList.add("active"); filter = b.dataset.filter; render() 
+}));
+
+async function borders() {
+    try {
+        let r = await fetch("https://cdn.jsdelivr.net/gh/darmat1/ukraine-geo-data@main/geodata/Ukraine.geojson", { cache: "no-store" });
+        let g = await r.json();
+        L.geoJSON(g, {
+            style: { color: "#64748b", weight: 1.5, fillColor: "#60a5fa", fillOpacity: .08 },
+            onEachFeature: (f, l) => {
+                let p = f.properties || {}, name = p.name || p.NAME || p.name_1 || p.NAME_1;
+                if (name) {
+                    l.bindTooltip(name, { sticky: true });
+                    l.on("click", () => {
+                        let a = E.filter(e => e.region === name);
+                        if (a.length > 0) show(name, a);
+                        else card.innerHTML = `<h2>${name}</h2><span class="badge">Событий: 0</span>${stats([])}<p>В текущем наборе данных событий нет.</p>`;
+                    });
+                }
+            }
+        }).addTo(map)
+    } catch (e) { console.warn(e) }
+}
+
+function fix() { setTimeout(() => map.invalidateSize(false), 100); setTimeout(() => map.invalidateSize(false), 800) }
+
 async function loadDataAndRender() {
     try {
-        const response = await fetch('events.json', {cache: "no-store"});
+        const response = await fetch('events.json', { cache: "no-store" });
         const D = await response.json();
         E = D.events || [];
         if (D.updated) {
-            document.getElementById("date").textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", {day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit"});
+            document.getElementById("date").textContent = "Обновлено: " + new Date(D.updated).toLocaleString("ru-RU", { day: "2-digit", month: "long", hour: "2-digit", minute: "2-digit" });
         }
-         function render(){
-    markers.forEach(m=>map.removeLayer(m));
-    markers=[];
-    let a=E.filter(e=>filter==="all"||e.types.includes(filter));
-    counter.textContent=a.length;
-    
-    a.forEach(e=>{
-        // Добавляем случайный разброс (примерно +- 2.5 км), чтобы точки не слипались в одну
-        let jitterLat = e.lat + (Math.random() - 0.5) * 0.05;
-        let jitterLon = e.lon + (Math.random() - 0.5) * 0.05;
-        
-        let m=L.marker([jitterLat, jitterLon],{icon:ic(e)}).addTo(map);
-        m.bindPopup(`<b>${e.region}</b><br><small>${e.status}</small>`);
-        m.on("click",()=>show(e));
-        markers.push(m);
-    })
-}
-
+        render();
     } catch (e) {
         console.warn("Данные пока не загружены", e);
     }
 }
-loadDataAndRender();
 
-const card=document.getElementById("card"),counter=document.getElementById("counter");let filter="all",markers=[];
-function ic(e){let c=e.types.includes("dead")?"black":e.types.includes("injured")?"purple":e.types.includes("debris")?"orange":"red";return L.divIcon({className:"",html:`<div class="event-dot ${c}"></div>`,iconSize:[18,18],iconAnchor:[9,9]})}
-function n(a,t){return a.filter(e=>e.types.includes(t)).length}function stats(a){return `<div class="stats"><div class="stat">🔴<b>${n(a,"hit")}</b>прилёты</div><div class="stat">🟠<b>${n(a,"debris")}</b>обломки</div><div class="stat">🔥<b>${n(a,"damage")}</b>ущерб</div><div class="stat">🩹<b>${n(a,"injured")}</b>раненые</div><div class="stat">⚫<b>${n(a,"dead")}</b>погибшие</div></div>`}
-function show(e){card.innerHTML=`<h2>${e.region}</h2><span class="badge">${e.status}</span><span class="badge">🟢 высокий уровень доверия</span><p>${e.text}</p>${stats([e])}<div class="source"><b>Источник:</b> <a href="${e.url}" target="_blank" rel="noopener">${e.source}</a><br><small>${new Date(e.published).toLocaleString("ru-RU")}</small></div>`}
-function render(){markers.forEach(m=>map.removeLayer(m));markers=[];let a=E.filter(e=>filter==="all"||e.types.includes(filter));counter.textContent=a.length;a.forEach(e=>{let m=L.marker([e.lat,e.lon],{icon:ic(e)}).addTo(map);m.bindPopup(`<b>${e.region}</b><br><small>${e.status}</small>`);m.on("click",()=>show(e));markers.push(m)})}
-document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("#filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()}));
-async function borders(){try{let r=await fetch("https://cdn.jsdelivr.net/gh/darmat1/ukraine-geo-data@main/geodata/Ukraine.geojson",{cache:"no-store"});let g=await r.json();L.geoJSON(g,{style:{color:"#64748b",weight:1.5,fillColor:"#60a5fa",fillOpacity:.08},onEachFeature:(f,l)=>{let p=f.properties||{},name=p.name||p.NAME||p.name_1||p.NAME_1;if(name){l.bindTooltip(name,{sticky:true});l.on("click",()=>{let a=E.filter(e=>e.region===name);card.innerHTML=`<h2>${name}</h2><span class="badge">Событий: ${a.length}</span>${stats(a)}<p>${a.length?"Смотрите события по маркерам на карте.":"В текущем наборе данных событий нет."}</p>`})}}}).addTo(map)}catch(e){console.warn(e)}}
-function fix(){setTimeout(()=>map.invalidateSize(false),100);setTimeout(()=>map.invalidateSize(false),800)};borders();fix();window.addEventListener("resize",fix);document.addEventListener("visibilitychange",()=>{if(!document.hidden)fix()});
+borders(); fix(); window.addEventListener("resize", fix); document.addEventListener("visibilitychange", () => { if (!document.hidden) fix() });
+loadDataAndRender();
