@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip
           
-      - name: Collect official NPU publications
+      - name: Collect OSINT data
         run: python3 scripts/collect_npu.py
         
       - name: Commit updated events
