@@ -5,11 +5,9 @@ from pathlib import Path
 OUT = Path("events.json")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
-# Токены для бота-информатора (берутся из GitHub Secrets)
 BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
 CHAT_ID = os.environ.get("TG_CHAT_ID")
 
-# Сначала точные города, затем области (чтобы скрипт сначала искал город)
 REGIONS = [
     (["кривий ріг", "кривой рог"], "Кривой Рог", 47.91, 33.39),
     (["біла церква", "белая церковь"], "Белая Церковь", 49.79, 30.11),
@@ -61,20 +59,15 @@ def send_alert(text):
         data = json.dumps({"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}).encode('utf-8')
         req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
         urllib.request.urlopen(req, timeout=10)
-    except Exception as e: print("Ошибка отправки в TG:", e)
+    except: pass
 
-def process_text(search_text, display_text, source_name, url, old_events, new_alerts):
+def process_text(search_text, display_text, source_name, url, img_url, old_events, new_alerts):
     low = search_text.lower()
     if not any(k in low for k in KEYWORDS): return
     
-    reg = None
-    for roots, ru_name, lat, lon in REGIONS:
-        if any(root in low for root in roots):
-            reg = (ru_name, lat, lon)
-            break
-            
+    reg = next((r for roots, r, _, _ in REGIONS if any(rt in low for rt in roots)), None)
     if not reg: return 
-    ru_name, lat, lon = reg
+    ru_name, lat, lon = next((r, lat, lon) for roots, r, lat, lon in REGIONS if r == reg)
     
     eid = "osint-" + hashlib.sha1((display_text + url).encode()).hexdigest()[:16]
     
@@ -85,31 +78,29 @@ def process_text(search_text, display_text, source_name, url, old_events, new_al
     if any(x in low for x in ["постраж", "травм", "поран", "ранен"]): types.append("injured")
     if any(x in low for x in ["загин", "загиб", "погиб"]): types.append("dead")
     
-    # Авто-постинг (только если событие новое и есть пострадавшие)
+    weapons = []
+    if any(x in low for x in ["шахед", "бпла", "беспилот", "мопед", "дрон"]): weapons.append("drone")
+    if any(x in low for x in ["ракет", "искандер", "кинжал", "баллист", "калибр"]): weapons.append("missile")
+    if any(x in low for x in ["каб", "фаб", "авиабомб"]): weapons.append("bomb")
+    if any(x in low for x in ["артил", "рсзв", "град", "мином"]): weapons.append("artillery")
+    
     if eid not in old_events and ("dead" in types or "injured" in types):
-        alert_msg = f"🚨 <b>OSINT Alert: {ru_name}</b>\n\n{display_text[:500]}...\n\n<a href='{url}'>Источник: {source_name}</a>"
-        new_alerts.append(alert_msg)
+        new_alerts.append(f"🚨 <b>OSINT: {ru_name}</b>\n\n{display_text[:500]}...\n\n<a href='{url}'>Источник</a>")
     
     old_events[eid] = {
         "id": eid, "region": ru_name, "lat": lat, "lon": lon,
-        "types": list(dict.fromkeys(types or ["hit"])), 
+        "types": list(set(types or ["hit"])), "weapons": list(set(weapons)),
         "status": "Зафиксировано", "confidence": "high" if "НПУ" in source_name or "RSS" in source_name else "medium",
-        "text": display_text[:250] + "...", "published": datetime.now(timezone.utc).isoformat(),
-        "source": source_name, "url": url
+        "text": display_text[:250] + "...", "image": img_url,
+        "published": datetime.now(timezone.utc).isoformat(), "source": source_name, "url": url
     }
 
 def main():
     try: d = json.loads(OUT.read_text(encoding="utf-8"))
     except: d = {"events": []}
-        
-    old = {e["id"]: e for e in d.get("events", [])}
+    old = {e["id"]: e for e in d.get("events", []) if (datetime.now(timezone.utc) - datetime.fromisoformat(e["published"])) <= timedelta(days=30)}
     new_alerts = []
     
-    # Очистка (30 дней)
-    now = datetime.now(timezone.utc)
-    old = {eid: event for eid, event in old.items() if (now - datetime.fromisoformat(event["published"])) <= timedelta(days=30)}
-    
-    # Парсинг
     try:
         page = get("https://npu.gov.ua/news")
         for path in list(dict.fromkeys(re.findall(r'href=["\'](/news/[^"\']+)["\']', page, re.I)))[:20]:
@@ -117,33 +108,39 @@ def main():
                 url = "https://npu.gov.ua" + path
                 raw = get(url)
                 title = clean(re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S).group(1)) if re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S) else clean(raw)[:100]
-                process_text(clean(raw), title, "Национальная полиция", url, old, new_alerts)
+                img = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', raw, re.I)
+                img_url = urllib.parse.urljoin("https://npu.gov.ua", img.group(1)) if img else ""
+                process_text(clean(raw), title, "Национальная полиция", url, img_url, old, new_alerts)
             except: continue
-    except Exception as e: print("Ошибка НПУ:", e)
+    except: pass
 
-    for source_name, rss_url in RSS_FEEDS:
+    for name, rss_url in RSS_FEEDS:
         try:
-            items = re.findall(r'<item>(.*?)</item>', get(rss_url), re.I | re.S)
-            for item in items[:20]:
+            for item in re.findall(r'<item>(.*?)</item>', get(rss_url), re.I | re.S)[:20]:
                 t = re.search(r'<title>(.*?)</title>', item, re.I | re.S)
                 if not t: continue
-                title, desc = clean(t.group(1)), clean(re.search(r'<description>(.*?)</description>', item, re.I | re.S).group(1)) if re.search(r'<description>', item) else ""
-                process_text(title + " " + desc, title, source_name, clean(re.search(r'<link>(.*?)</link>', item, re.I | re.S).group(1)) if re.search(r'<link>', item) else rss_url, old, new_alerts)
-        except Exception as e: print(f"Ошибка RSS ({source_name}):", e)
+                title = clean(t.group(1))
+                desc = clean(re.search(r'<description>(.*?)</description>', item, re.I | re.S).group(1)) if re.search(r'<description>', item) else ""
+                img = re.search(r'url=["\']([^"\']+)["\']', item, re.I)
+                img_url = img.group(1) if img else ""
+                process_text(title + " " + desc, title, name, clean(re.search(r'<link>(.*?)</link>', item, re.I | re.S).group(1)), img_url, old, new_alerts)
+        except: pass
 
-    for source_name, handle in TG_CHANNELS:
+    for name, handle in TG_CHANNELS:
         try:
             tg_page = get(f"https://t.me/s/{handle}")
-            posts = re.findall(r'<div class="tgme_widget_message_text[^>]*>(.*?)</div>', tg_page, re.S | re.I)
-            links = re.findall(r'<a class="tgme_widget_message_date" href="(https://t\.me/[^/]+/\d+)">', tg_page, re.I)
-            for i, text in enumerate(posts): process_text(clean(text), clean(text), source_name, links[i] if i < len(links) else f"https://t.me/{handle}", old, new_alerts)
-        except Exception as e: print(f"Ошибка Telegram ({handle}):", e)
+            blocks = re.findall(r'<div class="tgme_widget_message "[^>]*>(.*?)<div class="tgme_widget_message_info">', tg_page, re.S | re.I)
+            for block in blocks:
+                text_m = re.search(r'<div class="tgme_widget_message_text[^>]*>(.*?)</div>', block, re.S | re.I)
+                if not text_m: continue
+                text = clean(text_m.group(1))
+                link_m = re.search(r'<a class="tgme_widget_message_date" href="(https://t\.me/[^/]+/\d+)">', block, re.I)
+                img_m = re.search(r"background-image:url\('([^']+)'\)", block)
+                process_text(text, text, name, link_m.group(1) if link_m else f"https://t.me/{handle}", img_m.group(1) if img_m else "", old, new_alerts)
+        except: pass
 
-    # Отправляем максимум 3 алерта за раз, чтобы не спамить
     for alert in new_alerts[:3]: send_alert(alert)
 
-    d = {"updated": datetime.now(timezone.utc).isoformat(), "source_policy": "NPU + RSS + TG", "events": list(old.values())}
-    OUT.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
-    print("Stored", len(d["events"]), "events")
+    OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).isoformat(), "source_policy": "NPU + RSS + TG", "events": list(old.values())}, ensure_ascii=False, indent=2), encoding="utf-8")
 
 if __name__ == "__main__": main()
