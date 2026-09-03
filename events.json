@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T23:26:51.412297+00:00",
+  "updated": "2026-09-03T23:41:33.061038+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7264,8 +7264,8 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "dead",
-        "hit"
+        "hit",
+        "dead"
       ],
       "weapons": [
         "drone"
@@ -7274,7 +7274,7 @@
       "confidence": "medium",
       "text": "Россия вновь атаковала Киев: дрон попал в многоэтажку, три человека пострадали...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/7/905997/376afc1dc7a118066de7d572c8faa0c1.jpeg",
-      "published": "2026-09-03T23:26:48.305859+00:00",
+      "published": "2026-09-03T23:41:29.690854+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051800/"
     },
@@ -7387,7 +7387,7 @@
       "confidence": "medium",
       "text": "Правительство рекомендует Киеву сократить продолжительность комендантского часа...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/0/906038/706ad29e04c2351fd7b828d65ba5b387.jpeg",
-      "published": "2026-09-03T23:26:48.305655+00:00",
+      "published": "2026-09-03T23:41:29.690734+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051821/"
     },
@@ -7406,7 +7406,7 @@
       "confidence": "medium",
       "text": "Дрон РФ нанес удар по Coca-Cola: что известно о последствиях атаки на завод под Киевом...",
       "image": "https://img.tsn.ua/cached/235/tsn-1284f5ef/thumbs/608xX/de/93/c8180e5ac8482fb7fede4a65057893de.jpg",
-      "published": "2026-09-03T23:26:48.625512+00:00",
+      "published": "2026-09-03T23:41:30.126889+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/dron-rf-nanes-udar-po-coca-cola-chto-izvestno-o-posledstviyah-ataki-na-zavod-pod-kievom-3161873.html"
     },
@@ -7425,7 +7425,7 @@
       "confidence": "medium",
       "text": "Кличко: В течение дня в Киеве от российских ударов пострадали 13 человек...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/8/906051/a8fff98e2a82111d6e41fe2885f7f30e.jpeg",
-      "published": "2026-09-03T23:26:48.305458+00:00",
+      "published": "2026-09-03T23:41:29.690550+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051825/"
     },
@@ -7435,16 +7435,16 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "debris",
         "hit",
-        "damage"
+        "damage",
+        "debris"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Сыграла на уцелевшем 130-летнем рояле в разбитой гостиной — как семья из Киевщины пережила атаку...",
       "image": "https://img.tsn.ua/cached/425/tsn-51cb131e/thumbs/608xX/e5/17/f7c9e638a288af68d35067aa2c8217e5.jpg",
-      "published": "2026-09-03T23:26:48.625243+00:00",
+      "published": "2026-09-03T23:41:30.126636+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/sygrala-na-utselevshem-130-letnem-royale-v-razbitoy-gostinoy-kak-semya-iz-kievschiny-perezhila-ataku-3161882.html"
     },
@@ -7461,9 +7461,28 @@
       "confidence": "medium",
       "text": "В Запорожье после российского удара загорелась многоэтажка...",
       "image": "https://img.tsn.ua/cached/974/tsn-51cb131e/thumbs/608xX/86/41/32dcf7acdbffc0aff23528e2e0bc4186.jpg",
-      "published": "2026-09-03T23:26:48.624243+00:00",
+      "published": "2026-09-03T23:41:30.125601+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/v-zaporozhe-posle-rossiyskogo-udara-zagorelas-mnogoetazhka-3161900.html"
+    },
+    {
+      "id": "osint-7a9db96580d56adc",
+      "region": "Кропивницкий",
+      "lat": 48.51,
+      "lon": 32.26,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Российский дрон попал в многоэтажный дом в Кропивницком, есть пострадавший...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/6/906059/9643bfcde7c68049f57ab2f531279897.jpeg",
+      "published": "2026-09-03T23:41:29.690237+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051820/"
     }
   ]
 }
