@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T16:42:54.092620+00:00",
+  "updated": "2026-09-03T16:56:26.812512+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -6986,7 +6986,7 @@
       "confidence": "medium",
       "text": "В России стреляли в генерала, причастного к удару по \"Охматдету\" в Киеве – росСМИ...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/9/905678/a9c29688ff966d504bc583bf5ccba46b.jpeg",
-      "published": "2026-09-03T16:42:50.188366+00:00",
+      "published": "2026-09-03T16:56:22.847289+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051746/"
     },
@@ -6996,15 +6996,15 @@
       "lat": 49.99,
       "lon": 36.23,
       "types": [
-        "dead",
-        "injured"
+        "injured",
+        "dead"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Один погиб, один ранен: мужчине дали 14 лет тюрьмы за подрыв гранаты во время ссоры...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/e/905680/de9371de217dc6766b7ad49b18ce39ce.jpeg",
-      "published": "2026-09-03T16:42:50.188032+00:00",
+      "published": "2026-09-03T16:56:22.846771+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051756/"
     },
@@ -7040,7 +7040,7 @@
       "confidence": "medium",
       "text": "Генштаб: ВСУ поразили в Запорожской области российскую РЛС \"Каста\" стоимостью от 60 миллионов долларов...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905690/f6bef4bf41d55772ac51d3f410c5a4bc.jpeg",
-      "published": "2026-09-03T16:42:50.187871+00:00",
+      "published": "2026-09-03T16:56:22.846551+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051761/"
     },
@@ -7151,8 +7151,8 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
-        "debris"
+        "debris",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -7161,7 +7161,7 @@
       "confidence": "medium",
       "text": "В Киеве из-за дроновой атаки пострадали 6 человек, в том числе 12-летний ребенок...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/b/905885/7bda84ec8f7457ed46aa37906735d150.jpeg",
-      "published": "2026-09-03T16:42:50.187606+00:00",
+      "published": "2026-09-03T16:56:22.846180+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051774/"
     },
@@ -7198,9 +7198,45 @@
       "confidence": "medium",
       "text": "Россия ударила по двум локациям в Киеве: что известно о последствиях (фото)...",
       "image": "https://img.tsn.ua/cached/077/tsn-51cb131e/thumbs/608xX/05/81/35339df5f5e28fa937ea8f1c77de8105.jpg",
-      "published": "2026-09-03T16:42:51.341822+00:00",
+      "published": "2026-09-03T16:56:24.017570+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rossiya-udarila-po-dvum-lokatsiyam-v-kieve-chto-izvestno-o-posledstviyah-foto-3161777.html"
+    },
+    {
+      "id": "osint-5b28e0e2d2ce19d2",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия вновь атаковала Киев: в жилом доме возник пожар...",
+      "image": "",
+      "published": "2026-09-03T16:56:22.845116+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051800/"
+    },
+    {
+      "id": "osint-f3316970a92675c7",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Дрон РФ попал в девятиэтажку в Киеве: пожар охватил шесть этажей — подробности...",
+      "image": "https://img.tsn.ua/cached/519/tsn-51cb131e/thumbs/608xX/ff/ad/c2f9a8302e86860cbd0d2f8e4953adff.jpg",
+      "published": "2026-09-03T16:56:24.016934+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/dron-rf-popal-v-devyatietazhku-v-kieve-pozhar-ohvatil-shest-etazhey-podrobnosti-3161798.html"
     }
   ]
 }
