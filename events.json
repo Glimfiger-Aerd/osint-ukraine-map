@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T23:54:54.251841+00:00",
+  "updated": "2026-09-03T00:25:18.169424+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -5488,7 +5488,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали Житомирскую область: повреждены объекты инфраструктуры...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/0/905208/b0c6a912dd763811781c38428724c7c8.jpeg",
-      "published": "2026-09-02T23:54:51.232412+00:00",
+      "published": "2026-09-03T00:25:14.711578+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051607/"
     },
@@ -6508,8 +6508,8 @@
       "lat": 49.42,
       "lon": 27.0,
       "types": [
-        "hit",
-        "debris"
+        "debris",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -6518,7 +6518,7 @@
       "confidence": "medium",
       "text": "В Хмельницкой области обломки российского БПЛА упали на склад: пострадал водитель...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/9/905263/999af00988f60429beec9e85f8d9a14d.jpeg",
-      "published": "2026-09-02T23:54:51.231753+00:00",
+      "published": "2026-09-03T00:25:14.711021+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051622/"
     },
@@ -6537,7 +6537,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали Хмельницкий: после удара вспыхнул масштабный пожар (обновлено)...",
       "image": "https://img.tsn.ua/cached/765/tsn-135859377404ec64163c97d964721c31/thumbs/608xX/70/b0/05067bcaed39ffa4eda0a13ec7b9b070.jpeg",
-      "published": "2026-09-02T23:54:51.657975+00:00",
+      "published": "2026-09-03T00:25:15.323780+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-hmelnitskiy-posle-udara-vspyhnul-masshtabnyy-pozhar-3161129.html"
     },
@@ -6557,7 +6557,7 @@
       "confidence": "medium",
       "text": "Россияне начали бить КАБами по Одессе: эксперт объяснил, как это стало возможным...",
       "image": "https://img.tsn.ua/cached/835/tsn-51cb131e/thumbs/608xX/3b/a3/7669e2ccb0a5465ecbbd287d640aa33b.jpg",
-      "published": "2026-09-02T23:54:51.657583+00:00",
+      "published": "2026-09-03T00:25:15.323442+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-nachali-bit-kabami-po-odesse-ekspert-obyasnil-kak-eto-stalo-vozmozhnym-3161147.html"
     },
@@ -6576,7 +6576,7 @@
       "confidence": "medium",
       "text": "В Киеве раздался взрыв на фоне атаки дронов: в столице и ряде областей объявлена тревога...",
       "image": "https://img.tsn.ua/cached/684/tsn-0b4bc102/thumbs/608xX/73/53/1a391ec8a8f664d949840ad1bf725373.jpg",
-      "published": "2026-09-02T23:54:51.656886+00:00",
+      "published": "2026-09-03T00:25:15.322866+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/v-kieve-razdalsya-vzryv-na-fone-ataki-dronov-v-stolitse-i-ryade-oblastey-obyavlena-trevoga-3161162.html"
     },
@@ -6595,6 +6595,24 @@
       "text": "В Одессе в результате российской атаки повреждено многоэтажное здание – МВА...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/4/905269/f4e362e54dae82895b365c77d43a6cbe.jpeg",
       "published": "2026-09-02T23:54:51.231462+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051628/"
+    },
+    {
+      "id": "osint-05ea9ca9d3803148",
+      "region": "Одесса",
+      "lat": 46.48,
+      "lon": 30.72,
+      "types": [
+        "hit",
+        "damage"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Одессе в результате российского удара повреждено многоэтажное здание: 8 пострадавших...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/4/905269/f4e362e54dae82895b365c77d43a6cbe.jpeg",
+      "published": "2026-09-03T00:25:14.710743+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051628/"
     }
