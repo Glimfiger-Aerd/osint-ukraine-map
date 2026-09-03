@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T02:19:09.756146+00:00",
+  "updated": "2026-09-03T05:20:01.724000+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -6518,7 +6518,7 @@
       "confidence": "medium",
       "text": "В Хмельницкой области обломки российского БПЛА упали на склад: пострадал водитель...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/9/905263/999af00988f60429beec9e85f8d9a14d.jpeg",
-      "published": "2026-09-03T02:19:05.156204+00:00",
+      "published": "2026-09-03T05:19:58.667260+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/02/8051622/"
     },
@@ -6673,6 +6673,61 @@
       "published": "2026-09-03T02:19:06.037306+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiya-atakovala-odessu-povrezhdena-mnogoetazhka-vosem-postradavshih-3161171.html"
+    },
+    {
+      "id": "osint-6353528d8c544705",
+      "region": "Одесса",
+      "lat": 46.48,
+      "lon": 30.72,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Одессе в результате российского удара повреждено многоэтажное здание: 17 пострадавших...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/6/905329/561ebfdfddef42fb5aa496f0aa85f246.jpeg",
+      "published": "2026-09-03T05:19:58.666144+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051628/"
+    },
+    {
+      "id": "osint-8fe74765f07e3a6b",
+      "region": "Львов",
+      "lat": 49.84,
+      "lon": 24.03,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Женщину из Львова лишили пенсии и заставили вернуть государству 116 тысяч гривен: в чём причина...",
+      "image": "https://img.tsn.ua/cached/789/tsn-1284f5ef/thumbs/608xX/fd/76/96c6ca79044734995c77e1c7fbed76fd.jpg",
+      "published": "2026-09-03T05:19:59.007459+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/exclusive/zhenschinu-iz-lvova-lishili-pensii-i-zastavili-vernut-gosudarstvu-116-tysyach-griven-v-chyom-prichina-3160883.html"
+    },
+    {
+      "id": "osint-347f6248b6fe08e8",
+      "region": "Запорожье",
+      "lat": 47.84,
+      "lon": 35.14,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали Запорожье беспилотником: вспыхнул пожар...",
+      "image": "https://img.tsn.ua/cached/118/tsn-71c6e1c5a35efa308f11e0ccf1aae45e/thumbs/608xX/3e/be/2614f9ae30054d430bfe35973b17be3e.jpeg",
+      "published": "2026-09-03T05:19:59.007871+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-zaporozhe-bespilotnikom-vspyhnul-pozhar-3161192.html"
     }
   ]
 }
