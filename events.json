@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T17:56:30.433399+00:00",
+  "updated": "2026-09-03T18:20:21.542940+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7004,7 +7004,7 @@
       "confidence": "medium",
       "text": "Один погиб, один ранен: мужчине дали 14 лет тюрьмы за подрыв гранаты во время ссоры...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/e/905680/de9371de217dc6766b7ad49b18ce39ce.jpeg",
-      "published": "2026-09-03T17:56:27.042364+00:00",
+      "published": "2026-09-03T18:20:17.665380+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051756/"
     },
@@ -7040,7 +7040,7 @@
       "confidence": "medium",
       "text": "Генштаб: ВСУ поразили в Запорожской области российскую РЛС \"Каста\" стоимостью от 60 миллионов долларов...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905690/f6bef4bf41d55772ac51d3f410c5a4bc.jpeg",
-      "published": "2026-09-03T17:56:27.042208+00:00",
+      "published": "2026-09-03T18:20:17.665222+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051761/"
     },
@@ -7151,8 +7151,8 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
-        "debris"
+        "debris",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -7161,7 +7161,7 @@
       "confidence": "medium",
       "text": "В Киеве из-за дроновой атаки пострадали 6 человек, в том числе 12-летний ребенок...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/b/905885/7bda84ec8f7457ed46aa37906735d150.jpeg",
-      "published": "2026-09-03T17:56:27.041973+00:00",
+      "published": "2026-09-03T18:20:17.664983+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051774/"
     },
@@ -7190,15 +7190,15 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россия ударила по двум локациям в Киеве: что известно о последствиях (фото)...",
       "image": "https://img.tsn.ua/cached/077/tsn-51cb131e/thumbs/608xX/05/81/35339df5f5e28fa937ea8f1c77de8105.jpg",
-      "published": "2026-09-03T17:56:27.619822+00:00",
+      "published": "2026-09-03T18:20:18.814775+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rossiya-udarila-po-dvum-lokatsiyam-v-kieve-chto-izvestno-o-posledstviyah-foto-3161777.html"
     },
@@ -7257,6 +7257,62 @@
       "published": "2026-09-03T17:56:27.041332+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051800/"
+    },
+    {
+      "id": "osint-1c31cb904483f8b9",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "dead",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия вновь атаковала Киев: дрон попал в многоэтажку, три человека пострадали...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/7/905997/376afc1dc7a118066de7d572c8faa0c1.jpeg",
+      "published": "2026-09-03T18:20:17.663896+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051800/"
+    },
+    {
+      "id": "osint-3137f47eca9f64ec",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Дрон РФ попал в девятиэтажку в Киеве: пожар охватил шесть этажей — подробности (обновлено)...",
+      "image": "https://img.tsn.ua/cached/544/tsn-51cb131e/thumbs/608xX/6f/7a/e4fb9e39f70375c61f5c3558ea117a6f.jpg",
+      "published": "2026-09-03T18:20:18.813324+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/dron-rf-popal-v-devyatietazhku-v-kieve-pozhar-ohvatil-shest-etazhey-podrobnosti-3161798.html"
+    },
+    {
+      "id": "osint-313cc98df76687a7",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "\"Кока-кола\" стала врагом РФ: Зеленский рассказал об ударе по американскому заводу в Киевской области...",
+      "image": "https://img.tsn.ua/cached/675/tsn-51cb131e/thumbs/608xX/36/36/8162d19bbb1a3c87d9f5d38d91953636.png",
+      "published": "2026-09-03T18:20:18.813595+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/koka-kola-stala-vragom-rf-zelenskiy-rasskazal-ob-udare-po-amerikanskomu-zavodu-v-kievskoy-oblasti-3161831.html"
     }
   ]
 }
