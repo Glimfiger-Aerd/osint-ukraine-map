@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T18:45:24.695240+00:00",
+  "updated": "2026-09-03T19:12:41.027089+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7040,7 +7040,7 @@
       "confidence": "medium",
       "text": "Генштаб: ВСУ поразили в Запорожской области российскую РЛС \"Каста\" стоимостью от 60 миллионов долларов...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905690/f6bef4bf41d55772ac51d3f410c5a4bc.jpeg",
-      "published": "2026-09-03T18:45:19.655655+00:00",
+      "published": "2026-09-03T19:12:37.394019+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051761/"
     },
@@ -7161,7 +7161,7 @@
       "confidence": "medium",
       "text": "В Киеве из-за дроновой атаки пострадали 6 человек, в том числе 12-летний ребенок...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/b/905885/7bda84ec8f7457ed46aa37906735d150.jpeg",
-      "published": "2026-09-03T18:45:19.655422+00:00",
+      "published": "2026-09-03T19:12:37.393769+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051774/"
     },
@@ -7274,7 +7274,7 @@
       "confidence": "medium",
       "text": "Россия вновь атаковала Киев: дрон попал в многоэтажку, три человека пострадали...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/7/905997/376afc1dc7a118066de7d572c8faa0c1.jpeg",
-      "published": "2026-09-03T18:45:19.654367+00:00",
+      "published": "2026-09-03T19:12:37.392705+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051800/"
     },
@@ -7310,7 +7310,7 @@
       "confidence": "medium",
       "text": "\"Кока-кола\" стала врагом РФ: Зеленский рассказал об ударе по американскому заводу в Киевской области...",
       "image": "https://img.tsn.ua/cached/675/tsn-51cb131e/thumbs/608xX/36/36/8162d19bbb1a3c87d9f5d38d91953636.png",
-      "published": "2026-09-03T18:45:20.357060+00:00",
+      "published": "2026-09-03T19:12:38.052006+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/koka-kola-stala-vragom-rf-zelenskiy-rasskazal-ob-udare-po-amerikanskomu-zavodu-v-kievskoy-oblasti-3161831.html"
     },
@@ -7329,9 +7329,48 @@
       "confidence": "medium",
       "text": "Российский дрон попал в девятиэтажку в Киеве: пожар охватил шесть этажей — подробности (обновлено)...",
       "image": "https://img.tsn.ua/cached/544/tsn-51cb131e/thumbs/608xX/6f/7a/e4fb9e39f70375c61f5c3558ea117a6f.jpg",
-      "published": "2026-09-03T18:45:20.356796+00:00",
+      "published": "2026-09-03T19:12:38.051755+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/dron-rf-popal-v-devyatietazhku-v-kieve-pozhar-ohvatil-shest-etazhey-podrobnosti-3161798.html"
+    },
+    {
+      "id": "osint-7bd0254fd4b33349",
+      "region": "Кропивницкий",
+      "lat": 48.51,
+      "lon": 32.26,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Российский дрон попал в многоэтажный дом в Кропивницком, есть пострадавший...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/1/906036/214f05e12d0b7fb8afdf10bf963e1fac.jpeg",
+      "published": "2026-09-03T19:12:37.392558+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051820/"
+    },
+    {
+      "id": "osint-57d818ea1d18f344",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit",
+        "debris"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Киеве после атаки России упали обломки дрона: есть пострадавшие...",
+      "image": "https://img.tsn.ua/cached/246/tsn-51cb131e/thumbs/608xX/e2/ed/c6e93015964f03b852410a42a009ede2.jpg",
+      "published": "2026-09-03T19:12:38.051551+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/v-kieve-posle-ataki-rossii-upali-oblomki-drona-est-postradavshie-3161840.html"
     }
   ]
 }
