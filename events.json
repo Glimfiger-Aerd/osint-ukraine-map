@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T12:47:19.291529+00:00",
+  "updated": "2026-09-03T13:16:03.443457+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -6943,15 +6943,15 @@
       "lat": 48.46,
       "lon": 35.05,
       "types": [
-        "injured",
-        "hit"
+        "hit",
+        "injured"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Атака россиян на Днепр: 8 раненых, один – в тяжелом состоянии...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905612/f6804417a8b7cb36b1175ad611623a13.jpeg",
-      "published": "2026-09-03T12:47:16.232760+00:00",
+      "published": "2026-09-03T13:15:58.877433+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051734/"
     },
@@ -6968,7 +6968,7 @@
       "confidence": "medium",
       "text": "Дважды мобилизованный сбегал в СЗЧ и совершил ужасающую месть: его строго наказали...",
       "image": "https://img.tsn.ua/cached/960/tsn-0b4bc102/thumbs/608xX/ea/6e/d093f40912801f201333c836deae6eea.jpeg",
-      "published": "2026-09-03T12:47:16.602097+00:00",
+      "published": "2026-09-03T13:15:59.713788+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/dvazhdy-mobilizovannyy-sbegal-v-szch-i-sovershil-uzhasayuschuyu-mest-ego-strogo-nakazali-3161546.html"
     },
@@ -6978,17 +6978,52 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "injured",
-        "hit"
+        "hit",
+        "injured"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "В России стреляли в генерала, причастного к удару по \"Охматдету\" в Киеве – росСМИ...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/a/905650/1a08c8eff8f1a1d79c60a20dcfcf15a4.jpeg",
-      "published": "2026-09-03T12:47:16.232269+00:00",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/9/905678/a9c29688ff966d504bc583bf5ccba46b.jpeg",
+      "published": "2026-09-03T13:15:58.877044+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051746/"
+    },
+    {
+      "id": "osint-cacf89d39a6d990d",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "dead",
+        "injured"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Один погиб, один ранен: мужчине дали 14 лет тюрьмы за подрыв гранаты во время ссоры...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/e/905680/de9371de217dc6766b7ad49b18ce39ce.jpeg",
+      "published": "2026-09-03T13:15:58.876736+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051756/"
+    },
+    {
+      "id": "osint-ab26d0d5078e0a03",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Светлана Тарабарова покинула дом после обстрела: дочь артистки пошла в 1-й класс в новом городе...",
+      "image": "https://img.tsn.ua/cached/564/tsn-fc8d4bb0191801bebf97b41f256288af/thumbs/608xX/3d/68/2db3c0b0025ce6802bec0829122f683d.jpeg",
+      "published": "2026-09-03T13:15:59.713183+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/glamur/svetlana-tarabarova-pokinula-dom-posle-obstrela-doch-artistki-poshla-v-1-y-klass-v-novom-gorode-3161594.html"
     }
   ]
 }
