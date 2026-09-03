@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T07:56:51.066143+00:00",
+  "updated": "2026-09-03T08:19:25.466331+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -5216,7 +5216,7 @@
       "confidence": "medium",
       "text": "Сколько будут продолжаться непрерывные атаки России по Киеву: Мусиенко назвал сценарий...",
       "image": "https://img.tsn.ua/cached/403/tsn-51cb131e/thumbs/608xX/f1/4b/f298836fc731ad5537ebab4880b74bf1.jpg",
-      "published": "2026-09-03T07:56:47.311167+00:00",
+      "published": "2026-09-03T08:19:22.733502+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/skolko-budut-prodolzhatsya-nepreryvnye-ataki-rossii-po-kievu-musienko-nazval-stsenariy-3161045.html"
     },
@@ -6690,7 +6690,7 @@
       "confidence": "medium",
       "text": "В Одессе в результате российского удара повреждено многоэтажное здание: 17 пострадавших...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/6/905329/561ebfdfddef42fb5aa496f0aa85f246.jpeg",
-      "published": "2026-09-03T07:56:46.639018+00:00",
+      "published": "2026-09-03T08:19:22.236403+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051628/"
     },
@@ -6765,6 +6765,46 @@
       "published": "2026-09-03T07:42:38.259299+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/politika/putin-terroriziruet-kiev-i-ugrozhaet-novymi-udarami-ukraina-gotovit-otvet-est-li-shansy-na-mirnye-peregovory-na-fone-eskalatsii-3161075.html"
+    },
+    {
+      "id": "osint-3be87ca7927893a3",
+      "region": "Одесса",
+      "lat": 46.48,
+      "lon": 30.72,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Зеленский: РФ не планирует снижать темпы эскалации, только за эту ночь в 13 областях есть разрушения...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/3/905397/338ff3c9591012e9db96628d62c8fa58.jpeg",
+      "published": "2026-09-03T08:19:22.235792+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051689/"
+    },
+    {
+      "id": "osint-4aa9d1e5e1591d76",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "injured",
+        "hit",
+        "dead"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия подвергла массированной атаке лицей и склады в одном из городов Украины: вспыхнули пожары, есть погибшие (фото, видео)...",
+      "image": "https://img.tsn.ua/cached/236/tsn-51cb131e/thumbs/608xX/c1/38/bef21263f5dda9efcc4b42c1fdd638c1.jpg",
+      "published": "2026-09-03T08:19:22.732418+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/exclusive/rossiya-podvergla-massirovannoy-atake-litsey-i-sklady-v-odnom-iz-gorodov-ukrainy-vspyhnuli-pozhary-est-pogibshie-foto-video-3161372.html"
     }
   ]
 }
