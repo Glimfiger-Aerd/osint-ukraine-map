@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T14:42:17.951647+00:00",
+  "updated": "2026-09-03T14:57:09.927420+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -6951,7 +6951,7 @@
       "confidence": "medium",
       "text": "Атака россиян на Днепр: 8 раненых, один – в тяжелом состоянии...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905612/f6804417a8b7cb36b1175ad611623a13.jpeg",
-      "published": "2026-09-03T14:42:14.811779+00:00",
+      "published": "2026-09-03T14:57:05.447847+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051734/"
     },
@@ -6986,7 +6986,7 @@
       "confidence": "medium",
       "text": "В России стреляли в генерала, причастного к удару по \"Охматдету\" в Киеве – росСМИ...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/9/905678/a9c29688ff966d504bc583bf5ccba46b.jpeg",
-      "published": "2026-09-03T14:42:14.811330+00:00",
+      "published": "2026-09-03T14:57:05.447346+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051746/"
     },
@@ -7004,7 +7004,7 @@
       "confidence": "medium",
       "text": "Один погиб, один ранен: мужчине дали 14 лет тюрьмы за подрыв гранаты во время ссоры...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/e/905680/de9371de217dc6766b7ad49b18ce39ce.jpeg",
-      "published": "2026-09-03T14:42:14.810998+00:00",
+      "published": "2026-09-03T14:57:05.446969+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051756/"
     },
@@ -7040,7 +7040,7 @@
       "confidence": "medium",
       "text": "Генштаб: ВСУ поразили в Запорожской области российскую РЛС \"Каста\" стоимостью от 60 миллионов долларов...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905690/f6bef4bf41d55772ac51d3f410c5a4bc.jpeg",
-      "published": "2026-09-03T14:42:14.810817+00:00",
+      "published": "2026-09-03T14:57:05.446783+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051761/"
     },
@@ -7071,9 +7071,9 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "damage",
         "debris",
-        "hit"
+        "hit",
+        "damage"
       ],
       "weapons": [
         "drone"
@@ -7082,7 +7082,7 @@
       "confidence": "medium",
       "text": "РФ просто сейчас атакует Киев: раздаются взрывы, обломки дрона попали в авто с людьми — жуткие последствия...",
       "image": "https://img.tsn.ua/cached/960/tsn-51cb131e/thumbs/608xX/35/07/ea07cf047413344cf522591bc2ac0735.jpg",
-      "published": "2026-09-03T14:42:15.235234+00:00",
+      "published": "2026-09-03T14:57:06.157036+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rf-prosto-seychas-atakuet-kiev-razdayutsya-vzryvy-oblomki-drona-popali-v-avto-s-lyudmi-zhutkie-posledstviya-3161669.html"
     },
@@ -7101,7 +7101,7 @@
       "confidence": "medium",
       "text": "Сколько поляков поддерживают передачу ракет к Patriot Украине: цифры разочаровывают...",
       "image": "https://img.tsn.ua/cached/300/tsn-51cb131e/thumbs/608xX/79/25/1a9b0949d51e013000aeb46d2d082579.jpg",
-      "published": "2026-09-03T14:42:15.235367+00:00",
+      "published": "2026-09-03T14:57:06.157152+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/svit/skolko-polyakov-podderzhivayut-peredachu-raket-k-patriot-ukraine-tsifry-razocharovyvayut-3161687.html"
     },
@@ -7122,6 +7122,26 @@
       "text": "В Киеве из-за дроновой атаки пострадали 4 человека, в том числе 12-летний ребенок...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/8/905783/785058979ccc7200fcbf2c548db9f508.jpeg",
       "published": "2026-09-03T14:42:14.810548+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051774/"
+    },
+    {
+      "id": "osint-3d8ae959d301792d",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "debris",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Киеве из-за дроновой атаки пострадали 6 людей, в том числе 12-летний ребенок...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/8/905783/785058979ccc7200fcbf2c548db9f508.jpeg",
+      "published": "2026-09-03T14:57:05.446480+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051774/"
     }
