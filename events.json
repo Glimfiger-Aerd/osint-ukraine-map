@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T12:21:05.734826+00:00",
+  "updated": "2026-09-03T12:47:19.291529+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -6933,7 +6933,7 @@
       "confidence": "medium",
       "text": "Россия посреди дня атакует Киев: раздаются взрывы — что известно...",
       "image": "https://img.tsn.ua/cached/299/tsn-1284f5ef/thumbs/608xX/91/6c/d2fe1b1f411e4acfd89a977283006c91.jpg",
-      "published": "2026-09-03T12:21:02.282045+00:00",
+      "published": "2026-09-03T12:47:16.602969+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rossiya-posredi-dnya-atakuet-kiev-razdayutsya-vzryvy-chto-izvestno-3161495.html"
     },
@@ -6943,15 +6943,15 @@
       "lat": 48.46,
       "lon": 35.05,
       "types": [
-        "hit",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Атака россиян на Днепр: 8 раненых, один – в тяжелом состоянии...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/6/905612/f6804417a8b7cb36b1175ad611623a13.jpeg",
-      "published": "2026-09-03T12:21:01.612016+00:00",
+      "published": "2026-09-03T12:47:16.232760+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051734/"
     },
@@ -6968,9 +6968,27 @@
       "confidence": "medium",
       "text": "Дважды мобилизованный сбегал в СЗЧ и совершил ужасающую месть: его строго наказали...",
       "image": "https://img.tsn.ua/cached/960/tsn-0b4bc102/thumbs/608xX/ea/6e/d093f40912801f201333c836deae6eea.jpeg",
-      "published": "2026-09-03T12:21:02.281456+00:00",
+      "published": "2026-09-03T12:47:16.602097+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/dvazhdy-mobilizovannyy-sbegal-v-szch-i-sovershil-uzhasayuschuyu-mest-ego-strogo-nakazali-3161546.html"
+    },
+    {
+      "id": "osint-8403f53b75dcd296",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "injured",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В России стреляли в генерала, причастного к удару по \"Охматдету\" в Киеве – росСМИ...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/a/905650/1a08c8eff8f1a1d79c60a20dcfcf15a4.jpeg",
+      "published": "2026-09-03T12:47:16.232269+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051746/"
     }
   ]
 }
