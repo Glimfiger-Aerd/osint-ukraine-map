@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T05:53:47.234427+00:00",
+  "updated": "2026-09-04T06:19:14.270358+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7425,7 +7425,7 @@
       "confidence": "medium",
       "text": "Кличко: В течение дня в Киеве от российских ударов пострадали 13 человек...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/8/906051/a8fff98e2a82111d6e41fe2885f7f30e.jpeg",
-      "published": "2026-09-04T05:53:43.026193+00:00",
+      "published": "2026-09-04T06:19:11.032756+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/03/8051825/"
     },
@@ -7480,7 +7480,7 @@
       "confidence": "medium",
       "text": "Российский дрон попал в многоэтажный дом в Кропивницком, есть пострадавший...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/6/906059/9643bfcde7c68049f57ab2f531279897.jpeg",
-      "published": "2026-09-04T05:53:43.025829+00:00",
+      "published": "2026-09-04T06:19:11.032384+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051820/"
     },
@@ -7516,7 +7516,7 @@
       "confidence": "medium",
       "text": "В Запорожье после удара российского дрона загорелось многоэтажное здание...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/7/906058/57d562b0a987c253495d8d77f7638fa4.jpeg",
-      "published": "2026-09-04T05:53:43.025915+00:00",
+      "published": "2026-09-04T06:19:11.032470+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051828/"
     },
@@ -7553,7 +7553,7 @@
       "confidence": "medium",
       "text": "Словно перед татарским нападением взволнованный. Как Россия в 1914 году впервые оккупировала Львов...",
       "image": "",
-      "published": "2026-09-04T05:53:43.024665+00:00",
+      "published": "2026-09-04T06:19:11.031152+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051819/"
     },
@@ -7604,18 +7604,40 @@
       "lat": 46.48,
       "lon": 30.72,
       "types": [
+        "hit",
         "dead",
-        "damage",
-        "hit"
+        "damage"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Оккупанты утром ударили по Одесской области: 1 погибший, 5 пострадавших...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/6/6/906112/66c456eb178543e11e72bc3a4a2789e0.jpeg",
-      "published": "2026-09-04T05:53:43.024988+00:00",
+      "published": "2026-09-04T06:19:11.031505+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051839/"
+    },
+    {
+      "id": "osint-1737e654909c4fbc",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "hit",
+        "dead",
+        "injured"
+      ],
+      "weapons": [
+        "drone",
+        "artillery"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Документировали последствия атаки: россияне в повторным ударом убили двух полицейских на Днепропетровщине...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/b/906095/1b4e1f6fdf047a152ae6ae4fafd47a72.jpeg",
+      "published": "2026-09-04T06:19:11.031404+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051841/"
     }
   ]
 }
