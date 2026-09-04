@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T13:15:18.048240+00:00",
+  "updated": "2026-09-04T13:43:14.768770+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7784,7 +7784,7 @@
       "confidence": "medium",
       "text": "Зеленский назначил временного председателя Запорожской ОВА...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/5/906421/9596e04826808cdeab1ead93b63db9dc.jpeg",
-      "published": "2026-09-04T13:15:13.448548+00:00",
+      "published": "2026-09-04T13:43:10.534124+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051901/"
     },
@@ -7822,7 +7822,7 @@
       "confidence": "medium",
       "text": "Генштаб: Силы обороны ударили по топливному складу, месту запуска ударных БпЛА и командным пунктам россиян...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/f/906423/bf60e76957bfa0dc2cb90b751a29bd11.jpeg",
-      "published": "2026-09-04T13:15:13.448795+00:00",
+      "published": "2026-09-04T13:43:10.534373+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051900/"
     },
@@ -7843,7 +7843,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали маршрутку в Херсоне и мирных жителей в области: один погибший, 17 раненых...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/6/f/906390/6f8a3e796b348ee0e70f59941ac5cac4.jpeg",
-      "published": "2026-09-04T13:15:13.449308+00:00",
+      "published": "2026-09-04T13:43:10.534841+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051884/"
     },
@@ -7882,9 +7882,49 @@
       "confidence": "medium",
       "text": "Российский дрон нанес удар по зданию СБУ в центре Киева: на месте пожар...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/c/d/906560/cdf50aaa6debeaabdb982993efe917d7.jpeg",
-      "published": "2026-09-04T13:15:13.448301+00:00",
+      "published": "2026-09-04T13:43:10.533904+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051913/"
+    },
+    {
+      "id": "osint-b85839ae05eaecd8",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone",
+        "bomb"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Удар по зданию СБУ в Киеве: дрон попал в кабинет и.о. главы Службы Поклада...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/2/906597/12b6555d57e21452c937d73b19164d9a.jpeg",
+      "published": "2026-09-04T13:43:10.533721+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051918/"
+    },
+    {
+      "id": "osint-0bb390d9ca4a72a9",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "debris",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия атаковала центр Киева: дрон попал в здание СБУ напротив Софийского собора...",
+      "image": "https://img.tsn.ua/cached/624/tsn-51cb131e/thumbs/608xX/df/e9/c9342eff185be152e330c1fb7c23e9df.jpg",
+      "published": "2026-09-04T13:43:11.158557+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/rossiya-atakovala-tsentr-kieva-dron-popal-v-zdanie-sbu-naprotiv-sofiyskogo-sobora-3162257.html"
     }
   ]
 }
