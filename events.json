@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T08:17:22.559822+00:00",
+  "updated": "2026-09-04T08:44:17.417572+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7553,7 +7553,7 @@
       "confidence": "medium",
       "text": "Словно перед татарским нападением взволнованный. Как Россия в 1914 году впервые оккупировала Львов...",
       "image": "",
-      "published": "2026-09-04T08:17:17.769102+00:00",
+      "published": "2026-09-04T08:44:13.485743+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051819/"
     },
@@ -7613,7 +7613,7 @@
       "confidence": "medium",
       "text": "Оккупанты утром ударили по Одесской области: 1 погибший, 5 пострадавших...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/6/6/906112/66c456eb178543e11e72bc3a4a2789e0.jpeg",
-      "published": "2026-09-04T08:17:17.769415+00:00",
+      "published": "2026-09-04T08:44:13.485949+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051839/"
     },
@@ -7652,7 +7652,7 @@
       "confidence": "medium",
       "text": "За прошедшие сутки на фронте произошло 240 боевых столкновений, из них 38 – на Покровском направлении...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/9/906131/2956915f49b8e6146feece3b498bae11.jpeg",
-      "published": "2026-09-04T08:17:17.768739+00:00",
+      "published": "2026-09-04T08:44:13.485539+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051848/"
     },
@@ -7663,20 +7663,39 @@
       "lon": 35.05,
       "types": [
         "hit",
-        "injured",
-        "dead"
+        "dead",
+        "injured"
       ],
       "weapons": [
-        "artillery",
-        "drone"
+        "drone",
+        "artillery"
       ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Документировали последствия атаки: россияне повторным ударом убили двух полицейских на Днепропетровщине...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/b/906095/1b4e1f6fdf047a152ae6ae4fafd47a72.jpeg",
-      "published": "2026-09-04T08:17:17.769317+00:00",
+      "published": "2026-09-04T08:44:13.485887+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051841/"
+    },
+    {
+      "id": "osint-d96410a48636c46b",
+      "region": "Запорожье",
+      "lat": 47.84,
+      "lon": 35.14,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "bomb"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Бывший глава Запорожской ОВА Иван Федоров возглавил Агентство восстановления...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/d/906273/9dd4ea054c2e891098cdaed194ddc116.jpeg",
+      "published": "2026-09-04T08:44:13.485045+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051867/"
     }
   ]
 }
