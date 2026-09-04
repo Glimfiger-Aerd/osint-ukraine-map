@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T06:19:14.270358+00:00",
+  "updated": "2026-09-04T06:46:45.412190+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -7480,7 +7480,7 @@
       "confidence": "medium",
       "text": "Российский дрон попал в многоэтажный дом в Кропивницком, есть пострадавший...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/6/906059/9643bfcde7c68049f57ab2f531279897.jpeg",
-      "published": "2026-09-04T06:19:11.032384+00:00",
+      "published": "2026-09-04T06:46:41.904334+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051820/"
     },
@@ -7516,7 +7516,7 @@
       "confidence": "medium",
       "text": "В Запорожье после удара российского дрона загорелось многоэтажное здание...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/7/906058/57d562b0a987c253495d8d77f7638fa4.jpeg",
-      "published": "2026-09-04T06:19:11.032470+00:00",
+      "published": "2026-09-04T06:46:41.904438+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051828/"
     },
@@ -7553,7 +7553,7 @@
       "confidence": "medium",
       "text": "Словно перед татарским нападением взволнованный. Как Россия в 1914 году впервые оккупировала Львов...",
       "image": "",
-      "published": "2026-09-04T06:19:11.031152+00:00",
+      "published": "2026-09-04T06:46:41.902250+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051819/"
     },
@@ -7604,16 +7604,16 @@
       "lat": 46.48,
       "lon": 30.72,
       "types": [
-        "hit",
         "dead",
-        "damage"
+        "damage",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Оккупанты утром ударили по Одесской области: 1 погибший, 5 пострадавших...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/6/6/906112/66c456eb178543e11e72bc3a4a2789e0.jpeg",
-      "published": "2026-09-04T06:19:11.031505+00:00",
+      "published": "2026-09-04T06:46:41.902844+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051839/"
     },
@@ -7623,9 +7623,9 @@
       "lat": 48.46,
       "lon": 35.05,
       "types": [
-        "hit",
         "dead",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [
         "drone",
@@ -7635,9 +7635,26 @@
       "confidence": "medium",
       "text": "Документировали последствия атаки: россияне в повторным ударом убили двух полицейских на Днепропетровщине...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/b/906095/1b4e1f6fdf047a152ae6ae4fafd47a72.jpeg",
-      "published": "2026-09-04T06:19:11.031404+00:00",
+      "published": "2026-09-04T06:46:41.902647+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051841/"
+    },
+    {
+      "id": "osint-d1e7946e3e56e41e",
+      "region": "Покровск",
+      "lat": 48.28,
+      "lon": 37.17,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "За прошедшие сутки на фронте произошло 240 боевых столкновений, из них 38 – на Покровском направлении...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/9/906131/2956915f49b8e6146feece3b498bae11.jpeg",
+      "published": "2026-09-04T06:46:41.901582+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/04/8051848/"
     }
   ]
 }
