@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T17:27:00.582047+00:00",
+  "updated": "2026-09-05T17:40:48.501662+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -8959,7 +8959,7 @@
       "confidence": "medium",
       "text": "Путин приказал не атаковать Киев в течение трёх суток — Кремль...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/5/907250/054bed8126d8e2dcb78d9bbd0060f5f8.jpeg",
-      "published": "2026-09-05T17:26:57.125237+00:00",
+      "published": "2026-09-05T17:40:43.882980+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052048/"
     },
@@ -8986,9 +8986,9 @@
       "lat": 46.64,
       "lon": 32.62,
       "types": [
-        "hit",
         "damage",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -8997,7 +8997,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали \"Шахедами\" пассажирский поезд до Херсона, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/4/907294/946f6610398c8012f42477987575c590.jpeg",
-      "published": "2026-09-05T17:26:57.125009+00:00",
+      "published": "2026-09-05T17:40:43.882744+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052059/"
     },
@@ -9066,9 +9066,9 @@
       "lat": 49.42,
       "lon": 27.0,
       "types": [
-        "hit",
         "damage",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -9077,7 +9077,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали Хмельницкий район: повреждены предприятия и дом, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/4/907410/74fe50c68fdf801b5e7b6f1a4ad2ea08.jpeg",
-      "published": "2026-09-05T17:26:57.124779+00:00",
+      "published": "2026-09-05T17:40:43.882517+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052062/"
     },
@@ -9087,8 +9087,8 @@
       "lat": 47.84,
       "lon": 35.14,
       "types": [
-        "hit",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -9097,7 +9097,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали жилой район Запорожья, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/1/907357/b11c603fcc2f11efbad6816a79e9ce9f.jpeg",
-      "published": "2026-09-05T17:26:57.124355+00:00",
+      "published": "2026-09-05T17:40:43.882096+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052071/"
     },
@@ -9114,7 +9114,7 @@
       "confidence": "medium",
       "text": "В Миле под Киевом спасатели достали из ловушки собачку, за судьбу которой волновалось все село: фото...",
       "image": "https://img.tsn.ua/cached/398/tsn-51cb131e/thumbs/608xX/2f/34/32a2d60cd69c114f708316538740342f.png",
-      "published": "2026-09-05T17:26:57.726342+00:00",
+      "published": "2026-09-05T17:40:44.543263+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/v-mile-pod-kievom-spasateli-dostali-iz-lovushki-sobachku-za-sudbu-kotoroy-volnovalos-vse-selo-foto-3162773.html"
     },
@@ -9143,16 +9143,16 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
         "damage",
-        "dead"
+        "dead",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали Киевскую область: есть погибшие, повреждены 28 объектов...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/a/907418/7ae89be4a0772a2a29a6e13659767c62.jpeg",
-      "published": "2026-09-05T17:26:57.124549+00:00",
+      "published": "2026-09-05T17:40:43.882288+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052073/"
     },
@@ -9162,18 +9162,37 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
         "damage",
-        "dead"
+        "dead",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Двое погибших в результате удара РФ по Киевской области: стали известны последствия атаки...",
       "image": "https://img.tsn.ua/cached/639/tsn-0b4bc102/thumbs/608xX/ce/10/538513db5a2eb5f8d1793cace47410ce.jpg",
-      "published": "2026-09-05T17:26:57.725390+00:00",
+      "published": "2026-09-05T17:40:44.542348+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/dvoe-pogibshih-v-rezultate-udara-rf-po-kievskoy-oblasti-stali-izvestny-posledstviya-ataki-3162812.html"
+    },
+    {
+      "id": "osint-c86b991958d428ce",
+      "region": "Хмельницкий",
+      "lat": 49.42,
+      "lon": 27.0,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия атаковала \"Шахедами\" Хмельницкую область: что известно о последствиях...",
+      "image": "https://img.tsn.ua/cached/273/tsn-51cb131e/thumbs/608xX/aa/bc/e28778287744113f263273e5d5b7bcaa.jpg",
+      "published": "2026-09-05T17:40:44.542120+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/rossiya-atakovala-shahedami-po-hmelnitskoy-oblasti-chto-izvestno-o-posledstviyah-3162794.html"
     }
   ]
 }
