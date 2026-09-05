@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T13:53:07.581032+00:00",
+  "updated": "2026-09-05T14:13:36.811178+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -8872,7 +8872,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали СТО в Днепропетровской области: один человек погиб, ещё 5 ранены...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/c/907151/dc13a99d462139e8ea7ae98d95f25312.jpeg",
-      "published": "2026-09-05T13:53:04.022868+00:00",
+      "published": "2026-09-05T14:13:33.624340+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052024/"
     },
@@ -8889,7 +8889,7 @@
       "confidence": "medium",
       "text": "Зеленский: Россия нанесла удар по аэропортам в Жулянах и Борисполе...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/4/907158/f42229075d42695b2e6ae724de3b4ae7.jpeg",
-      "published": "2026-09-05T13:53:04.022763+00:00",
+      "published": "2026-09-05T14:13:33.624247+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052026/"
     },
@@ -8942,7 +8942,7 @@
       "confidence": "medium",
       "text": "Россияне ночью атаковали 9 областей, в частности, вновь нанесли удары по складам в Одесской области...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/1/907190/0136541effd6711cb81f8f5448580717.jpeg",
-      "published": "2026-09-05T13:53:04.022518+00:00",
+      "published": "2026-09-05T14:13:33.624049+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052039/"
     },
@@ -8959,7 +8959,7 @@
       "confidence": "medium",
       "text": "Путин приказал не атаковать Киев в течение трёх суток — Кремль...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/5/907250/054bed8126d8e2dcb78d9bbd0060f5f8.jpeg",
-      "published": "2026-09-05T13:53:04.022292+00:00",
+      "published": "2026-09-05T14:13:33.623885+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052048/"
     },
@@ -8976,7 +8976,7 @@
       "confidence": "medium",
       "text": "В Путина заявили о якобы прекращении обстрелов Киева: какая причина...",
       "image": "https://img.tsn.ua/cached/060/tsn-51cb131e/thumbs/608xX/a2/1c/59808a2b69bc43561159187ba3c11ca2.jpg",
-      "published": "2026-09-05T13:53:04.646762+00:00",
+      "published": "2026-09-05T14:13:34.007916+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/svit/v-putina-zayavili-o-yakoby-prekraschenii-obstrelov-kieva-kakaya-prichina-3162716.html"
     },
@@ -8986,8 +8986,8 @@
       "lat": 46.64,
       "lon": 32.62,
       "types": [
-        "damage",
         "hit",
+        "damage",
         "injured"
       ],
       "weapons": [
@@ -8997,7 +8997,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали \"Шахедами\" пассажирский поезд до Херсона, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/4/907294/946f6610398c8012f42477987575c590.jpeg",
-      "published": "2026-09-05T13:53:04.022058+00:00",
+      "published": "2026-09-05T14:13:33.623698+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052059/"
     },
@@ -9020,6 +9020,45 @@
       "published": "2026-09-05T13:53:04.021826+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052062/"
+    },
+    {
+      "id": "osint-c52d2cb49eeab8a7",
+      "region": "Хмельницкий",
+      "lat": 49.42,
+      "lon": 27.0,
+      "types": [
+        "hit",
+        "damage"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали предприятия в Хмельницкой области, поврежден дом...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/7/907320/a70a53dae36aaa539d0b4a7ce578afbb.jpeg",
+      "published": "2026-09-05T14:13:33.623515+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052062/"
+    },
+    {
+      "id": "osint-f3acbc7d9e809e78",
+      "region": "Житомир",
+      "lat": 50.25,
+      "lon": 28.66,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Житомир окутал густой дым: российский \"Шахед\" мог попасть в здание \"Новой почты\"...",
+      "image": "https://img.tsn.ua/cached/167/tsn-51cb131e/thumbs/608xX/74/f4/e1bfe913606be48167f72c300095f474.jpg",
+      "published": "2026-09-05T14:13:34.007040+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/zhitomir-okutal-gustoy-dym-rossiyskiy-shahed-mog-popast-v-zdanie-novoy-pochty-3162752.html"
     }
   ]
 }
