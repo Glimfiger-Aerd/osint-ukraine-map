@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T09:42:52.517838+00:00",
+  "updated": "2026-09-05T09:55:15.261296+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -8667,7 +8667,7 @@
       "confidence": "medium",
       "text": "Более тысячи раз за сутки россияне атаковали Запорожскую область, ранили 6 человек...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/9/907003/490ad40ff146cae7d00f17bf17d4d5f9.jpeg",
-      "published": "2026-09-05T09:42:47.986351+00:00",
+      "published": "2026-09-05T09:55:10.757040+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052000/"
     },
@@ -8703,7 +8703,7 @@
       "confidence": "medium",
       "text": "Спасатели показали последствия российских ударов по ТЦ в Николаеве...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/d/907012/0de959ed6c4cfe6fe38fbd1617daa8f3.jpeg",
-      "published": "2026-09-05T09:42:47.986313+00:00",
+      "published": "2026-09-05T09:55:10.756987+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052002/"
     },
@@ -8713,9 +8713,9 @@
       "lat": 46.64,
       "lon": 32.62,
       "types": [
-        "injured",
-        "hit",
         "dead",
+        "hit",
+        "injured",
         "damage"
       ],
       "weapons": [],
@@ -8723,7 +8723,7 @@
       "confidence": "medium",
       "text": "В двух областях в результате российских ударов погибли 2 человека, ещё 34 получили ранения...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/6/907057/86b9b4771d3ee4c320a744b1e33d5269.jpeg",
-      "published": "2026-09-05T09:42:47.986270+00:00",
+      "published": "2026-09-05T09:55:10.756926+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052004/"
     },
@@ -8740,7 +8740,7 @@
       "confidence": "medium",
       "text": "Словакия вызывает посла России из-за российского удара вблизи её посольства в Киеве...",
       "image": "",
-      "published": "2026-09-05T09:42:47.986213+00:00",
+      "published": "2026-09-05T09:55:10.756836+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052005/"
     },
@@ -8786,9 +8786,9 @@
       "lat": 46.97,
       "lon": 32.0,
       "types": [
-        "injured",
+        "dead",
         "hit",
-        "dead"
+        "injured"
       ],
       "weapons": [
         "drone"
@@ -8797,7 +8797,7 @@
       "confidence": "medium",
       "text": "Умерла женщина, раненная во время нападения на маршрутку в Херсоне — её спасали в Николаеве...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/7/b/907086/7b181aca7f863553b4aef8370e681d5a.jpeg",
-      "published": "2026-09-05T09:42:47.985877+00:00",
+      "published": "2026-09-05T09:55:10.756327+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052011/"
     },
@@ -8863,18 +8863,35 @@
       "lat": 48.46,
       "lon": 35.05,
       "types": [
-        "injured",
+        "dead",
         "hit",
-        "dead"
+        "injured"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали СТО в Днепропетровской области: один человек погиб, ещё 5 ранены...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/c/907151/dc13a99d462139e8ea7ae98d95f25312.jpeg",
-      "published": "2026-09-05T09:42:47.985620+00:00",
+      "published": "2026-09-05T09:55:10.755972+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052024/"
+    },
+    {
+      "id": "osint-2c3da5c2075e7ce3",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Зеленский: Россия нанесла удар по аэропортам в Жулянах и Борисполе...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/4/907158/f42229075d42695b2e6ae724de3b4ae7.jpeg",
+      "published": "2026-09-05T09:55:10.755848+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052026/"
     }
   ]
 }
