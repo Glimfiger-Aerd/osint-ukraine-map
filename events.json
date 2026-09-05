@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-05T13:39:33.021034+00:00",
+  "updated": "2026-09-05T13:53:07.581032+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -8864,15 +8864,15 @@
       "lon": 35.05,
       "types": [
         "dead",
-        "injured",
-        "hit"
+        "hit",
+        "injured"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне атаковали СТО в Днепропетровской области: один человек погиб, ещё 5 ранены...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/c/907151/dc13a99d462139e8ea7ae98d95f25312.jpeg",
-      "published": "2026-09-05T13:39:29.613223+00:00",
+      "published": "2026-09-05T13:53:04.022868+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052024/"
     },
@@ -8889,7 +8889,7 @@
       "confidence": "medium",
       "text": "Зеленский: Россия нанесла удар по аэропортам в Жулянах и Борисполе...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/4/907158/f42229075d42695b2e6ae724de3b4ae7.jpeg",
-      "published": "2026-09-05T13:39:29.613112+00:00",
+      "published": "2026-09-05T13:53:04.022763+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052026/"
     },
@@ -8942,7 +8942,7 @@
       "confidence": "medium",
       "text": "Россияне ночью атаковали 9 областей, в частности, вновь нанесли удары по складам в Одесской области...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/1/907190/0136541effd6711cb81f8f5448580717.jpeg",
-      "published": "2026-09-05T13:39:29.612836+00:00",
+      "published": "2026-09-05T13:53:04.022518+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052039/"
     },
@@ -8959,7 +8959,7 @@
       "confidence": "medium",
       "text": "Путин приказал не атаковать Киев в течение трёх суток — Кремль...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/5/907250/054bed8126d8e2dcb78d9bbd0060f5f8.jpeg",
-      "published": "2026-09-05T13:39:29.612627+00:00",
+      "published": "2026-09-05T13:53:04.022292+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052048/"
     },
@@ -8976,7 +8976,7 @@
       "confidence": "medium",
       "text": "В Путина заявили о якобы прекращении обстрелов Киева: какая причина...",
       "image": "https://img.tsn.ua/cached/060/tsn-51cb131e/thumbs/608xX/a2/1c/59808a2b69bc43561159187ba3c11ca2.jpg",
-      "published": "2026-09-05T13:39:29.960901+00:00",
+      "published": "2026-09-05T13:53:04.646762+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/svit/v-putina-zayavili-o-yakoby-prekraschenii-obstrelov-kieva-kakaya-prichina-3162716.html"
     },
@@ -8987,8 +8987,8 @@
       "lon": 32.62,
       "types": [
         "damage",
-        "injured",
-        "hit"
+        "hit",
+        "injured"
       ],
       "weapons": [
         "drone"
@@ -8997,9 +8997,29 @@
       "confidence": "medium",
       "text": "Россияне атаковали \"Шахедами\" пассажирский поезд до Херсона, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/4/907294/946f6610398c8012f42477987575c590.jpeg",
-      "published": "2026-09-05T13:39:29.612371+00:00",
+      "published": "2026-09-05T13:53:04.022058+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052059/"
+    },
+    {
+      "id": "osint-3dce899c3af649b8",
+      "region": "Хмельницкий",
+      "lat": 49.42,
+      "lon": 27.0,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали предприятия в Хмельницкой области...",
+      "image": "",
+      "published": "2026-09-05T13:53:04.021826+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/05/8052062/"
     }
   ]
 }
