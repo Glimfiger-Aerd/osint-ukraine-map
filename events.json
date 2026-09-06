@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T15:16:29.893902+00:00",
+  "updated": "2026-09-06T15:40:44.028732+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -9541,7 +9541,7 @@
       "confidence": "medium",
       "text": "В Киеве ввели дифференцированные воздушные тревоги...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/8/907698/9833d0984b997a43c1be666d25b96cb5.jpeg",
-      "published": "2026-09-06T15:16:26.093674+00:00",
+      "published": "2026-09-06T15:40:38.948094+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/06/8052138/"
     },
@@ -9590,15 +9590,15 @@
       "lat": 48.46,
       "lon": 35.05,
       "types": [
-        "hit",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россияне ударили по складам логистической компании в Днепре, есть раненые...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/6/907839/d6a7574d7a78027ff6bd1f0901c6e303.jpeg",
-      "published": "2026-09-06T15:16:26.093232+00:00",
+      "published": "2026-09-06T15:40:38.947877+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/06/8052147/"
     },
@@ -9635,6 +9635,25 @@
       "text": "Россияне атаковали склады в Днепре: есть раненые, вспыхнул пожар...",
       "image": "https://img.tsn.ua/cached/764/tsn-51cb131e/thumbs/608xX/3e/f3/4fae02db6f6fad3b58c593d26546f33e.jpg",
       "published": "2026-09-06T15:16:26.690860+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-dnepr-est-ranenye-vspyhnul-pozhar-3163157.html"
+    },
+    {
+      "id": "osint-6f057f4d994f45b5",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "injured",
+        "hit",
+        "dead"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали склады в Днепре: есть погибший и раненые, вспыхнул сильный пожар (фото)...",
+      "image": "https://img.tsn.ua/cached/764/tsn-51cb131e/thumbs/608xX/3e/f3/4fae02db6f6fad3b58c593d26546f33e.jpg",
+      "published": "2026-09-06T15:40:39.562989+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-dnepr-est-ranenye-vspyhnul-pozhar-3163157.html"
     }
