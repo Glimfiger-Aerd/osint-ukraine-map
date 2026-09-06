@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T13:17:11.127248+00:00",
+  "updated": "2026-09-06T13:40:45.688158+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -9480,15 +9480,15 @@
       "lat": 46.97,
       "lon": 32.0,
       "types": [
-        "dead",
-        "hit"
+        "hit",
+        "dead"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "В Николаевской области россияне атаковали транспортную инфраструктуру: погиб водитель...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/2/907642/92e4c9863004fd60ffbcb45e13c2ec0f.jpeg",
-      "published": "2026-09-06T13:17:07.088267+00:00",
+      "published": "2026-09-06T13:40:40.294521+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/06/8052116/"
     },
@@ -9541,7 +9541,7 @@
       "confidence": "medium",
       "text": "В Киеве ввели дифференцированные воздушные тревоги...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/8/907698/9833d0984b997a43c1be666d25b96cb5.jpeg",
-      "published": "2026-09-06T13:17:07.087623+00:00",
+      "published": "2026-09-06T13:40:40.293876+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/06/8052138/"
     },
@@ -9554,14 +9554,14 @@
         "hit"
       ],
       "weapons": [
-        "drone",
-        "missile"
+        "missile",
+        "drone"
       ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Ракеты, дроны или массированная атака: в Киеве по-новому предупреждают об опасности...",
       "image": "https://img.tsn.ua/cached/831/tsn-dc382829a98d0f40b34d312a72bcb9b7/thumbs/608xX/6a/4e/992ce91b7f5cb829b54834a6bfa44e6a.jpeg",
-      "published": "2026-09-06T13:17:07.689013+00:00",
+      "published": "2026-09-06T13:40:41.306105+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/rakety-drony-ili-massirovannaya-ataka-v-kieve-po-novomu-preduprezhdayut-ob-opasnosti-3163121.html"
     },
@@ -9580,9 +9580,45 @@
       "confidence": "medium",
       "text": "В реке на Киевщине обнаружили опасные вещества после атаки БпЛА: что нашли в воде...",
       "image": "https://img.tsn.ua/cached/306/tsn-51cb131e/thumbs/608xX/7f/d5/26a4e2d8297f660535c6e224dabdd57f.png",
-      "published": "2026-09-06T13:17:07.688726+00:00",
+      "published": "2026-09-06T13:40:41.305844+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/v-reke-borschagovka-obnaruzhili-opasnye-veschestva-posle-ataki-bpla-chto-nashli-v-vode-3163130.html"
+    },
+    {
+      "id": "osint-26f46a13688e34fd",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "hit",
+        "injured"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне ударили по складам логистической компании в Днепре, есть раненые...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/d/2/907775/d2bc72485c8cd277b96c8e744dd23371.jpeg",
+      "published": "2026-09-06T13:40:40.293571+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/06/8052147/"
+    },
+    {
+      "id": "osint-4751809cb12fd3d9",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "hit",
+        "injured"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне атаковали Днепр: есть раненые, вспыхнул пожар...",
+      "image": "https://img.tsn.ua/cached/764/tsn-51cb131e/thumbs/608xX/3e/f3/4fae02db6f6fad3b58c593d26546f33e.jpg",
+      "published": "2026-09-06T13:40:41.305072+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-dnepr-est-ranenye-vspyhnul-pozhar-3163157.html"
     }
   ]
 }
