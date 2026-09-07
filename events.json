@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T11:18:06.177729+00:00",
+  "updated": "2026-09-07T11:43:34.299712+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -9859,10 +9859,10 @@
       "lat": 48.73,
       "lon": 37.58,
       "types": [
+        "damage",
         "injured",
-        "dead",
         "hit",
-        "damage"
+        "dead"
       ],
       "weapons": [
         "bomb"
@@ -9871,7 +9871,7 @@
       "confidence": "medium",
       "text": "Россия сбросила авиабомбы на центр Краматорска: есть попадания в многоэтажные дома, 2 человека погибли...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/c/a/908613/ca75d173ce14e594668741ee1fd21ff9.jpeg",
-      "published": "2026-09-07T11:18:02.694402+00:00",
+      "published": "2026-09-07T11:43:29.363080+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052250/"
     },
@@ -9881,15 +9881,15 @@
       "lat": 47.84,
       "lon": 35.14,
       "types": [
-        "hit",
-        "damage"
+        "damage",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Силы обороны нанесли удар по железнодорожному мосту через Северо-Крымский канал – Генштаб...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/1/908651/912878becacfbca2e9b651afb14c3ce5.jpeg",
-      "published": "2026-09-07T11:18:02.693648+00:00",
+      "published": "2026-09-07T11:43:29.362299+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052255/"
     },
@@ -9907,9 +9907,26 @@
       "confidence": "medium",
       "text": "Российские террористы убили ещё одного человека в Херсоне...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/6/908630/b620127f71ecf3ff62f725706518b335.jpeg",
-      "published": "2026-09-07T11:18:02.694064+00:00",
+      "published": "2026-09-07T11:43:29.362746+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052257/"
+    },
+    {
+      "id": "osint-84596c299e20538e",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "ДТЭК через неделю вернул свет почти миллиону семей после обстрелов...",
+      "image": "https://img.tsn.ua/cached/336/tsn-51cb131e/thumbs/608xX/78/b5/790e61c6fb8bffa12661b5753c6ab578.jpg",
+      "published": "2026-09-07T11:43:30.181099+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/dtek-cherez-nedelyu-vernul-svet-pochti-millionu-semey-posle-obstrelov-3163634.html"
     }
   ]
 }
