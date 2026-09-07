@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T05:42:55.411877+00:00",
+  "updated": "2026-09-07T05:56:39.095818+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -9718,8 +9718,8 @@
       "lat": 47.84,
       "lon": 35.14,
       "types": [
-        "damage",
-        "hit"
+        "hit",
+        "damage"
       ],
       "weapons": [
         "drone"
@@ -9728,7 +9728,7 @@
       "confidence": "medium",
       "text": "Армия РФ атаковала Запорожье, загорелся торговый центр – ОВА...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/b/908284/2b3fd254389581364499f8d17f9da733.jpeg",
-      "published": "2026-09-07T05:42:50.624391+00:00",
+      "published": "2026-09-07T05:56:34.488018+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052190/"
     },
@@ -9762,7 +9762,7 @@
       "confidence": "medium",
       "text": "Россия атаковала один из микрорайонов Балаклеи в Харьковской области...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/3/c/908313/3c0b2bb71477bdbc7cee23d2b842aa49.jpeg",
-      "published": "2026-09-07T05:42:50.623897+00:00",
+      "published": "2026-09-07T05:56:34.487556+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052194/"
     },
@@ -9789,14 +9789,15 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit"
+        "hit",
+        "dead"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "В Киеве скончался пострадавший в результате обстрела 1 сентября...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/f/908353/2f78eef6e319570d090aa87fa3c9bd3b.jpeg",
-      "published": "2026-09-07T05:42:50.623298+00:00",
+      "published": "2026-09-07T05:56:34.487047+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052211/"
     },
@@ -9813,7 +9814,7 @@
       "confidence": "medium",
       "text": "На фронте 237 боев: на Покровском направлении захлебнулось 43 штурма противника...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/d/908351/bdce0b34b07e4711cf41342ae8007522.jpeg",
-      "published": "2026-09-07T05:42:50.623451+00:00",
+      "published": "2026-09-07T05:56:34.487172+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/07/8052210/"
     }
