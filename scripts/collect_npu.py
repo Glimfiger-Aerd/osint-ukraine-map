@@ -5,9 +5,11 @@ from pathlib import Path
 OUT = Path("events.json")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
+# Токены для отправки алертов в Telegram (берутся из GitHub Secrets)
 BOT_TOKEN = os.environ.get("TG_BOT_TOKEN")
 CHAT_ID = os.environ.get("TG_CHAT_ID")
 
+# Сначала точные города, затем области (чтобы скрипт в первую очередь искал точную локацию)
 REGIONS = [
     (["кривий ріг", "кривой рог"], "Кривой Рог", 47.91, 33.39),
     (["біла церква", "белая церковь"], "Белая Церковь", 49.79, 30.11),
@@ -39,6 +41,7 @@ REGIONS = [
     (["чернівц", "черновц"], "Черновцы", 48.29, 25.94)
 ]
 
+# Ключевые слова для срабатывания парсера
 KEYWORDS = ["атака", "удар", "обстрел", "попад", "оскол", "облом", "бпла", "беспилот", "поврежд", "погиб", "ранен", "пострад", "взрыв", "ракет", "каб", "ата", "обстр", "влуч", "улам", "загиб", "поран", "вибух"]
 
 TG_CHANNELS = [("Труха⚡️Україна", "truexanewsua"), ("Труха⚡️Київ", "truexakyiv"), ("Труха⚡️Харків", "truexakharkiv"), ("UKR 2025", "ukr_2025_ru")]
@@ -53,24 +56,28 @@ def clean(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<!\[CDATA\[|\]\]>|<[^>]+>", " ", s))).strip()
 
 def send_alert(text):
+    """Функция отправки уведомлений в Telegram"""
     if not BOT_TOKEN or not CHAT_ID: return
     try:
         url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
         data = json.dumps({"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"}).encode('utf-8')
         req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
         urllib.request.urlopen(req, timeout=10)
-    except: pass
+    except Exception as e:
+        print("Ошибка отправки в TG:", e)
 
 def process_text(search_text, display_text, source_name, url, img_url, old_events, new_alerts):
     low = search_text.lower()
     if not any(k in low for k in KEYWORDS): return
     
+    # Поиск локации
     reg = next((r for roots, r, _, _ in REGIONS if any(rt in low for rt in roots)), None)
     if not reg: return 
     ru_name, lat, lon = next((r, lat, lon) for roots, r, lat, lon in REGIONS if r == reg)
     
     eid = "osint-" + hashlib.sha1((display_text + url).encode()).hexdigest()[:16]
     
+    # Определение последствий
     types = []
     if any(x in low for x in ["ата", "удар", "обстр", "влуч", "вибух", "ракет", "каб", "попад"]): types.append("hit")
     if any(x in low for x in ["улам", "оскол", "облом"]): types.append("debris")
@@ -78,12 +85,14 @@ def process_text(search_text, display_text, source_name, url, img_url, old_event
     if any(x in low for x in ["постраж", "травм", "поран", "ранен"]): types.append("injured")
     if any(x in low for x in ["загин", "загиб", "погиб"]): types.append("dead")
     
+    # Определение типа оружия
     weapons = []
     if any(x in low for x in ["шахед", "бпла", "беспилот", "мопед", "дрон"]): weapons.append("drone")
     if any(x in low for x in ["ракет", "искандер", "кинжал", "баллист", "калибр"]): weapons.append("missile")
     if any(x in low for x in ["каб", "фаб", "авиабомб"]): weapons.append("bomb")
     if any(x in low for x in ["артил", "рсзв", "град", "мином"]): weapons.append("artillery")
     
+    # Триггер алертов (если новость новая и есть пострадавшие)
     if eid not in old_events and ("dead" in types or "injured" in types):
         new_alerts.append(f"🚨 <b>OSINT: {ru_name}</b>\n\n{display_text[:500]}...\n\n<a href='{url}'>Источник</a>")
     
@@ -96,11 +105,16 @@ def process_text(search_text, display_text, source_name, url, img_url, old_event
     }
 
 def main():
-    try: d = json.loads(OUT.read_text(encoding="utf-8"))
-    except: d = {"events": []}
+    try: 
+        d = json.loads(OUT.read_text(encoding="utf-8"))
+    except: 
+        d = {"events": []}
+    
+    # Храним события за последние 30 дней для работы архива
     old = {e["id"]: e for e in d.get("events", []) if (datetime.now(timezone.utc) - datetime.fromisoformat(e["published"])) <= timedelta(days=30)}
     new_alerts = []
     
+    # 1. Национальная Полиция (НПУ)
     try:
         page = get("https://npu.gov.ua/news")
         for path in list(dict.fromkeys(re.findall(r'href=["\'](/news/[^"\']+)["\']', page, re.I)))[:20]:
@@ -114,6 +128,7 @@ def main():
             except: continue
     except: pass
 
+    # 2. RSS-ленты
     for name, rss_url in RSS_FEEDS:
         try:
             for item in re.findall(r'<item>(.*?)</item>', get(rss_url), re.I | re.S)[:20]:
@@ -126,21 +141,32 @@ def main():
                 process_text(title + " " + desc, title, name, clean(re.search(r'<link>(.*?)</link>', item, re.I | re.S).group(1)), img_url, old, new_alerts)
         except: pass
 
+    # 3. Telegram-каналы (Исправленный блок)
     for name, handle in TG_CHANNELS:
         try:
             tg_page = get(f"https://t.me/s/{handle}")
-            blocks = re.findall(r'<div class="tgme_widget_message "[^>]*>(.*?)<div class="tgme_widget_message_info">', tg_page, re.S | re.I)
+            # Измененный regex для поиска блока, чтобы он не зависел от лишних пробелов
+            blocks = re.findall(r'<div class="tgme_widget_message[^>]*>(.*?)<div class="tgme_widget_message_info"', tg_page, re.S | re.I)
             for block in blocks:
                 text_m = re.search(r'<div class="tgme_widget_message_text[^>]*>(.*?)</div>', block, re.S | re.I)
                 if not text_m: continue
                 text = clean(text_m.group(1))
+                
                 link_m = re.search(r'<a class="tgme_widget_message_date" href="(https://t\.me/[^/]+/\d+)">', block, re.I)
-                img_m = re.search(r"background-image:url\('([^']+)'\)", block)
-                process_text(text, text, name, link_m.group(1) if link_m else f"https://t.me/{handle}", img_m.group(1) if img_m else "", old, new_alerts)
-        except: pass
+                # Измененный regex для картинок, ловит разные кавычки
+                img_m = re.search(r"background-image:\s*url\(['\"]?([^'\")]+)['\"]?\)", block, re.I)
+                
+                url = link_m.group(1) if link_m else f"https://t.me/{handle}"
+                img_url = img_m.group(1) if img_m else ""
+                
+                process_text(text, text, name, url, img_url, old, new_alerts)
+        except Exception as e:
+            print(f"Ошибка Telegram ({handle}):", e)
 
+    # Отправляем максимум 3 алерта за один прогон, чтобы не спамить
     for alert in new_alerts[:3]: send_alert(alert)
 
     OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).isoformat(), "source_policy": "NPU + RSS + TG", "events": list(old.values())}, ensure_ascii=False, indent=2), encoding="utf-8")
+    print("Stored", len(old), "events")
 
 if __name__ == "__main__": main()
