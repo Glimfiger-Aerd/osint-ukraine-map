@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T09:58:40.215088+00:00",
+  "updated": "2026-09-08T10:21:05.250782+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -10816,15 +10816,15 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
-        "damage"
+        "damage",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Во время атаки на Киев россияне повредили 14 многоэтажек и станцию метро...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/b/909165/bb6f4a2f7e0d3aa922de25a836972dda.jpeg",
-      "published": "2026-09-08T09:58:34.862513+00:00",
+      "published": "2026-09-08T10:21:01.452463+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052377/"
     },
@@ -10851,8 +10851,8 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit",
-        "injured"
+        "injured",
+        "hit"
       ],
       "weapons": [
         "drone"
@@ -10861,7 +10861,7 @@
       "confidence": "medium",
       "text": "В Сумской области россияне атаковали пассажирский поезд: эвакуировали 90 человек...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/6/909198/963f30191f297bf43a15543da96c6ef9.jpeg",
-      "published": "2026-09-08T09:58:34.862196+00:00",
+      "published": "2026-09-08T10:21:01.452035+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052387/"
     },
@@ -10927,15 +10927,15 @@
       "lat": 46.48,
       "lon": 30.72,
       "types": [
-        "hit",
-        "damage"
+        "damage",
+        "hit"
       ],
       "weapons": [],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "Россия ночью ударила по одесскому рынку \"7 километр\": пострадали 3 человека...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/c/909214/5c08e2d4ffcef77ae96d28eba3b6faab.jpeg",
-      "published": "2026-09-08T09:58:34.862093+00:00",
+      "published": "2026-09-08T10:21:01.451896+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052392/"
     },
@@ -11028,7 +11028,7 @@
       "confidence": "medium",
       "text": "Россияне прицельно ударили по поезду \"Днепр – Запорожье\": бушует пожар, нет связи с проводницей...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/4/909235/441c908710b6362a7e30bf03fc7e15f3.jpeg",
-      "published": "2026-09-08T09:58:34.861925+00:00",
+      "published": "2026-09-08T10:21:01.451680+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052401/"
     },
@@ -11064,7 +11064,7 @@
       "confidence": "medium",
       "text": "Киев после атаки: девочка катается на качелях у здания в огне (видео)...",
       "image": "https://img.tsn.ua/cached/775/tsn-51cb131e/thumbs/608xX/52/71/4ed3c2a4321bb6840e867f885e967152.jpg",
-      "published": "2026-09-08T09:58:36.135655+00:00",
+      "published": "2026-09-08T10:21:01.935470+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/exclusive/kiev-posle-ataki-devochka-kataetsya-na-kachelyah-u-zdaniya-v-ogne-video-3164306.html"
     },
@@ -11084,6 +11084,101 @@
       "published": "2026-09-08T09:44:23.819112+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/rossiyane-atakovali-poezd-dnepr-zaporozhe-passazhirov-evakuirovali-prodolzhayutsya-poiski-provodnitsy-3164252.html"
+    },
+    {
+      "id": "osint-90a9d8712b212084",
+      "region": "Сумы",
+      "lat": 50.91,
+      "lon": 34.8,
+      "types": [
+        "injured",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россияне за утро атаковали уже третий пассажирский поезд: есть раненые...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/e/9/909312/e9f082fdeef671dfcf6762dda03498e0.jpeg",
+      "published": "2026-09-08T10:21:01.451060+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052422/"
+    },
+    {
+      "id": "osint-6888fd44eee72906",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Реактивные дроны стали реальностью: какими БПЛА Россия атакует Киев и можно ли им противостоять...",
+      "image": "",
+      "published": "2026-09-08T10:21:01.451126+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052285/"
+    },
+    {
+      "id": "osint-5181be36f4e802d4",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "damage",
+        "injured",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Киеве россияне атаковали офис телеканала \"Мы-Украина\": 5 человек пострадали...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/6/909283/2605e2ef43bbecfe5bcf02005b536422.jpeg",
+      "published": "2026-09-08T10:21:01.451440+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052411/"
+    },
+    {
+      "id": "osint-2ac1993e50cb6574",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit",
+        "dead"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "РФ с ночи атакует Киев: количество погибших возросло - последние данные...",
+      "image": "https://img.tsn.ua/cached/632/tsn-51cb131e/thumbs/608xX/7c/4f/e66783be5b5d160cc7c6e6a69ac44f7c.jpg",
+      "published": "2026-09-08T10:21:01.934692+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/rf-s-nochi-atakuet-kiev-kolichestvo-pogibshih-vozroslo-poslednie-dannye-3164345.html"
+    },
+    {
+      "id": "osint-63bc17dfc6d9e90f",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "damage",
+        "injured",
+        "hit"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Киеве гремят взрывы: \"прилетело\" по телеканалам, есть раненые (фото, видео)...",
+      "image": "https://img.tsn.ua/cached/552/tsn-fc8d4bb0191801bebf97b41f256288af/thumbs/608xX/94/c6/54705327cd2de7416594e04d514bc694.jpeg",
+      "published": "2026-09-08T10:21:01.935007+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/v-kieve-gremyat-vzryvy-priletelo-po-telekanalam-est-ranenye-foto-video-3164318.html"
     }
   ]
 }
