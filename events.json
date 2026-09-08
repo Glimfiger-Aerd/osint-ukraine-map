@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T07:16:40.003495+00:00",
+  "updated": "2026-09-08T07:44:33.254374+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -10711,7 +10711,7 @@
       "confidence": "medium",
       "text": "Россияне атаковали Покровский и ещё два направления фронта более 60 раз – Генштаб...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/c/b/909127/cbdef5ec5fba76c8ec17d9f7d1854b22.jpeg",
-      "published": "2026-09-08T07:16:33.834224+00:00",
+      "published": "2026-09-08T07:44:27.718724+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052375/"
     },
@@ -10786,7 +10786,7 @@
       "confidence": "medium",
       "text": "Сибига: Путин атаковал Киев и убил людей, как только посланцы Трампа уехали...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/e/909158/be6a495c65c5cd6794ea6b6e4ffb803c.jpeg",
-      "published": "2026-09-08T07:16:33.833926+00:00",
+      "published": "2026-09-08T07:44:27.718370+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052380/"
     },
@@ -10824,7 +10824,7 @@
       "confidence": "medium",
       "text": "Во время атаки на Киев россияне повредили 14 многоэтажек и станцию метро...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/b/b/909165/bb6f4a2f7e0d3aa922de25a836972dda.jpeg",
-      "published": "2026-09-08T07:16:33.833779+00:00",
+      "published": "2026-09-08T07:44:27.718188+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052377/"
     },
@@ -10841,7 +10841,7 @@
       "confidence": "medium",
       "text": "В Киеве задержали мужчину, который в упор расстрелял директора клиники: фото...",
       "image": "https://img.tsn.ua/cached/850/tsn-51cb131e/thumbs/608xX/81/8d/e60400e4136424e5b10f119112a28d81.png",
-      "published": "2026-09-08T07:16:34.559709+00:00",
+      "published": "2026-09-08T07:44:28.411408+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/v-kieve-zaderzhali-muzhchinu-kotoryy-v-upor-rasstrelyal-direktora-kliniki-reprudoktologii-foto-3164132.html"
     },
@@ -10851,14 +10851,17 @@
       "lat": 50.45,
       "lon": 30.52,
       "types": [
-        "hit"
+        "hit",
+        "injured"
       ],
-      "weapons": [],
+      "weapons": [
+        "drone"
+      ],
       "status": "Зафиксировано",
       "confidence": "medium",
       "text": "В Сумской области россияне атаковали пассажирский поезд: эвакуировали 90 человек...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/9/6/909198/963f30191f297bf43a15543da96c6ef9.jpeg",
-      "published": "2026-09-08T07:16:33.833380+00:00",
+      "published": "2026-09-08T07:44:27.717774+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052387/"
     },
@@ -10878,7 +10881,7 @@
       "confidence": "medium",
       "text": "Воздушные силы: Ночью РФ атаковала Украину баллистическими, противокорабельными и 32 крылатыми ракетами...",
       "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/a/c/909152/ac208b5b20b6e86ac23df4696aff9142.jpeg",
-      "published": "2026-09-08T07:16:33.834005+00:00",
+      "published": "2026-09-08T07:44:27.718471+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052379/"
     },
@@ -10897,7 +10900,7 @@
       "confidence": "medium",
       "text": "Удар РФ по Киеву: момент \"прилета\" ракеты попал на видео...",
       "image": "https://img.tsn.ua/cached/703/tsn-51cb131e/thumbs/608xX/1a/b1/81123ea24e974474b3c05f73a98bb11a.jpg",
-      "published": "2026-09-08T07:16:34.559261+00:00",
+      "published": "2026-09-08T07:44:28.410798+00:00",
       "source": "ТСН",
       "url": "https://kyiv.tsn.ua/ru/kyiv/udar-rf-po-kievu-moment-prileta-rakety-popal-na-video-3164174.html"
     },
@@ -10914,9 +10917,46 @@
       "confidence": "medium",
       "text": "Удар был преднамеренно просчитан: Зеленский раскрыл детали ночной атаки РФ...",
       "image": "https://img.tsn.ua/cached/871/tsn-51cb131e/thumbs/608xX/54/9c/4ece975b585ba14497eb19cad2409c54.jpg",
-      "published": "2026-09-08T07:16:34.559551+00:00",
+      "published": "2026-09-08T07:44:28.411211+00:00",
       "source": "ТСН",
       "url": "https://tsn.ua/ru/ukrayina/udar-byl-prednamerenno-proschitan-zelenskiy-raskryl-detali-nochnoy-ataki-rf-3164138.html"
+    },
+    {
+      "id": "osint-b5c2fa26b9b85702",
+      "region": "Одесса",
+      "lat": 46.48,
+      "lon": 30.72,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия ночью ударила по одесскому рынку \"7 километр\": пострадали 3 человека...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/5/c/909214/5c08e2d4ffcef77ae96d28eba3b6faab.jpeg",
+      "published": "2026-09-08T07:44:27.717614+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/08/8052392/"
+    },
+    {
+      "id": "osint-a97ad83e59e71af2",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Вражеские \"Шахеды\" нанесли два прицельных удара по поезду Киев—Сумы: какие последствия...",
+      "image": "https://img.tsn.ua/cached/282/tsn-51cb131e/thumbs/608xX/b7/76/c4ad43a53332b448f3393c04c0fa76b7.png",
+      "published": "2026-09-08T07:44:28.410252+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/vrazheskie-shahedy-nanesli-dva-pritselnyh-udara-po-poezdu-kiev-sumy-kakie-posledstviya-3164171.html"
     }
   ]
 }
