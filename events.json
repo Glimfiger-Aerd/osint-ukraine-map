@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T13:01:08.265065+00:00",
+  "updated": "2026-09-29T13:34:34.502771+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
     {
@@ -84532,7 +84532,7 @@
       "confidence": "medium",
       "text": "🤬 Вибухи у Сарнах на Рівненщині: над містом здіймається дим. 🔴 З'явилися кадри та нова інформація з міста: https://t.me/+5tmVyHqe6io0YWQy...",
       "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-29T13:01:05.496083+00:00",
+      "published": "2026-09-29T13:34:31.768216+00:00",
       "source": "Труха⚡️Україна",
       "url": "https://t.me/truexanewsua/145353"
     },
@@ -84748,7 +84748,7 @@
       "confidence": "medium",
       "text": "БпЛА, схожий на «Молнію», пролетів в напрямку центру. ㅤ Труха ⚡️ Харків | Надіслати новину...",
       "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-29T12:38:04.124545+00:00",
+      "published": "2026-09-29T13:34:33.520519+00:00",
       "source": "Труха⚡️Харків",
       "url": "https://t.me/truexakharkiv/101908"
     },
@@ -84767,7 +84767,7 @@
       "confidence": "medium",
       "text": "БпЛА, схожий на «Молнію», пролетів в напрямку центру. ㅤ Труха ⚡️ Харків | Надіслати новину...",
       "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-29T13:01:07.282980+00:00",
+      "published": "2026-09-29T13:34:33.520563+00:00",
       "source": "Труха⚡️Харків",
       "url": "https://t.me/truexakharkiv/101909"
     },
@@ -84932,7 +84932,7 @@
       "confidence": "medium",
       "text": "Батальйон поліції особливого призначення ГУНП в Запорізькій області за понад рік збила 650+ повітряних цілей, які летіли на Запоріжжя З 2025 року поліцейські долучились до захисту неба міста і збивають перехоплювачами ШАХЕДИ, Молнії, Supercam, Lancet...",
       "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-29T13:01:05.496272+00:00",
+      "published": "2026-09-29T13:34:31.768348+00:00",
       "source": "Труха⚡️Україна",
       "url": "https://t.me/truexanewsua/145355"
     },
@@ -85306,7 +85306,7 @@
       "confidence": "medium",
       "text": "💥 Сообщается о взрывах в Житомирской области...",
       "image": "//telegram.org/img/emoji/40/F09F92A5.png",
-      "published": "2026-09-29T13:01:08.264014+00:00",
+      "published": "2026-09-29T13:34:34.501747+00:00",
       "source": "UKR 2025",
       "url": "https://t.me/ukr_2025_ru/338650"
     },
@@ -85323,7 +85323,7 @@
       "confidence": "medium",
       "text": "💥 Взрывы в Киевской области...",
       "image": "//telegram.org/img/emoji/40/F09F92A5.png",
-      "published": "2026-09-29T13:01:08.264515+00:00",
+      "published": "2026-09-29T13:34:34.502067+00:00",
       "source": "UKR 2025",
       "url": "https://t.me/ukr_2025_ru/338656"
     },
@@ -85340,7 +85340,7 @@
       "confidence": "medium",
       "text": "💥 Новые взрывы в Сумской области...",
       "image": "//telegram.org/img/emoji/40/F09F92A5.png",
-      "published": "2026-09-29T13:01:08.264764+00:00",
+      "published": "2026-09-29T13:34:34.502231+00:00",
       "source": "UKR 2025",
       "url": "https://t.me/ukr_2025_ru/338658"
     },
@@ -85357,9 +85357,85 @@
       "confidence": "medium",
       "text": "💥 Взрывы в Киевской области...",
       "image": "//telegram.org/img/emoji/40/F09F92A5.png",
-      "published": "2026-09-29T13:01:08.265059+00:00",
+      "published": "2026-09-29T13:34:34.502459+00:00",
       "source": "UKR 2025",
       "url": "https://t.me/ukr_2025_ru/338661"
+    },
+    {
+      "id": "osint-728e0259e9011cc0",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit",
+        "damage"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Киеве две баллистические ракеты упали возле жилых домов и не взорвались, их обезвредили...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/e/f/923494/efd26bf7eb4a00b1ea56f3f91b3f6d73.jpeg",
+      "published": "2026-09-29T13:34:29.795532+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/09/29/8055624/"
+    },
+    {
+      "id": "osint-63ce8b65d976a0f9",
+      "region": "Сумы",
+      "lat": 50.91,
+      "lon": 34.8,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "bomb"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "❗️ рф вдарила КАБом по школі у Сумах , — місцеві ЗМІ. Кадри https://t.me/+qQw3X2XPk3U2MTIy...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-09-29T13:34:31.768742+00:00",
+      "source": "Труха⚡️Україна",
+      "url": "https://t.me/truexanewsua/145364"
+    },
+    {
+      "id": "osint-f46584aa987b60b7",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit",
+        "dead"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "⚡️ Завершили рятувальні роботи на Гвардійців-Широнінців : як виглядає будинок після удару «Бандеролі». Рятувальники повністю закінчили аварійні роботи в багатоповерхівці на Салтівці. Справжнє диво, що обійшлося без загиблих. Зараз на місці працюють к...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-09-29T13:34:33.521060+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/101933"
+    },
+    {
+      "id": "osint-409a2ab23c62ee34",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "injured"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "🇺🇦 На Украине признали, что в жилых домах собирают дроны Игорь Мосийчук* рассказал о схеме, где в Киеве мелкие конторы по производству, ремонту и хранению БпЛА располагаются для маскировки прямо внутри гражданских объектов. Бывшие помещения офисов, м...",
+      "image": "https://cdn4.telesco.pe/file/BQ6NcvGkiLP5nLBytc4qwePh31irxfXRJBg8_IoZTj5pwIlG-r74GmcGpS-xJgYXMhWYCqmZ4Ew9NhN9c3TynUGgRVJ33F-nipkxdUDW_biwsJ0udr5U23fD957FsMFFMEKXaAoPGp58KX5_2Uoq7zjCPajVDfHDSISSsYyEGqrL3WS623p_ZCbnIG9Hm1iQd87hTDqC0k4bZghcG2Zacyin4OiXKE-OI4BwrKd12o-EcuId4bJCvn4FK46Dcq5923Cz4TElaIsg38uGTjFkI-AW9LMzgawGiQcZhyrwE9JAVqwkSlPvseYR7OPUlDA-qXqOajxw2UHm9KuChv9jBw",
+      "published": "2026-09-29T13:34:34.502711+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/338666"
     }
   ]
 }
