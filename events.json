@@ -1,100 +1,7 @@
 {
-  "updated": "2026-10-27T06:42:35.704739+00:00",
+  "updated": "2026-10-27T12:43:52.361824+00:00",
   "source_policy": "NPU + RSS + TG",
   "events": [
-    {
-      "id": "osint-e9b73fecc68a252e",
-      "region": "Харьков",
-      "lat": 49.99,
-      "lon": 36.23,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА продовжує рух на Саржин Яр. Труха ⚡️ Харків | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T06:46:59.236107+00:00",
-      "source": "Труха⚡️Харків",
-      "url": "https://t.me/truexakharkiv/101676"
-    },
-    {
-      "id": "osint-28edaab5042bcbce",
-      "region": "Харьков",
-      "lat": 49.99,
-      "lon": 36.23,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА на Перемоги. Труха ⚡️ Харків | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:55:24.658008+00:00",
-      "source": "Труха⚡️Харків",
-      "url": "https://t.me/truexakharkiv/101677"
-    },
-    {
-      "id": "osint-2b196de5b4449bb5",
-      "region": "Покровск",
-      "lat": 48.28,
-      "lon": 37.17,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Больше всего атак за день на Покровском и Константиновском направлениях – Генштаб...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/d/921547/2d5036642ab854b57819c10c4eb15f6d.jpeg",
-      "published": "2026-09-27T06:46:54.912236+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/26/8055195/"
-    },
-    {
-      "id": "osint-6d3f80b6d5960b1f",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "bomb"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Киеве и других городах проблемы с телевидением, MEGOGO и SWEET TV – СМИ...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/8/921577/48c8e52ebb2cfbeb5eba9522abc6a7a3.jpeg",
-      "published": "2026-09-27T07:31:59.005875+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/26/8055199/"
-    },
-    {
-      "id": "osint-88778917c3261c23",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Соломенском районе Киева из-за попадания российского дрона загорелся склад...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/3/921579/1363580a3ee9c2fefc7a974a07ea9935.jpeg",
-      "published": "2026-09-27T07:54:04.285203+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055201/"
-    },
     {
       "id": "osint-fee4f26bf0c0bb76",
       "region": "Харьков",
@@ -115,449 +22,6 @@
       "url": "https://t.me/truexakharkiv/101699"
     },
     {
-      "id": "osint-9ad5a08055b10876",
-      "region": "Запорожье",
-      "lat": 47.84,
-      "lon": 35.14,
-      "types": [
-        "injured",
-        "hit",
-        "dead"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Россияне атаковали Комышуваху в Запорожской области: погиб мужчина, ещё четверо человек ранены...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/2/921588/8242d3257fd4561257b07d9fbfc085b6.jpeg",
-      "published": "2026-09-27T08:56:45.236150+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055204/"
-    },
-    {
-      "id": "osint-c6aa44fcf1de81b4",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "hit",
-        "damage"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Оккупанты атаковали город Килия в Одесской области: повреждена портовая и гражданская инфраструктура...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/0/c/921591/0ccf03142f114ada6b9ba7e5b99315da.jpeg",
-      "published": "2026-09-27T08:56:45.236065+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055206/"
-    },
-    {
-      "id": "osint-901bbf348ca4c953",
-      "region": "Житомир",
-      "lat": 50.25,
-      "lon": 28.66,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "РФ полностью разрушила склад крупнейшего производителя мороженого в Украине...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/8/4/921593/8420afccb0c9386048bd51e49f37df62.jpeg",
-      "published": "2026-09-27T09:17:06.785062+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055207/"
-    },
-    {
-      "id": "osint-d403f3c38ab615b9",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Гауляйтер Киева сообщает, что удар был нанесён по складскому зданию в Соломенском районе города Начался пожар....",
-      "image": "https://cdn4.telesco.pe/file/BmRKnX6ECIhyYzRyKa5jISh1md5FHt4dLFtib5uap48IhpKx_rt-K1df0DiKuwRl4rcpckdt2dUI8UnrM2mh2k0_TKUNH_9HVSindFxEEDBq7xK6wG1DWyO9hfZDfWhQajQZ5a474UtqVEzYdNlv0MKD30vB8fWvvCR5aeaFytUsSDWys-nCjuLot0Lhh3_X_N2pIK_AkeDcNrs2h3RnOQQT2B-2q9FUdaTnjzbK8NVmoRnV-vdoVed7SwKl15OlhlgvliPsSW01eqoGFr7hNrBkL9p_uM3cgNUlxyXjV8Qy4ldEn0nnTstpA9vDqNNte2KwxOwFtej05_G0lyPWDw",
-      "published": "2026-09-27T06:47:00.375442+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338179"
-    },
-    {
-      "id": "osint-cdf8d235f2a233f3",
-      "region": "Николаев",
-      "lat": 46.97,
-      "lon": 32.0,
-      "types": [
-        "damage"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ О повреждениях хозяйственных построек после прилёта БПЛА сообщают в администрации Николаевской области...",
-      "image": "//telegram.org/img/emoji/40/E29D97.png",
-      "published": "2026-09-27T07:15:02.865607+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338180"
-    },
-    {
-      "id": "osint-f07dcc97fd0d5127",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ После ночной атаки весь Киев затянуло черным дымом Что-то горит в стороне Броваров....",
-      "image": "https://cdn4.telesco.pe/file/elBrPeT4ju22gwO8J0eoqn2Sj5kvX7Hzv88sFDFG8To530Alna9KdhkL2qTza4TEd4x-3o-URxG0oM1XHIZpzec58TXn5p2Ypa1axwf-ViOMXy0pD5eu0ep4LvYF8OEMc0K537ApH5Dzs_IKYQyYEGaERmsq_noiXNqo3kkrO5Nz3Gcd_48TW6Z6xcmnV4W4QM5BnumgnoFk9as_FkrimrzJhbLsuyoCA9YftJeem4chD1loEFTOazH4Dl4ZaJ1LtPCxsr8_NI_WkkGZo_6BXSJGDnKu7CNY0iJPpKUuira81EpZiyo2UEexoWkeM9CsGfdZMpB1hSMrX8aJY-abFw.jpg",
-      "published": "2026-09-27T07:15:02.865717+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338181"
-    },
-    {
-      "id": "osint-745dd7ddce1b87ad",
-      "region": "Хмельницкий",
-      "lat": 49.42,
-      "lon": 27.0,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Удары по дата-центрам, атака по Хмельницкому, выступление Зеленского на Генассамблее ООН — Украина в фото, 21-27 сентября...",
-      "image": "https://img.tsn.ua/cached/374/tsn-51cb131e/thumbs/608xX/ef/2a/83f94a39fdfa56222c6a67e3c2972aef.jpg",
-      "published": "2026-09-27T07:15:00.142916+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/udary-po-data-tsentram-ataka-po-hmelnitskomu-vystuplenie-zelenskogo-na-genassamblee-oon-ukraina-v-foto-21-27-sentyabrya-3175760.html"
-    },
-    {
-      "id": "osint-9385df26cbebd54f",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "‼️ Доброе утро, дорогие подписчики и читатели канала «Украина.ру». Собрали для вас самые важные новости на утро 27 сентября 🟥 Ночью российские беспилотники атаковали цели в Виннице. Также сообщалось об ударах в районе Бучи Киевской области, в Запорож...",
-      "image": "https://cdn4.telesco.pe/file/kW101C0lSUxnNI3_2oEcbS3EwZ4Y7LXg71h_iigVwuAi-uCbWnEsFLH3YrMPn4q3lkYuP1zTrpH8BazES2qC6IPdFzQD7tag2EuLo0s1YfxrIykisE5a1-B1NqYtWVZ_Ml3j_-Q9m1AMslxoYkCoq7fpX6ZtfzSrBk9v5QSiEHM2AXC1LjOR09tDv_2PrIADinQhc8gULl8iRXtqAwcLUxZDd1M5TeLFmLgozYOzS727J1JlTgOKQvjewTiMK-BgQ7QobWGHls665y57rWROR8i12b8803D5lSdFEMBfqjsduEZWseMMh-02yaaedkNWthZVJtgju2G6e4j30Gq_rQ",
-      "published": "2026-09-27T07:32:04.477877+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338182"
-    },
-    {
-      "id": "osint-c763b0e8fe078818",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Минувшей ночью Украину атаковали беспилотники 🟥 В Одессе после прилёта возник крупный пожар в районе торгового центра «Эпицентр». Предположительно, целью могло быть расположенное поблизости предприятие. 🟥 В Шевченковском районе Киева БПЛА ударил п...",
-      "image": "//telegram.org/img/emoji/40/E29D97.png",
-      "published": "2026-09-27T07:32:04.478068+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338183"
-    },
-    {
-      "id": "osint-35dabd3ba71ce1e9",
-      "region": "Луганская область",
-      "lat": 48.57,
-      "lon": 39.31,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Луганске прозвучала серия взрывов после атаки дронов...",
-      "image": "https://img.tsn.ua/cached/724/tsn-51cb131e/thumbs/608xX/91/57/aaead30fddfff829575fb05e2b9d5791.jpg",
-      "published": "2026-09-27T07:54:04.950197+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/v-luganske-prozvuchala-seriya-vzryvov-posle-ataki-dronov-3176375.html"
-    },
-    {
-      "id": "osint-13279869bdc530b0",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Минувшей ночью Украину атаковали беспилотники 🟥 В Одессе после прилёта возник крупный пожар в районе торгового центра «Эпицентр». Предположительно, целью могло быть расположенное поблизости предприятие. 🟥 В Шевченковском районе Киева БПЛА ударил п...",
-      "image": "//telegram.org/img/emoji/40/E29D97.png",
-      "published": "2026-09-27T07:54:08.194079+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338187"
-    },
-    {
-      "id": "osint-913a3100d48883c5",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "dead"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Киеве в результате нападения погиб мужчина, а также загорелась СТО...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/e/7/921616/e7385c6cd9fe5aee3890e19058637bb1.jpeg",
-      "published": "2026-09-27T11:31:21.387817+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055213/"
-    },
-    {
-      "id": "osint-88aa3e2baeb79061",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "hit",
-        "injured",
-        "dead"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Одессе после атаки РФ погиб человек, ещё двое ранены...",
-      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/2/d/921623/2dc111ad4f69230a9df10008ebc6b742.jpeg",
-      "published": "2026-09-27T12:18:55.144064+00:00",
-      "source": "Украинская Правда",
-      "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055215/"
-    },
-    {
-      "id": "osint-ada33928c9789151",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "dead",
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Пожары и погибший: Одесса приходит в себя после удара РФ...",
-      "image": "https://img.tsn.ua/cached/637/tsn-51cb131e/thumbs/608xX/d0/cb/c2fa09fb0fac683b44a185bc83ebcbd0.jpg",
-      "published": "2026-09-27T09:17:07.462129+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/pozhary-i-pogibshiy-odessa-prihodit-v-sebya-posle-udara-rf-3176387.html"
-    },
-    {
-      "id": "osint-9cbec2b101da2f24",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "dead"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Дроновый террор Киева: горела СТО, спасатели обнаружили тело мужчины...",
-      "image": "https://img.tsn.ua/cached/846/tsn-51cb131e/thumbs/608xX/5f/8e/260a560e88fad6fd67f8b80349ac8e5f.jpg",
-      "published": "2026-09-27T06:46:55.979314+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/dronovyy-terror-kieva-gorela-sto-spasateli-obnaruzhili-telo-muzhchiny-3176381.html"
-    },
-    {
-      "id": "osint-03fa68ff273a1107",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "⚡️ Взрывы в Киеве! Денёк обещает быть снова горячим. Украина.ру — подписаться и знать больше 🔄 Мы в MAX 🔄 Аналитика 👍...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T08:15:35.015391+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338192"
-    },
-    {
-      "id": "osint-6ac485ff8b8897bf",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "damage"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "😡 Внаслідок ворожої атаки виникла пожежа на одному з логістичних промислових центрів у Броварському районі , – міський голова. Інформації щодо потерпілих наразі немає. Через значну задимленість спостерігається погіршення стану атмосферного повітря. ㅤ...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T06:46:58.128691+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89120"
-    },
-    {
-      "id": "osint-3ae3f846624f8eab",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Бровари падає БпЛА. Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T06:46:58.128784+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89121"
-    },
-    {
-      "id": "osint-62c03e14008cde21",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Бровари падає БпЛА. Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:15:01.511216+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89122"
-    },
-    {
-      "id": "osint-86e7248472cd2f60",
-      "region": "Харьков",
-      "lat": 49.99,
-      "lon": 36.23,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "bomb"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Пуски КАБ на півночі + загроза Бандеродей. ㅤ Труха ⚡️ Харків | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T06:46:59.237649+00:00",
-      "source": "Труха⚡️Харків",
-      "url": "https://t.me/truexakharkiv/101713"
-    },
-    {
-      "id": "osint-51bf889a28d5c8cf",
-      "region": "Харьков",
-      "lat": 49.99,
-      "lon": 36.23,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "bomb"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "КАБ вже біля Прудянки. UPD 9:34: впали в області. Труха ⚡️ Харків | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T06:46:59.237730+00:00",
-      "source": "Труха⚡️Харків",
-      "url": "https://t.me/truexakharkiv/101714"
-    },
-    {
-      "id": "osint-850bf8cc479364e4",
-      "region": "Запорожье",
-      "lat": 47.84,
-      "lon": 35.14,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Взрывы в Запорожье...",
-      "image": "https://cdn4.telesco.pe/file/mLL-WKNudAkwelzn-1sKoNohftDEA4-P23EL8ULcR-GOoddioE04W7GqaPdzVqwKf8dRp2UbttNdUm741KXKhnQ7cEO4Q8VEteRYXiyqoku9-bSQVBAZN4nm6gXpirSHhuy9-FLkq3AU8-_7B71C1NUpb8kfsgbwUVgUtbMsLgxNtk5d5fVF57zEVhwr7qZ5k3EoIWLfpwOespkGetIghv9OmsGgv0LAhF9yPWcPphpEU3jjWh3L5dND6eiVFqhuTmw5JP2c2r13szGTDeeN85sNkE4WHZGZmWveaolbGozQICODJfI4AubsEQvasNNyJaO4Q9j0MzC3i3ygRXttag.jpg",
-      "published": "2026-09-27T08:15:35.015491+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338193"
-    },
-    {
-      "id": "osint-5c378d83935e91e2",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "⚡️ Взрывы в Киеве! Денёк обещает быть снова горячим. Украина.ру — подписаться и знать больше 🔄 Мы в MAX 🔄 Аналитика 👍...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T08:42:51.600842+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338194"
-    },
-    {
-      "id": "osint-ae7c58483d84f71a",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Взрывы в Одесской области...",
-      "image": "https://cdn4.telesco.pe/file/Tv9T3CQXzpR00i-TfqgSlZyiejIbi5ofWuggr1G1o1_8HMnp8QkkNi-dF6gXn_M-qsKsB6OlEjQsF7QCyJjZpbJ8tZVuq5ihMgF-BL-zzbFtV-sQm030z57C5ae53lElvmpAsPeS4BHiuVZRDqq64S0NoGJCwy07p6Hb-ZjPhWwneeWqTIX1wFQ1SYCXTFKjADqLGba5Bt0RbFOwOcnGedIz4hT69wK5O3DJmkE8LU1UZby3LGaBoemUofD2qxkluenad6H7OIofLx8sSjOh4GWMDgWSYNwe2ei7GM2hfXPWfxUAmfpip61-DfQfL7QGwFeenzIdGsKkpoKOfgyQPw.jpg",
-      "published": "2026-09-27T08:56:49.791312+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338196"
-    },
-    {
       "id": "osint-4f6ba0f226fd33b3",
       "region": "Киев",
       "lat": 50.45,
@@ -575,208 +39,6 @@
       "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055219/"
     },
     {
-      "id": "osint-782e83bca57652dd",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "dead"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Киев снова атакуют дроны: количество пострадавших выросло — новые данные...",
-      "image": "https://img.tsn.ua/cached/846/tsn-51cb131e/thumbs/608xX/5f/8e/260a560e88fad6fd67f8b80349ac8e5f.jpg",
-      "published": "2026-09-27T11:14:08.789968+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/dronovyy-terror-kieva-gorela-sto-spasateli-obnaruzhili-telo-muzhchiny-3176381.html"
-    },
-    {
-      "id": "osint-917c0d37e6ad5d57",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Це рБпЛА, курс на Ірпінь! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:15:01.511838+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89130"
-    },
-    {
-      "id": "osint-cd5caf743efe9d03",
-      "region": "Львов",
-      "lat": 49.84,
-      "lon": 24.03,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "⚡️ Местные ТГ-каналы сообщают, что в центре города Шептицкий (Львовская область) кто-то подорвал гранату Сообщается о мощном взрыве. Ожидаем дополнительной информации....",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T08:56:49.791415+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338197"
-    },
-    {
-      "id": "osint-c733629aca0eea9a",
-      "region": "Сумы",
-      "lat": 50.91,
-      "lon": 34.8,
-      "types": [
-        "damage",
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ В Глухове Сумской области два беспилотника атаковали магазин АТБ , сообщают местные СМИ Удар произошёл около 23:40. Помещение повреждено, магазин сейчас не работает. Украина.ру — подписаться и знать больше 🔄 Мы в MAX 🔄 Аналитика 👍...",
-      "image": "https://cdn4.telesco.pe/file/Liue8aynrOXYmyGkwB5anHAfzdEG90775Ys14oh759awveKrREfPYnqc1jhFd-03TX09Ul6LJUXf4WxrdozcP8_0Ek1fe95s-4QMoSqCCcIJP6BfLdhKojOYKBeP-LiX8_bVUwieKVXSTZ9WphxTfEXEOmmMui7STEIRSSXGiDIyTzKeWKbbE9cNq64TG5w_TAbSePtW8G1c2n0AfAEjZi3ZeRkEOIarboRtIjERPpZFu7ISwDfuzsn_2XUoD5loYipApN4e0s_1Uj2tizV8urxVLeDwQgwZpICL4btGsckFvEoiIzDgnF3DsSjFtnnrPAlxpdLoabIadF0QWZgaSQ.jpg",
-      "published": "2026-09-27T09:17:12.032004+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338198"
-    },
-    {
-      "id": "osint-be98dc4306fcd9b9",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "В Одессе произошло ДТП с участием 5 автомобилей: пострадали копы и военные ТЦК (фото)...",
-      "image": "https://img.tsn.ua/cached/964/tsn-51cb131e/thumbs/608xX/7e/90/ba67438c5e04aba6fba8c09c8873907e.jpeg",
-      "published": "2026-09-27T10:15:03.107514+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/ukrayina/dtp-v-odesse-s-uchastiem-5-avtomobiley-postradali-kopy-i-voennye-ttsk-foto-3176411.html"
-    },
-    {
-      "id": "osint-1a5a90635c87e2b2",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "debris"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Попередньо, уламки впали на будівлю закладу освіти у Солом'янському районі, – КМВА. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:32:03.090894+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89142"
-    },
-    {
-      "id": "osint-ea06400267bf5e4f",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА на Троєщину! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:32:03.090994+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89143"
-    },
-    {
-      "id": "osint-e03cec7e775e1206",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА на Троєщину! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:32:03.091073+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89144"
-    },
-    {
-      "id": "osint-9e45f21bcd79a584",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Видніється задимлення після влучання БпЛА у столиці! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T07:32:03.091693+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89155"
-    },
-    {
-      "id": "osint-a57c501bfb9c2b6e",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "injured",
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "‼️ В результате активных наступательных действий штурмовые подразделения группировки \"Север\" выбили ВСУшников из села Хрипуны Волчанского района Харьковской области – сообщает «Северный ветер» И о других событиях к этому часу: 🟥 В результате атаки во...",
-      "image": "https://cdn4.telesco.pe/file/PSCORh19b-h9Rk3Bs4qHxt-kzNcA9cl1C4UD6YKO1LCCT5Mh4TlBcNOcurLh-uu0t8JEUa2-09gjDz5GbQMQ8w0e88QdWumTVudaJf7DRVjslqvVqLVnTS9jEH6SrKXS2kMUoViF78TMJeWLyzoIumyilMbGY64LRW6F2HYd4f03gxB66_1WgDu7AGILeihB-X4wQWPMZp6JCams_zCr99wKvSHrzbEZ2iJJnZ_ZKaAn-RzyunHtFCyoo-hn7R_oEVeW8bjbBkSE6yfMP_0BKqcnHDGf4NbdpleQPTiGOWk-npOykJvLNBXY8A2P7BmLqpby4X7wiUryRckWreuRBA.jpg",
-      "published": "2026-09-27T09:17:12.032483+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338200"
-    },
-    {
-      "id": "osint-186ae1ae5bfb6ca4",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Новые взрывы в Киеве...",
-      "image": "https://cdn4.telesco.pe/file/bM9lAS1_0QvCRNAVWvTKBvLHq3hzX18IPNjEdH72FQZexfeAIb7M546zzHgkJyIaSy6IUo82xPH7Ft3TkLIcPE9RqzQ4deiYqds8Z1GAi1lSqRa5bpogICqnH27AjZzvU9QU8VjlUEfrUD5xmdK6r9DrtyjjxnPUzRy5n-Ns39T19F7KnyWVz04Rn_Q7JMrP-RHiX5iLIFl2Ic3V5gyynGxFZx33KX9EJ7SojYTFpHvzrb2849AccZ-EZVUUu9WhJBObSX1CjIqebce_uTyu-zQBZe3KS7PTFRYjwPVlL1Ql_M1xL_oncwMiZQju6Y_v_yuK8jD8qwRzQCa-NMIz0A.jpg",
-      "published": "2026-09-27T09:17:12.032587+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338201"
-    },
-    {
       "id": "osint-2c2232e0e9cc7fc5",
       "region": "Львов",
       "lat": 49.84,
@@ -792,40 +54,6 @@
       "published": "2026-09-27T13:53:48.268220+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055221/"
-    },
-    {
-      "id": "osint-03fc709db5f2b547",
-      "region": "Львов",
-      "lat": 49.84,
-      "lon": 24.03,
-      "types": [
-        "injured"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Взорвал гранату во время ссоры: во Львовской области раздался сильный взрыв, есть раненые...",
-      "image": "https://img.tsn.ua/cached/326/tsn-51cb131e/thumbs/608xX/e6/b5/bb31b8f845db387929c1cb4025ebb5e6.jpeg",
-      "published": "2026-09-27T11:14:08.790160+00:00",
-      "source": "ТСН",
-      "url": "https://lviv.tsn.ua/ru/lviv/vzorval-granatu-vo-vremya-ssory-vo-lvovskoy-oblasti-razdalsya-silnyy-vzryv-est-ranenye-3176420.html"
-    },
-    {
-      "id": "osint-9d3c47de2b068177",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Новые взрывы в Киеве...",
-      "image": "https://cdn4.telesco.pe/file/jIG2eTlc1rJqp1zRQ6yabioD5PSN7BZ8SnqKiGbdVWhBq03nvk9jUtzQt4LLODZaIegcIrJo6Eq7-uSGsu83VmACbIAcFX9OkIeOaZMPhyc2jTUeaEcB-mvt3VJQ9gNkKfeeUWUY1li6QxRvX4Ns_EwZf58A3fypwZXU25rJ4wsAiIiWvuRQl3h4uQ6gzjY59VlRbqpp16Bt9Zku56YnI_2k6rfuCKYV2PtTnvSoKhFviTVXE8BcmkCCAAw47uWTuZGQgAUluYTnyeeSyAlGyYh2v6i-TVWa9g9ViD2uSurNJ1GtAgadAx3GP10yZRIIjUeF2Yv7oGm4mbl7ozfM5A.jpg",
-      "published": "2026-09-27T09:42:10.955970+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338202"
     },
     {
       "id": "osint-c0d6133ade867df5",
@@ -866,45 +94,6 @@
       "url": "https://t.me/truexanewsua/145235"
     },
     {
-      "id": "osint-9e6165eac2c4c6a0",
-      "region": "Краматорск",
-      "lat": 48.73,
-      "lon": 37.58,
-      "types": [
-        "damage",
-        "injured",
-        "dead",
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Утром 27 сентября удары пришлись по целям ВСУ в нескольких населённых пунктах в Харьковской области, а также в Славянске и Краматорске О последствиях и потерях канал \"Донбасский партизан\" сообщает по предварительным данным: 🟥 Барвенково: удар приш...",
-      "image": "//telegram.org/img/emoji/40/E29D97.png",
-      "published": "2026-09-27T10:15:06.982231+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338205"
-    },
-    {
-      "id": "osint-ebff72c4a7a485c4",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Новые взрывы в Киеве...",
-      "image": "https://cdn4.telesco.pe/file/sBgQFsWvJ4bTzLXjjRTIQ39UvDHliCgydqLwqyh9wQZYdFo80Z0I3bLAyLneIWKWi6UTX9hPmHgYAQMIZTk9sEZ_ppwWZIlzG1_rIAlzxo4seSoBCCq2tLUw4TRb1uyt3iLaz8j_BZgez8z2yMJqySCEGrC_M-vJ3KS2swbPLTM-wBRi44CXDTQLQc83543vFTxBIfBaYYv1zP3y6rMzqoz8zYJJ_ZxqUGhI2jkrpi0EhcB_iYK1FmcFwJ1NLhGz-_Ls7RN6YgV-FWjI3mugArIIOj76sW7Z7F3iGP2l6jD67GZnwebi4K-76dS_pfB0Tt4dWcVlwyDH-8tpAVQw-w.jpg",
-      "published": "2026-09-27T10:32:10.856768+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338208"
-    },
-    {
       "id": "osint-4c39c4b33c291022",
       "region": "Киев",
       "lat": 50.45,
@@ -920,100 +109,6 @@
       "published": "2026-09-27T14:53:24.793319+00:00",
       "source": "Украинская Правда",
       "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055224/"
-    },
-    {
-      "id": "osint-02e14a1242fc448e",
-      "region": "Сумы",
-      "lat": 50.91,
-      "lon": 34.8,
-      "types": [
-        "injured"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Почему деньги нельзя держать в одном месте: какую сумму опасно хранить в банке...",
-      "image": "https://img.tsn.ua/cached/335/tsn-1284f5ef/thumbs/608xX/33/81/4777daf550a97160279daf5551568133.jpg",
-      "published": "2026-09-27T11:14:08.789879+00:00",
-      "source": "ТСН",
-      "url": "https://tsn.ua/ru/other/pochemu-dengi-nelzya-derzhat-v-odnom-meste-kakuyu-summu-opasno-hranit-v-banke-3176414.html"
-    },
-    {
-      "id": "osint-c3cced6f820a51ec",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "damage",
-        "dead",
-        "injured",
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Загинув чоловік, поранено двох неповнолітніх та жінку внаслідок атаки на Київ, – поліція Києва. Пошкоджено складські приміщення у Соломʼянському районі – загинув 56-річний охоронець. У Шевченківському районі внаслідок влучання дрону в одне з підприєм...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:17:09.827506+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89209"
-    },
-    {
-      "id": "osint-b1f101b390c39537",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "🤬 В одному з районів столиці атаковано заклад освіти. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:55:23.945988+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89210"
-    },
-    {
-      "id": "osint-8ca7bb9a7bbbc28d",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "🤬 Влучання дрону сталось в СТО у Солом’янському районі, – ДСНС. Загорілася одноповерхова будівля. За іншою адресою дрон влучив у нежитлову будівлю. Під час гасіння виявили тіло чоловіка. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:55:23.946113+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89211"
-    },
-    {
-      "id": "osint-8803671a04c84ed1",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ русня здійснила доставку 70 реактивних БпЛА на пускову локацію Орел, – монітори. Готуйтесь до тривалої тривоги, яка може продовжитись і вночі. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:55:23.946288+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89213"
     },
     {
       "id": "osint-88b06bed8851cca0",
@@ -1037,83 +132,6 @@
       "url": "https://kyiv.tsn.ua/ru/kyiv/udar-prishelsya-po-proezzhey-chasti-rossiyane-atakovali-kiev-i-oblast-est-pogibshiy-3176444.html"
     },
     {
-      "id": "osint-b292f76660837a46",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Академ увага по БпЛА! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T10:53:33.205251+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89214"
-    },
-    {
-      "id": "osint-ab57ca20c8ee597d",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Академ увага по БпЛА! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T11:14:10.311274+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89215"
-    },
-    {
-      "id": "osint-95ae25c65d7510cc",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Момент падіння останнього БпЛА у місті, – соцмережі. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T11:53:45.104889+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89219"
-    },
-    {
-      "id": "osint-f0d4cc8e183e3ab6",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "injured"
-      ],
-      "weapons": [
-        "artillery"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "Такой вот маркетинговый ход: Зеленский пугает мир войной с Россией и предлагает купить Drone Deal Глава киевского режима на этот раз примерил маску глобального пророка. Согласно разведданным, находящимся в распоряжении Зеленского, в России «хотят рас...",
-      "image": "https://cdn4.telesco.pe/file/v070XL4UHUmjcpotZbkk9WzPoNYafsGLwNdNsGQk7DATf_SVVBSkWMUbecosHCgg6vcpj-edxObOjHtkUgYplxm7HzcU9kzpf16GwBTUsxJ8FM64imY9qINYQzR6TujyiLXKR_fkAADDj14FP_--5KE1WSBbvr329xH6SZt1t4VSfuf_76XdYXy4_CjLjN3r2Vuq9ZuF-_mTCZvv9KT-JgOQckUPZX2kpfUnlct8drXkq-_zFx8EfYZshO60-yuVKG-Hc5h_OGi6J737yprezj5Hiv9mgxrtA6-xOTSY97RWiL3V4e4g2SL0VgwDbyyzAlgH8teuXXze-MOF-eQL4Q.jpg",
-      "published": "2026-09-27T11:31:25.451176+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338214"
-    },
-    {
       "id": "osint-9475cbb82d107036",
       "region": "Донецкая область",
       "lat": 48.3,
@@ -1134,94 +152,6 @@
       "url": "https://www.pravda.com.ua/rus/news/2026/09/27/8055227/"
     },
     {
-      "id": "osint-4a3a497b197821ee",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit",
-        "injured"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "У Соломʼянському районі влучання в нежитлову будівлю , – Кличко. Екстрені служби прямують на місце. У Шевченківському районі постраждали четверо людей. Трьох із них госпіталізували. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T12:18:57.093397+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89220"
-    },
-    {
-      "id": "osint-b13f7d257117ee79",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "🤬 Вранці росіяни двічі обстріляли дата-центр у Києві, – Зеленський. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T12:18:57.093584+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89223"
-    },
-    {
-      "id": "osint-7cb5aeed55af6062",
-      "region": "Одесса",
-      "lat": 46.48,
-      "lon": 30.72,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "🇺🇦 В Одессе после ночной атаки РФ загорелся терминал \"Новой почты\" Украина.ру — подписаться и знать больше 🔄 Мы в MAX 🔄 Аналитика 👍...",
-      "image": "https://cdn4.telesco.pe/file/v6LDll2TuhyWiFoNQU1nKXPP7BRGOIU-NSbL2SXZu1Yrwr6G89E5D0i4xY0waJvsb9W04Xgel0eriUJa1r4BFXgqKTQNDuV8shOhoeSC4KjUCNO-kVnZpdx9CIx_Wx0KkF-ga5FtuYnfgjHpU6__WKV1zwxEDnQmlNMzVlpyqkmWMAIzag9ed2UysMGL1mZnjWBPxg4aOvY8Vj_bvkx2udOcAn1OTnvqhfTIl7P1Y2sbUn06CvwnGVILMHjCSFTJd-VPEqNN954ppCx_S77vqml8pTTlNrONYez-LE50Ui4-8ppRUuEkhE-uKmybxcjVTFeGMIUM0P5aSTOFsmYMQg",
-      "published": "2026-09-27T11:31:25.451280+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338215"
-    },
-    {
-      "id": "osint-bcb9717110ce8f34",
-      "region": "Днепр",
-      "lat": 48.46,
-      "lon": 35.05,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Взрывы в Днепропетровске...",
-      "image": "https://cdn4.telesco.pe/file/c__PwNx7FJHYhxJofk6jCOQ8bZakeFFzaZ5_wolW1EfP6fr5QXvzb-d0LP9rcwKvipRIJdMo5PNtDIBeaFmJ4Isx8bUKnDnyFbqHoy0xVsHO6lVCi2R_zljcyefHNANy30HCinOTvOp4jvtetrsYFoR-siH-IX1LVLrddN9Cb0xbVuAWxVcDKtUrL7enNFYUfe5O2jA-5OhtU3h6Qq4Lx9tCEZP-_pbyV8pEvrXLA6Ja9WFQxJY3pYNqQjX370HSIa83DfjnAKD4P1FJsHFaZxoS9-cMvGxBEGlE_KxJUp_RJZy_EUKF8JwPKX8QtmqRNooxG49HC4X1yysJPTBNwg.jpg",
-      "published": "2026-09-27T11:53:46.484922+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338216"
-    },
-    {
-      "id": "osint-f06d249260aa6a66",
-      "region": "Константиновка",
-      "lat": 48.52,
-      "lon": 37.7,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ На Краснолиманском направлении заявления о прорыве ВСУ к Кировску не подтверждаются: противник пытается просачиваться по одиночке и малыми группами вдоль трассы «Красный Лиман–Ямполь» В лесных массивах и посадках эти группы вскрываются разведкой и...",
-      "image": "https://cdn4.telesco.pe/file/q1CxkfU6j8F-XwCEkD6EvoDq5G3v7yQQkv46Rl5TaQDAY7rOvUVnIxSR9uNDm0GoFjXHQg1WbnwDTjTlbrCajdbshCHI3EOk-p_rYBnxmM-rUNrv_eFX8BBzdtYdxMjRCyzqSNFZ4sPWGNyxb4tpZGXRbfltOzJpwJigyR-Zr3z6YTyTSiUxMonMCVP8xZJzs2TzEPoVQkqMNoWIzQXnwnIQf01WlICOggRsddlsfnQWcRa83LyVIhNra68XbIyJrK2KYjhE35xYaUVCTwN_T9ZtJtDUtjNEiY_X12I3CFvn037UgOdzKqMGaDlnKDrgs_iFa9hDIQ9gNvPDaJSV5g.jpg",
-      "published": "2026-09-27T11:53:46.485219+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338217"
-    },
-    {
       "id": "osint-c3b4763bdc310d34",
       "region": "Сумы",
       "lat": 50.91,
@@ -1239,23 +169,6 @@
       "url": "https://tsn.ua/ru/ukrayina/izbegayte-mest-massovogo-skopleniya-v-odnoy-iz-oblastey-predupredili-o-novyh-atakah-3176453.html"
     },
     {
-      "id": "osint-1deb45e93ec3762c",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "🤬 Вранці росіяни двічі обстріляли дата-центр у Києві, – Зеленський. ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T12:18:57.093666+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89224"
-    },
-    {
       "id": "osint-c716fa580dcebb01",
       "region": "Киев",
       "lat": 50.45,
@@ -1271,82 +184,6 @@
       "published": "2026-09-27T12:46:34.694825+00:00",
       "source": "Труха⚡️Київ",
       "url": "https://t.me/truexakyiv/89225"
-    },
-    {
-      "id": "osint-0d095905dd7a2a45",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА на Ясногородку! Йде дуже низько! ㅤ Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:42:09.177304+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89229"
-    },
-    {
-      "id": "osint-c67bd84f1be6c239",
-      "region": "Кропивницкий",
-      "lat": 48.51,
-      "lon": 32.26,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "artillery"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Серия взрывов прозвучала в Кировограде...",
-      "image": "https://cdn4.telesco.pe/file/ApDwm4j21H70Mj2_Pqa0WxufRKrkIKVhY-3eJBCKrMmR8ZKEER-p2F6HpcQf0yoQhtu5wDEfOGMr2jOitrXP1oauujLxkpEdiX4lZsRb3_k-ykpBErQfI56XiCj8rgFEVhzk3AfN6Levh4f4-ifZkbFMJqyIQdN_LDyjd0YmBSfgYHHq2xdqfsXjUkinqOdxkcflEbPsIb4oZfYTNPHYB6_GzstDcfM9flE4Lt3caeT_QGJ1towVXnP0Ibjgfo7mFvuxd8TrmlnA6YRb35j4lrnIZ8OEt4288f6fFGuGnnnVL_QZwZYdicC_Bfkj77NGNnmSUERDl6j49XceR39sPw.jpg",
-      "published": "2026-09-27T12:18:58.481761+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338220"
-    },
-    {
-      "id": "osint-6dacf1bf34422d29",
-      "region": "Киев",
-      "lat": 50.45,
-      "lon": 30.52,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "drone"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "БпЛА на Ясногородку! Йде дуже низько! UPD 12:43: припинив існування. Труха ⚡️ Київ | Надіслати новину...",
-      "image": "//telegram.org/img/emoji/40/E29AA1.png",
-      "published": "2026-09-27T09:55:23.947215+00:00",
-      "source": "Труха⚡️Київ",
-      "url": "https://t.me/truexakyiv/89229"
-    },
-    {
-      "id": "osint-5c42fb88cb810570",
-      "region": "Ровно",
-      "lat": 50.62,
-      "lon": 26.25,
-      "types": [
-        "hit"
-      ],
-      "weapons": [
-        "missile"
-      ],
-      "status": "Зафиксировано",
-      "confidence": "medium",
-      "text": "❗️ Утром 27 сентября британская полиция объявила о крупном происшествии рядом с авиабазой Фэрфорд, которую используют ВВС США Собрали последние новости об этом для вас. 🟦 Несколько мужчин задержаны по подозрению в нарушении закона о взрывчатых вещест...",
-      "image": "https://cdn4.telesco.pe/file/ceeVjMg7l_OYfEfhV1o9fXbG8yuhppx6vST8pKrl4GT-JEpaqCmRJKE_ZZPRS0dDHBpM9xFuD_6gPLQLMvuKDea4_3AQGEapiSXwnie65PINU8xTZVSnfcX2hqc_Gw0rOn9fXwKUyHx3fzDG6-FKpxX1aJh9t2APTE-MWnNqk6T9G6RIOeb03m5CAj4p7cZcdHgzGt4tqbh5UypODUdY1Y1jsaiRYgrK9xdg_dfamujVNx9TmzJppnGjSbrfmDGyCnKSm8jkswzN14Mr9sd43wtee3yHeOu0T6EosSrChdeinq93iDGPM3eDFZVOrtWfCnepjQ9c4nFf4YdNX5xiiw.jpg",
-      "published": "2026-09-27T12:18:58.482235+00:00",
-      "source": "UKR 2025",
-      "url": "https://t.me/ukr_2025_ru/338222"
     },
     {
       "id": "osint-372ef93bdf26a866",
@@ -70660,6 +69497,451 @@
       "published": "2026-10-27T06:42:35.704733+00:00",
       "source": "UKR 2025",
       "url": "https://t.me/ukr_2025_ru/344399"
+    },
+    {
+      "id": "osint-9c87133aa957e2f1",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Россия нанесла ракетный удар по Дергачам на Харьковщине: 5 пострадавших, есть разрушения...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/3/944638/13b28eb55978a3c51bbf1983c4a793e3.jpeg",
+      "published": "2026-10-27T12:43:49.452491+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/10/27/8059925/"
+    },
+    {
+      "id": "osint-dfa5e783158b4e1e",
+      "region": "Чернигов",
+      "lat": 51.25,
+      "lon": 32.0,
+      "types": [
+        "hit",
+        "injured"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "В Черниговской области от российских ударов пострадали 6 человек, среди них ребенок...",
+      "image": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/f/9/944185/f91ea82585b7418e9b2db900b21858fe.jpeg",
+      "published": "2026-10-27T12:43:49.453532+00:00",
+      "source": "Украинская Правда",
+      "url": "https://www.pravda.com.ua/rus/news/2026/10/27/8059887/"
+    },
+    {
+      "id": "osint-2167dc16788b218b",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Энергетики после обстрелов возобновили электроснабжение более 1,2 млн семей за неделю— ДТЭК...",
+      "image": "",
+      "published": "2026-10-27T12:43:49.852841+00:00",
+      "source": "ТСН",
+      "url": "https://tsn.ua/ru/ukrayina/energetiki-posle-obstrelov-vozobnovili-elektrosnabzhenie-bolee-12-mln-semey-za-nedelyu-dtek-3200951.html"
+    },
+    {
+      "id": "osint-b65871a1b9cd3619",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Зияет огромная воронка: последствия баллистического удара по Южному мосту в Киеве сняли на видео...",
+      "image": "https://img.tsn.ua/cached/902/tsn-51cb131e/thumbs/608xX/79/be/6fa187e0f765e886c23f8755f733be79.png",
+      "published": "2026-10-27T12:43:49.853121+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/ziyaet-ogromnaya-voronka-posledstviya-ballisticheskogo-udara-po-yuzhnomu-mostu-v-kieve-snyali-na-video-3200943.html"
+    },
+    {
+      "id": "osint-7222eb93b5d159b9",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "После атаки на мост в Киеве запускают дополнительные электрички между берегами: полное расписание на 27–30 октября...",
+      "image": "https://img.tsn.ua/cached/089/tsn-51cb131e/thumbs/608xX/41/d2/95da5526558e62c025b7846a6f79d241.jpg",
+      "published": "2026-10-27T12:43:49.854455+00:00",
+      "source": "ТСН",
+      "url": "https://kyiv.tsn.ua/ru/kyiv/posle-ataki-na-most-v-kieve-zapuskayut-dopolnitelnye-elektrichki-mezhdu-beregami-polnoe-raspisanie-na-27-30-oktyabrya-3200851.html"
+    },
+    {
+      "id": "osint-0613db3c8516b2ac",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Так виглядає Південний міст після російської атаки на Київ , — Укрінформ. ТРУХА ⚡️ Україна | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:50.489253+00:00",
+      "source": "Труха⚡️Україна",
+      "url": "https://t.me/truexanewsua/147254"
+    },
+    {
+      "id": "osint-ea541cec23ef1cf0",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Вибух 💥 Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.639376+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104715"
+    },
+    {
+      "id": "osint-564cdc72e818dc82",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [
+        "missile"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "❗️ Ворог наніс ракетний удар по місту Дергачі, – ОВА. Зафіксовано влучання в складську будівлю. Пошкоджено АЗС та автомобіль. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.639556+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104717"
+    },
+    {
+      "id": "osint-6b2b16833a370467",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Вибух 💥 Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.639735+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104719"
+    },
+    {
+      "id": "osint-baeec7f0207f7390",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "Ще один БпЛА на місто. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.639879+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104721"
+    },
+    {
+      "id": "osint-9aa4f69d3838f11e",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "рБпЛА на Холодну Гору. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.639954+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104722"
+    },
+    {
+      "id": "osint-3b0b781dde77bd06",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "⚠️ Загроза рБпЛА зберігається. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.640179+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104725"
+    },
+    {
+      "id": "osint-aa90ec240d83c370",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [
+        "drone"
+      ],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "БпЛА на Саржин Яр. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.640256+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104726"
+    },
+    {
+      "id": "osint-c9a05d27dd4e013d",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit",
+        "injured"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "❗️ Зафіксовано удар по Шевченківському району, наразі один поранений , – Терехов. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.640634+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104732"
+    },
+    {
+      "id": "osint-2d3dae40034c53be",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "❗️ Ще одне влучання в Шевченківському районі , – Терехов. Труха ⚡️ Харків | Надіслати новину...",
+      "image": "//telegram.org/img/emoji/40/E29AA1.png",
+      "published": "2026-10-27T12:43:51.640774+00:00",
+      "source": "Труха⚡️Харків",
+      "url": "https://t.me/truexakharkiv/104734"
+    },
+    {
+      "id": "osint-86575880c879872a",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "damage",
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "🇺🇦 На Южном мосту в Киеве в результате удара образовалась большая пробоина, железнодорожные пути сильно повреждены, сообщают украинские СМИ и публикуют фото Украина.ру 🔄 Аналитика 🔄 Видео Мы в MAX 🔄 👍...",
+      "image": "https://cdn4.telesco.pe/file/C_xa7u8PSXqmnyBhXrQrzRi2mQJNvpKHeyT0X0gTCoxp-B7q69AWHiXtG65h451d711-8o9So2wnNmZxr-yIpxkSAWgdsJgio8mOxDtgKFpDlbt6ZZIJlCZm8_RK7N12mqyMcGAI3aGY8xC4ThSCBHTjOJaOL3Ot13LHO19LifbD-RnlE3RINCO0OX6HhfMNRJbKfyfmGWEd8swxvV65KnRm-xn7HZBYTGtCIWOpqOii8892GL0QqGft82FZDM3qINvK15HXTk9TycsB-oCpDAbmRPexpYGZJNIEBbpq0eqL1Edbem6l8XE97_JlN4ayaydpqoV_XANvU1qaya55tg.jpg",
+      "published": "2026-10-27T12:43:52.360180+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344426"
+    },
+    {
+      "id": "osint-5fdbfd64cd33fb6d",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Взрывы звучали в Харькове и оккупированном ВСУ Запорожском районе...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.360285+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344427"
+    },
+    {
+      "id": "osint-740be1c90b74a605",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Взрывы в Броварах Киевской области...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.360717+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344432"
+    },
+    {
+      "id": "osint-fd5ec2323e41d55d",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Нанесены удары по объектам в Днепропетровске...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.360882+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344434"
+    },
+    {
+      "id": "osint-1a4b20caa142bf21",
+      "region": "Черкассы",
+      "lat": 49.44,
+      "lon": 32.06,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Взрывы в Уманском районе Черкасской области...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.360962+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344435"
+    },
+    {
+      "id": "osint-956460095360b297",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Взрывы гремели в Харькове...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.361198+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344438"
+    },
+    {
+      "id": "osint-d1ca1a169a05c52a",
+      "region": "Киев",
+      "lat": 50.45,
+      "lon": 30.52,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Взрывы в Киевской области...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.361368+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344440"
+    },
+    {
+      "id": "osint-272c733b632793ea",
+      "region": "Днепр",
+      "lat": 48.46,
+      "lon": 35.05,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Днепропетровск — взрывы...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.361439+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344441"
+    },
+    {
+      "id": "osint-202704a08f8cd71d",
+      "region": "Винница",
+      "lat": 49.23,
+      "lon": 28.47,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Винницкая область — взрывы...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.361729+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344444"
+    },
+    {
+      "id": "osint-c2fb0da2545c848c",
+      "region": "Харьков",
+      "lat": 49.99,
+      "lon": 36.23,
+      "types": [
+        "hit"
+      ],
+      "weapons": [],
+      "status": "Зафиксировано",
+      "confidence": "medium",
+      "text": "💥 Удары нанесены по объектам в Харькове и Хмельницкой области...",
+      "image": "//telegram.org/img/emoji/40/F09F92A5.png",
+      "published": "2026-10-27T12:43:52.361816+00:00",
+      "source": "UKR 2025",
+      "url": "https://t.me/ukr_2025_ru/344445"
     }
   ]
 }
